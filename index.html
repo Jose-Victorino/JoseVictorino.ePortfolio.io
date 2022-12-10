@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jose Victorino</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="x-icon" href="Pictures/Crest Icon.png">
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Poppins'>
     <script src="https://kit.fontawesome.com/ec6c50ff9c.js" crossorigin="anonymous"></script>
 </head>
@@ -12,21 +13,22 @@
     <!--Navigation Bar-->
     <nav>
         <input type="checkbox" id="Burger">
+        <input type="checkbox" id="Arrow">
         <div class="logo">
             <img src="Pictures/Crest Logo.png" alt="Logo">
             <s>Jose Victorino</s>
         </div>
         <ul>
-            <label class="BClose" for="Burger"><i class="fa-solid fa-angle-right"></i></label>
+            <label class="BClose" for="Burger"><i class="fa-solid fa-xmark"></i></label>
             <li><a href="#Home">Home</a></li>
             <li class="Class">
-                <a href="#Classes">Classes</a>
-                <i class="fa-solid fa-angle-down"></i>
-                <i class="fa-solid fa-angle-up"></i>
-                <div class="Sub-Class">
-                    <ul><!--Insert new subjects here-->
-                        <li><a href="">Subject 1</a></li>
-                </div>
+                <p>
+                    <a href="#Classes">Classes</a>
+                    <label class="Arrow" for="Arrow"><i class="fa-solid fa-angle-down"></i></label>
+                </p>
+                <ul class="Sub-Class"><!--Insert new subjects here-->
+                    <li><a href="">Subject 1</a></li>
+                </ul>
             </li>    
             <li><a href="#Resume">Resume</a></li>
             <li><a href="#Activities">Activities</a></li>
@@ -198,7 +200,7 @@
             <!-- Courses -->    
             <h5>COURSES/SUBJECTS</h5>
             <div class="Class-Grid"><!--Insert new subjects here-->
-                <a href="#">Subject 1</a>
+                <a href="">Subject 1</a>
             </div>
             <br><br>
             <!-- Highlights -->
@@ -206,7 +208,7 @@
             <div class="Highlights"><!--Insert new highlights here-->
                 <div>
                     <img src="Pictures/Temp.jpg" alt="Project 1">
-                    <a href="#"><div class="hover">Project 1</div></a>
+                    <a href=""><div class="hover">Project 1</div></a>
                 </div>
             </div>
         </aside>
@@ -222,12 +224,12 @@
                     <h5>EDUCATION</h5>
                     <div class="line">
                         <h4>Mapúa University 2019 - Present</h4>
-                        <ul>
+                        <ul type="square">
                             <li>SHS Diploma</li>
                             <li>Graduated with Honors</li>
                         </ul>
                         <h4>UST Angelicum 2010 - 2019</h4>
-                        <ul>
+                        <ul type="square">
                             <li>High School Diploma</li>
                             <li></li>
                         </ul>
@@ -238,7 +240,7 @@
                     <h5>EXPERIENCE</h5>
                     <div class="line">
                         <h4>CREOTEC Philippines Inc. 2020</h4>
-                        <ul>
+                        <ul type="square">
                             <li>Completed 80 hours of virtual work immersion training</li>
                             <li>Department Assigned: Technical Group (STEM)</li>
                         </ul>
@@ -252,10 +254,9 @@
                     <a href="Certificates.pdf" target="blank">See all Certificates</a>
                 </div>
                 <div class="line">
-                    <ul>
+                    <ul type="square">
                         <li>1</li>
                         <li>2</li>
-                        <li>3</li>
                     </ul>
                 </div>
             </aside>
@@ -305,8 +306,8 @@
     <!-- Footer -->
     <section class="Footer">
         <div  id="Contact" class="Cont">
-            <img src="Pictures/Crest Logo.png" alt="Logo">
             <aside>
+                <img src="Pictures/Crest Logo.png" alt="Logo">
                 <div class="txt">
                     <h3>Site Links</h3>
                     <div class="SiteLink">
