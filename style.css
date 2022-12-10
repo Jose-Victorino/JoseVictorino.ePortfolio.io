@@ -1,11 +1,12 @@
 *{
     margin: 0px;
     padding: 0px;
+    text-decoration: none;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 body{
-    background-image: url(asfalt-dark.png);
+    background-image: url("Pictures/asfalt-dark.png");
     background-color: #2a2a2a;
 }
 /*Default Custom Scroll Bar*/
@@ -24,17 +25,17 @@ body{
 /*---===Navigation Bar===---*/
 nav{
     font-family: 'roboto', 'Open Sans', sans-serif;
-    background-color: rgba(12, 12, 12, 0.95);
+    background-color: rgba(12, 12, 12, 0.5);
+    backdrop-filter: blur(5px);
     color: #e3e3e3;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    top: 0;
     width: 100%;
     height: 80px;
-    box-shadow: 0 0 15px black;
+    box-shadow: 0 0 5px black;
     z-index: 1;
 }
 nav .logo{
@@ -49,7 +50,6 @@ nav .logo img{
     height: 45px;
 }
 nav .logo s{
-    text-decoration: none;
     cursor: default;
     margin-left: 15px;
     font-size: 20px;
@@ -61,7 +61,6 @@ nav ul{
 }
 nav ul a{
     color: #e3e3e3;
-    text-decoration: none;
     font-weight: normal;
 }
 nav ul li{
@@ -83,9 +82,10 @@ nav .Sub-Class ul{
     width: fit-content;
     overflow: auto;
     min-height: fit-content;
-    max-height: 360px;
+    max-height: 320px;
     padding: 10px 0;
     margin: 0;
+    box-shadow: 0 0 10px black;
 }
 nav .Sub-Class ul li{
     padding: 15px 50px;
@@ -103,7 +103,7 @@ nav .Class:hover .Sub-Class{
 nav .Sub-Class ul::-webkit-scrollbar-track{
     background-color: #2a2a2a;
 }
-/*---===Introduction===---*/
+/*---===Banner===---*/
 .Intro{
     display: flex;
     justify-content: center;
@@ -121,8 +121,7 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1150px;
-    padding: 0 20px;
+    width: 1100px;
     height: fit-content;
 }
 .Intro .txt{
@@ -148,7 +147,6 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     align-items: center;
     background-color: #333333;
     color: #e3e3e3;
-    text-decoration: none;
     font-size: 24px;
     width: 40px;
     height: 40px;
@@ -157,7 +155,7 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     transition: 0.3s;
 }
 .Intro .socmed a:hover{
-    box-shadow: 0 0 13px #0045e5;
+    box-shadow: 0 0 13px #2149a7;
     text-shadow: 0 0 3px #0045e5;
     color: #0045e5;
 }
@@ -165,7 +163,7 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
 .Home{
     font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     background-color: rgba(24, 24, 24, 0.7);
-    margin: 30px auto;
+    margin: 0 auto;
     width: 1100px;
     padding: 20px 30px 30px;    
     border-radius: 10px;
@@ -206,6 +204,7 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
 .AboutMe .Cont .Profile{
     display: flex;
     flex-direction: row;
+    text-align: left;
     margin-left: 20px;
 }
 .AboutMe .Cont .Profile ul{
@@ -333,7 +332,6 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
 }
 .Classes .Class-Grid a{
     color: #e3e3e3;
-    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -370,7 +368,7 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     font-size: 20px;
 }
 .Classes .Highlights .hover{
-    background-color: rgba(24, 24, 24, 0.7);
+    background-color: rgb(51, 51, 51,0.7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -391,7 +389,7 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     background-color: rgba(24, 24, 24, 0.7);
     display: flex;
     flex-direction: column;
-    margin: 30px auto;
+    margin: 0 auto;
     width: 1100px;
     padding: 20px 30px 30px;
     border-radius: 10px;
@@ -415,7 +413,7 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
 }
 .Resume .Cont{
     display: flex;
-    width: 100%;
+    flex-direction: row;
 }
 .Resume .Cont aside{
     width: 100%;
@@ -432,10 +430,9 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
 .Resume .btn a{
     background-color: #2149a7;
     color: #e3e3e3;
-    text-decoration: none;
     display: flex;
     justify-content: center;
-    line-height: 39px;
+    line-height: 40px;
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -474,7 +471,6 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
 /*Extra-Curricular Activities*/
 .Active .Acts div{
     background-color: #2a2a2a;
-    text-decoration: none;
     border-radius: 10px;
 }
 .Active .Acts img{
@@ -496,7 +492,6 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
 }
 .Active .Acts div s{
     color: #e3e3e3;
-    text-decoration: none;
 }
 /*---===Footer===---*/
 .Footer{
@@ -506,59 +501,50 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     padding: 40px 20px 0;
     box-shadow: 0 0 20px #181818;
 }
-.Footer .Footer-Cont{
+.Footer .Cont{
     display: flex;
     justify-content: space-between;
     margin: 0 40px;
 }
-.Footer .Footer-Cont img{
+.Footer .Cont img{
     width: 160px;
+    height: fit-content;
 }
-.Footer .Footer-Cont .txt{
+.Footer aside{
     display: flex;
-    flex-direction: column;
-    width: 110px;
-}
-.Footer .Footer-Cont h3{
-    margin-bottom: 10px;
-}
-.Footer .Footer-Cont aside{
-    display: flex;
-    justify-content: space-between;
-    width: calc(50% + 100px);
-}
-.Footer .Footer-Cont .txt .SiteLink{
-    margin-right: 40px;
+    justify-content: space-around;
     width: 100%;
 }
-.Footer .Footer-Cont .txt .SiteLink div{
+.Footer .Cont .txt{
+    display: flex;
+    flex-direction: column;
+}
+.Footer .Cont h3{
+    margin-bottom: 10px;
+}
+.Footer .Cont .txt .SiteLink div{
     margin-bottom: 7px;
 }
-.Footer .Footer-Cont .txt .SiteLink a{
-    text-decoration: none;
+.Footer .Cont .txt .SiteLink a{
     color:#a3a3a3;
 }
-.Footer .Footer-Cont .txt .SiteLink a:hover{
+.Footer .Cont .txt .SiteLink a:hover{
     text-decoration: underline;
 }
-.Footer .Footer-Cont .Contact{
-    min-width: 290px;
-}
-.Footer .Footer-Cont .Contact p{
+.Footer .Cont .Contact p{
     color:#a3a3a3;
     margin-bottom: 7px;
 }
-.Footer .Footer-Cont .Contact .socmed{
+.Footer .Cont .Contact .socmed{
     display: flex;
     margin-top: 12px;
 }
-.Footer .Footer-Cont .Contact .socmed a{
+.Footer .Cont .Contact .socmed a{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #2a2a2a;
     color: #e3e3e3;
-    text-decoration: none;
     font-size: 20px;
     width: 36px;
     height: 36px;
@@ -566,9 +552,9 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     border-radius: 18px;
     transition: 0.3s;
 }
-.Footer .Footer-Cont .Contact .socmed a:hover{
-    box-shadow: 0 0 10px #0045e5;
-    text-shadow: 0 0 2px #0045e5;
+.Footer .Cont .Contact .socmed a:hover{
+    box-shadow: 0 0 13px #2149a7;
+    text-shadow: 0 0 3px #0045e5;
     color: #0045e5;
 }
 .Footer footer{
@@ -578,9 +564,8 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     padding: 15px 0;
     border-top: 2px solid #464646;
 }
-
 /*---===Responsive===---*/
-@media(max-width: 1180px){
+@media(max-width: 1200px){
     /*---===Navigation Bar===---*/
     nav .logo{
         margin-left: 100px;
@@ -588,9 +573,24 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     nav ul{
         margin-right: 100px;
     }
-    /*---===Introduction===---*/
+    /*---===Banner===---*/
     .Intro .Cont{
         width: 830px;
+    }
+    .Intro .txt .p1{
+        font-size: 12px;
+    }
+    .Intro .txt .p2{
+        font-size: 30px;
+    }
+    .Intro .txt .p3{
+        font-size: 15px;
+    }
+    .Intro .socmed a{
+        font-size: 20px;
+        width: 34px;
+        height: 34px;
+        border-radius: 17px;
     }
     /*---===Home===---*/
     .Home{
@@ -627,11 +627,12 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     .Active .Cont{
         width: 830px;
     }
-    /*---===Footer===---*/
-
 }
-@media(max-width: 900px){
+@media(max-width: 950px){
     /* ---===Navigation Bar===--- */
+    nav .logo{
+        margin-left: 80px;
+    }
     nav ul{
         background-color: rgba(12, 12, 12, 0.7);
         flex-direction: column;
@@ -647,6 +648,10 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     }
     nav ul li{
         margin-bottom: 25px;
+    }
+    nav ul a:hover{
+        border-bottom: 0;
+        color: #2149a7;
     }
     nav ul .BClose{
         display: flex;
@@ -671,25 +676,13 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     #Burger:checked ~ .BOpen{
         display: none;
     }
-    nav ul a:hover{
-        border-bottom: 0;
-        color: #2149a7;
-    }
-    /*---===Introduction===---*/
+    /*---===Banner===---*/
     .Intro .Cont{
-        flex-direction: column;
-        height: fit-content;
-    }
-    .Intro .txt{
-        margin-bottom: 40px;
-        text-align: center;
-    }
-    .Intro .socmed{
-        justify-content: center;
+        padding: 0 30px;
     }
     /*---===Home===---*/
     .Home{
-        width: 600px;
+        width: 700px;
     }
     /*About Me*/
     .AboutMe .Cont img{
@@ -703,7 +696,7 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     }
     /*Skills*/
     .Skills .Cont{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: 1fr;
     }
     /*Interest*/
     .Interest .Cont{
@@ -721,26 +714,22 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     }
     /*---===Classes===---*/
     .Classes aside{
-        width: 600px;
+        width: 700px;
     }
     /*Courses/Subjects*/
     .Classes .Class-Grid{
         grid-template-columns: repeat(3,1fr);
     }
-    /*Highlights*/
-    .Classes .Highlights{
-        grid-template-columns: repeat(1,1fr);
-    } /* pin */
     /*---===Resume===---*/
     .Resume{
-        width: 600px;
+        width: 700px;
     }
     .Resume .Cont{
-        flex-direction: column;
+    flex-direction: column;
     }
     /*---===Activities===---*/
     .Active .Cont{
-        width: 600px;
+        width: 700px;
     }
     .Active .Acts img{
         width: 100%;
@@ -753,23 +742,106 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
         text-align: justify;
         margin-bottom: 20px;
     }
-    /*---===Footer===---*/
-    .Footer .Footer-Cont img{
-        width: 200px;
+}
+@media(max-width: 740px){
+    /*---===Banner===---*/
+    .Intro{
+        align-items: flex-end;
+        height: 680px;
+        padding-bottom: 30px;
     }
-    .Footer .Footer-Cont aside{
+    .Intro .Cont{
         flex-direction: column;
-        text-align: center;
-        margin-left: 40px;
     }
-    .Footer .Footer-Cont .txt{
+    .Intro .txt{
         text-align: center;
-        width: 100%;
+        margin-bottom: 15px;
     }
-    .Footer .Footer-Cont .txt .SiteLink{
+    .Intro .socmed{
+        justify-content: center;
+    }
+    /*---===Home===--- */
+    .Home{
+        width: 540px;
+    }
+    /*---===Classes===---*/
+    .Classes aside{
+        width: 540px;
+    }
+    /*Highlights*/
+    .Classes .Highlights{
+        grid-template-columns: 1fr;
+    }
+    /*---===Resume===---*/
+    .Resume{
+        width: 540px;
+    }
+    /*---===Activities===---*/
+    .Active .Cont{
+        width: 540px;
+    }
+    /*---===Footer===---*/
+    .Footer .Cont{
         margin: 0;
     }
-    .Footer .Footer-Cont .Contact .socmed{
+    .Footer aside{
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 20px;
+    }
+    .Footer aside{
+        align-items: center;
+    }
+    .Footer .Cont .txt .SiteLink,.Footer .Cont .Contact{
+        text-align: center;
+    }
+    .Footer .Cont .Contact .socmed{
         justify-content: center;
+    }
+}
+@media(max-width: 560px){
+    /* ---===Navigation Bar===--- */
+    nav .logo{
+        margin-left: 50px;
+    }
+    nav .logo s{
+        display: none;
+    }
+    /*---===Home===--- */
+    .Home{
+        width: 100%;
+    }
+    /*About Me*/
+    .AboutMe .Cont img{
+        width: 100%;
+    }
+    /*Interest*/
+    .Interest .Cont{
+        grid-template-columns: 1fr;
+    }
+    /*---===Classes===---*/
+    .Classes aside{
+        width: 100%;
+        padding: 0 20px;
+    }
+    /*---===Resume===---*/
+    .Resume{
+        width: 100%;
+    }
+    /*---===Activities===---*/
+    .Active .Cont{
+        width: 100%;
+        padding: 0 20px;
+    }
+    /*---===Footer===---*/
+    .Footer .Cont{
+        flex-direction: column;
+        align-items: center;
+    }
+    .Footer .Cont img{
+        margin-bottom: 20px;
+    }
+    .Footer aside{
+        margin: 0;
     }
 }
