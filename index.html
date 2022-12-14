@@ -2,66 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jose Victorino</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="x-icon" href="Pictures/Crest Icon.png">
-    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Poppins'>
+    <link href="style.css" rel="stylesheet">
+    <link href="Pictures/Crest Icon.png" rel="shortcut icon" type="png">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel="stylesheet">
     <script src="https://kit.fontawesome.com/ec6c50ff9c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!--Navigation Bar-->
+    <!-- Navigation Bar -->
     <nav>
         <input type="checkbox" id="Burger">
         <input type="checkbox" id="Arrow">
-        <div class="logo">
+        <a class="logo" href="#Home">
             <img src="Pictures/Crest Logo.png" alt="Logo">
             <s>Jose Victorino</s>
-        </div>
+        </a>
         <ul>
-            <label class="BClose" for="Burger"><i class="fa-solid fa-xmark"></i></label>
-            <li><a href="#Home">Home</a></li>
+            <label class="BClose" for="Burger">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+            <li><a href="#AboutMe">About Me</a></li>
             <li class="Class">
                 <p>
                     <a href="#Classes">Classes</a>
-                    <label class="Arrow" for="Arrow"><i class="fa-solid fa-angle-down"></i></label>
+                    <label class="Arrow" for="Arrow">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </label>
                 </p>
                 <ul class="Sub-Class"><!--Insert new subjects here-->
-                    <li><a href="">Subject 1</a></li>
+                    <li><a href="/ePortfolio/Courses/subject 1.html">Subject 1</a></li>
                 </ul>
             </li>    
             <li><a href="#Resume">Resume</a></li>
             <li><a href="#Activities">Activities</a></li>
             <li><a href="#Contact">Contact</a></li>
         </ul>
-        <label class="BOpen" for="Burger"><i class="fa-solid fa-bars"></i></label>
+        <label class="BOpen" for="Burger">
+            <i class="fa-solid fa-bars"></i>
+        </label>
     </nav>
     <!-- Banner -->
-    <section id="Home" class="Intro">
+    <section id="Home" class="Home">
         <div class="Cont">
             <div class="txt">  
                 <p class="p1">Hello there,</p>
                 <p class="p2"><b>I'm Jose Victorino</b></p>
                 <p class="p3">a <b>1st year I.T. Student</b> of Mapúa University.</p>
                 <div class="socmed">
-                    <a href="https://www.facebook.com/JoseVictorinoo/" target="blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/joseeevictorino/" target="blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://twitter.com/JoseeVictorino" target="blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/JoseVictorinoo/" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/joseeevictorino/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/JoseeVictorino" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
                 </div>
             </div>
             <img src="Pictures/Temp.jpg" alt="Header Selfie">
         </div>
     </section>
     <br><br>
-    <!-- Home -->
-    <section id="AboutMe" class="Home">
-        <!-- About Me -->
-        <div class="AboutMe">
+    <!-- About Me -->
+    <section id="AboutMe" class="AboutMe">
+        <div class="Intro">
             <h1>ABOUT ME</h1>
             <h5>INFORMATION</h5>
             <div class="Cont">
-                <img src="Pictures/Temp.jpg" alt="AboutMe Selfie">
+                <img src="Pictures/DSC_0222.JPG" alt="AboutMe Selfie">
                 <div>
+                    <h3>Introduction</h3>
                     <p>Hello, I am Jose, a 1st year IT student. I enjoy editing images, videos, and coding. I strive to learn more on how to code and edit pictures as well as videos. When I was in elementary, my initial dream is to become a pilot, to fly to places, and to travel the world. As I grew up, I slowly lose interest in it and took an interest on engineering because of my father being a civil engineer. In high school, I grew an interest on photo editing, video editing, coding, and anything computer related. After the first year of Electrical Engineering, I decided to shift to IT due to my subtle interest in coding. Now I enjoy coding, especially with HTML and CSS.</p>
                     <h3>Profile</h3>
                     <!-- Profile -->
@@ -77,7 +90,7 @@
                         </ul>
                     </div>
                     <h3>Goals</h3>  
-                    <p>My short term goals are to expand my knowledge and understanding of various programming languages such as C++, HTML, and CSS. Long term wise, my plan is to have earn a job in a successful company with a substantial income and hopefully gain life long learning and new experiences.</p>
+                    <p>My short term goals are to expand my knowledge and understanding on various programming languages such as C++, HTML, and CSS. Long term wise, my plan is to have earn a job in a successful company with a substantial income and hopefully gain life long learning and new experiences.</p>
                 </div>
             </div>
         </div>
@@ -87,46 +100,58 @@
             <h5>SKILLS & STRENGTHS</h5>
             <div class="Cont">
                 <div>
-                    <div class="txtBar">
+                    <div class="txt">
                         <p>C++</p>
                         <p>Basics</p>
                     </div>
-                    <div class="barWrap"><div class="p" style="width: 40%"></div></div>
+                    <div class="barWrap">
+                        <div class="cpp" style="width: 40%;"></div>
+                    </div>
                 </div>
                 <div>
-                    <div class="txtBar">
+                    <div class="txt">
                         <p>HTML</p>
                         <p>Basics</p>
                     </div>
-                    <div class="barWrap"><div class="p" style="width: 40%"></div></div>
+                    <div class="barWrap">
+                        <div class="html" style="width: 40%;"></div>
+                    </div>
                 </div>
                 <div>
-                    <div class="txtBar">
+                    <div class="txt">
                         <p>CSS</p>
                         <p>Fundamentals</p>
                     </div>
-                    <div class="barWrap"><div class="p" style="width: 20%"></div></div>
+                    <div class="barWrap">
+                        <div class="css" style="width: 20%;"></div>
+                    </div>
                 </div>
                 <div>
-                    <div class="txtBar">
+                    <div class="txt">
                         <p>Python</p>
                         <p>Fundamentals</p>
                     </div>
-                    <div class="barWrap"><div class="p" style="width: 20%"></div></div>
+                    <div class="barWrap">
+                        <div class="python" style="width: 20%;"></div>
+                    </div>
                 </div>
                 <div>
-                    <div class="txtBar">
+                    <div class="txt">
                         <p>Photo Editing</p>
                         <p>Basics</p>
                     </div>
-                    <div class="barWrap"><div class="p" style="width: 40%"></div></div>
+                    <div class="barWrap">
+                        <div class="photo" style="width: 40%;"></div>
+                    </div>
                 </div>
                 <div>
-                    <div class="txtBar">
+                    <div class="txt">
                         <p>Video Editing</p>
                         <p>Intermediate</p>
                     </div>
-                    <div class="barWrap"><div class="p" style="width: 60%"></div></div>
+                    <div class="barWrap">
+                        <div class="video" style="width: 60%;"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -135,35 +160,35 @@
         <div class="Interest">
             <h5>INTEREST</h5>
             <div class="Cont">
-                <div class="box">
+                <div>
                     <i class="fa-solid fa-film"></i>
                     <p>Watching Movies</p>
                 </div>
-                <div class="box">
+                <div>
                     <i class="fa-solid fa-gamepad"></i>
                     <p>Video Games</p>
                 </div>
-                <div class="box">
+                <div>
                     <i class="fa-regular fa-futbol"></i>
                     <p>Football</p>
                 </div>
-                <div class="box">
+                <div>
                     <i class="fa-solid fa-guitar"></i>
                     <p>Guitar</p>
                 </div>
-                <div class="box">
+                <div>
                     <i class="fa-solid fa-camera"></i>
                     <p>Photography</p>
                 </div>
-                <div class="box">
+                <div>
                     <i class="fa-solid fa-video"></i>
                     <p>Videography</p>
                 </div>
-                <div class="box">
-                    <i class="fa-solid fa-eye-dropper"></i>
+                <div>
+                    <i class="fa-solid fa-pen"></i>
                     <p>Photo Editing</p>
                 </div>
-                <div class="box">
+                <div>
                     <i class="fa-solid fa-play"></i>
                     <p>Video Editing</p>
                 </div>
@@ -200,7 +225,7 @@
             <!-- Courses -->    
             <h5>COURSES/SUBJECTS</h5>
             <div class="Class-Grid"><!--Insert new subjects here-->
-                <a href="">Subject 1</a>
+                <a href="/ePortfolio/Courses/subject 1.html" target="_blank">Subject 1</a>
             </div>
             <br><br>
             <!-- Highlights -->
@@ -208,7 +233,9 @@
             <div class="Highlights"><!--Insert new highlights here-->
                 <div>
                     <img src="Pictures/Temp.jpg" alt="Project 1">
-                    <a href=""><div class="hover">Project 1</div></a>
+                    <a href="" target="_blank">
+                        <div class="hover">Project 1</div>
+                    </a>
                 </div>
             </div>
         </aside>
@@ -224,14 +251,16 @@
                     <h5>EDUCATION</h5>
                     <div class="line">
                         <h4>Mapúa University 2019 - Present</h4>
+                        <i>Senior Highschool - STEM / College</i>
                         <ul type="square">
                             <li>SHS Diploma</li>
                             <li>Graduated with Honors</li>
                         </ul>
                         <h4>UST Angelicum 2010 - 2019</h4>
+                        <i>Junior Highschool</i>
                         <ul type="square">
                             <li>High School Diploma</li>
-                            <li></li>
+                            <li>Robotics Team Leader</li>
                         </ul>
                     </div>
                 </div>
@@ -251,12 +280,15 @@
             <aside>
                 <h5>CERTIFICATES</h5>
                 <div class="btn">
-                    <a href="Certificates.pdf" target="blank">See all Certificates</a>
+                    <a href="Certificates.pdf" target="_blank">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <p>View Certificates</p>
+                    </a>
                 </div>
                 <div class="line">
                     <ul type="square">
-                        <li>1</li>
-                        <li>2</li>
+                        <li>CREOTEC Philippines Inc.</li>
+                        <li></li>
                     </ul>
                 </div>
             </aside>
@@ -264,7 +296,7 @@
     </section>
     <br><br>
     <!-- Activities -->
-    <section id="Activities" class="Active">
+    <section id="Activities" class="Activities">
         <div class="Cont">
             <h1>ACTIVITIES</h1>
             <!-- Seminar & Conference -->
@@ -280,7 +312,7 @@
                     <img src="Pictures/Soccer.jpg" alt="Soccer">
                     <aside>
                         <h4>Football</h4>
-                        <s>I joined the Altus FC, a football club that started at my former school UST Angelicum. I started training since the summer of 2013, building my skills as a football player. Since then, I have been participating in competition and tournaments winning medals and certificates.</s>    
+                        <s>When I was a young, I joined the Altus FC, a football club that started at my former school UST Angelicum. I started training since the summer of 2013, building my skills as a football player. Since then, I have been participating in competition and tournaments winning medals and certificates.</s>    
                     </aside>
                 </div>
                 <br>
@@ -292,11 +324,11 @@
                     </aside>
                 </div>
                 <br>
-                <div class=" e3 left">
+                <div class="left">
                     <img src="Pictures/Guitar.jpg" alt="Concert">
                     <aside>
                         <h4>Guitarist</h4>
-                        <s>I started playing guitar when I was in Grade 6 at my previous school. A year later, I enrolled guitar lessons in Music First Talent Training Center. Since then I have performed in multiple recitals and concerts. In my first debut, I was introduced as a percussive guitarist.</s>
+                        <s>I started playing guitar when I was in Grade 6 at my previous school. A year later, I enrolled guitar lessons in Music First Talent Training Center. Since then I have performed in multiple recitals and concerts across Quezon City. In my first debut, I was introduced as a percussive guitarist. I am mostly the lead guitarist.</s>
                     </aside>
                 </div>
             </div>
@@ -305,30 +337,45 @@
     <br><br>
     <!-- Footer -->
     <section class="Footer">
-        <div  id="Contact" class="Cont">
-            <aside>
-                <img src="Pictures/Crest Logo.png" alt="Logo">
-                <div class="txt">
-                    <h3>Site Links</h3>
-                    <div class="SiteLink">
-                        <div><a href="#AboutMe">About Me</a></div>
-                        <div><a href="#Classes">Classes</a></div>
-                        <div><a href="#Resume">Resume</a></div>
-                        <div><a href="#Activities">Activities</a></div>
+        <div id="Contact" class="Cont">
+            <img src="Pictures/Crest Logo.png" alt="Logo">
+            <div class="txt">
+                <h4>SITE LINKS</h4>
+                <div class="SiteLink">
+                    <div>
+                        <a href="#AboutMe">About Me</a>
+                    </div>
+                    <div>
+                        <a href="#Classes">Classes</a>
+                    </div>
+                    <div>
+                        <a href="#Resume">Resume</a>
+                    </div>
+                    <div>
+                        <a href="#Activities">Activities</a>
                     </div>
                 </div>
-                <!-- Contacts -->
-                <div class="Contact">
-                    <h3>Contacts</h3>
-                    <p><b>Number: </b>(+63) 9284650259</p>
-                    <p><b>E-mail: </b>josevictorino003@gmail.com</p>
-                    <div class="socmed">
-                        <a href="https://www.facebook.com/JoseVictorinoo/" target="blank"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/joseeevictorino/" target="blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://twitter.com/JoseeVictorino" target="blank"><i class="fa-brands fa-twitter"></i></a>
-                    </div>
+            </div>
+            <!-- Contacts -->
+            <div class="Contact">
+                <h4>CONTACT</h4>
+                <p><i class="fa-solid fa-phone"></i>(+63) 9284650259</p>
+                <p><i class="fa-solid fa-envelope"></i>josevictorino003@gmail.com</p>
+            </div>
+            <div class="socmed">
+                <h4>SOCIAL</h4>
+                <div>
+                    <a href="https://www.facebook.com/JoseVictorinoo/" target="_blank">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/joseeevictorino/" target="_blank">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/JoseeVictorino" target="_blank">
+                        <i class="fa-brands fa-square-twitter"></i>
+                    </a>
                 </div>
-            </aside>
+            </div>
         </div>
         <footer>
             <p>Jose Victorino © 2023. All Rights Reserved.</p>
