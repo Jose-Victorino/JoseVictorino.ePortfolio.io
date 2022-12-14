@@ -22,10 +22,11 @@ body{
 ::-webkit-scrollbar-thumb:hover{
     background-color: #0045e5;
 }
+
 /*---===Navigation Bar===---*/
 nav{
     font-family: 'roboto', 'Open Sans', sans-serif;
-    background-color: rgba(12, 12, 12, 0.5);
+    background-color: rgba(12, 12, 12, 0.7);
     backdrop-filter: blur(5px);
     color: #e3e3e3;
     display: flex;
@@ -33,6 +34,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
     width: 100%;
     height: 80px;
     box-shadow: 0 0 5px black;
@@ -50,7 +52,6 @@ nav .logo img{
     height: 45px;
 }
 nav .logo s{
-    cursor: default;
     margin-left: 15px;
     font-size: 20px;
 }
@@ -58,6 +59,10 @@ nav ul{
     display: flex;
     list-style: none;
     margin-right: 200px;
+}
+nav a{
+    color: #e3e3e3;
+    cursor: pointer;
 }
 nav ul a{
     color: #e3e3e3;
@@ -69,79 +74,77 @@ nav ul li{
 nav ul a:hover{
     border-bottom: 3px solid #2149a7;
 }
-nav #Burger, nav .BClose, nav .BOpen, nav .fa-angle-up{
+nav #Burger, nav .BClose, nav .BOpen, nav #Arrow{
     display: none;
 }
 /*Sub Class*/
 nav .Sub-Class{
+    background: #181818;
     display: none;
-}
-nav .Sub-Class ul{
-    display: flex;
+    position: absolute;
     flex-direction: column;
-    width: fit-content;
     overflow: auto;
-    min-height: fit-content;
-    max-height: 320px;
-    padding: 10px 0;
-    margin: 0;
+    width: fit-content;
+    max-height: 260px;
+    top: 53px;
     box-shadow: 0 0 10px black;
+    border-radius: 10px;
 }
-nav .Sub-Class ul li{
+nav .Sub-Class li{
     padding: 15px 50px;
     border-bottom: 1px solid #464646;
 }
-nav .Sub-Class ul li:last-child{
+nav .Sub-Class li:last-child{
     border-bottom: none;
 }
 nav .Class:hover .Sub-Class{
-    background-color: rgba(12, 12, 12, 0.95);
-    display: block;
-    position: absolute;
-    top: 53px;
+    display: flex;
 }
-nav .Sub-Class ul::-webkit-scrollbar-track{
-    background-color: #2a2a2a;
+nav .Sub-Class::-webkit-scrollbar-track{
+    background-color: #181818;
+    border-radius: 10px;
+}
+nav .Sub-Class::-webkit-scrollbar-thumb{
+    border-radius: 10px;
 }
 /*---===Banner===---*/
-.Intro{
+.Home{
+    background-image: linear-gradient(#0c0c0c,#181818,#0c0c0c);
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: #0c0c0c;  
+    align-items: center; 
     height: 100vh;
-    box-shadow: 0 0 20px #0c0c0c;
 }
-.Intro img{
+.Home img{
     object-fit: cover;
     width: 300px;
     height: 400px;
 }
-.Intro .Cont{
+.Home .Cont{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 1100px;
     height: fit-content;
 }
-.Intro .txt{
+.Home .txt{
+    font-family: 'Poppins', sans-serif;
     color: #e3e3e3;
-    font-family: "poppins", sans-serif;
 }
-.Intro .txt .p1{
+.Home .txt .p1{
     font-size: 15px;
 }
-.Intro .txt .p2{
+.Home .txt .p2{
     font-size: 40px;
 }
-.Intro .txt .p3{
+.Home .txt .p3{
     font-size: 18px;
 }
-.Intro .socmed{
+.Home .socmed{
     display: flex;
-    margin-top: 10px;
+    margin-top: 5px;
 }
-.Intro .socmed a{
+.Home .socmed a{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,76 +157,80 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     border-radius: 20px;
     transition: 0.3s;
 }
-.Intro .socmed a:hover{
+.Home .socmed a:hover{
     box-shadow: 0 0 13px #2149a7;
     text-shadow: 0 0 3px #0045e5;
     color: #0045e5;
 }
-/*---===Home===---*/
-.Home{
+/*---===About Me====---*/
+.AboutMe{
     font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     background-color: rgba(24, 24, 24, 0.7);
-    margin: 0 auto;
     width: 1100px;
-    padding: 20px 30px 30px;    
+    margin: 0 auto;
+    padding: 20px 30px 30px;
     border-radius: 10px;
     box-shadow: 0 0 20px #0c0c0c;
 }
-.Home h5{
+.AboutMe h5{
     color: #2149a7;
     letter-spacing: 2px;
     margin-bottom: 12px;
 }
-/*About Me*/
-.AboutMe{
+/*Introduction*/
+.Intro{
     display: flex;
     flex-direction: column;
     color: #e3e3e3;
 }
-.AboutMe h1{
+.Intro h1{
     font-size: 40px;
 }
-.AboutMe .Cont{
+.Intro .Cont{
     display: flex;
     text-align: justify;
 }
-.AboutMe .Cont h3{
-    margin: 20px 0 5px;
-    color: #0045e5;
-}
-.AboutMe .Cont img{
+.Intro .Cont img{
     object-fit: cover;
+    object-position: 43% 50%;
+    filter: grayscale(50%);
     width: 300px;
     height: 420px;
     border-radius: 10px;
 }
-.AboutMe .Cont div{
-    margin: 5px 0 0 30px;
+.Intro .Cont div{
+    margin-left: 30px;
+}
+.Intro .Cont div h3{
+    margin: 20px 0 5px;
+    color: #0045e5;
+}
+.Intro .Cont div h3:first-child{
+    margin-top: 0;
 }
 /*Profile*/
-.AboutMe .Cont .Profile{
+.Intro .Cont .Profile{
     display: flex;
     flex-direction: row;
     text-align: left;
     margin-left: 20px;
 }
-.AboutMe .Cont .Profile ul{
+.Intro .Cont .Profile ul{
     display: flex;
     flex-direction: column;
     margin-right: 40px;
 }
-
 /*Skills*/
-.Skills .Cont p{
-    color: #e3e3e3;
-    margin-bottom: 5px;
-}
 .Skills .Cont{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-column-gap: 20px;
 }
-.Skills .Cont .txtBar{
+.Skills .Cont p{
+    color: #e3e3e3;
+    margin-bottom: 5px;
+}
+.Skills .Cont .txt{
     display: flex;
     justify-content: space-between;
     margin-right: 5px;
@@ -235,9 +242,10 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     margin-bottom: 10px;
     border-radius: 5px;
 }
-.Skills .Cont .p{
+.Skills .Cont .barWrap div{
     background-color: #0045e5;
-    height: 100%;
+    width: 0%;
+    height: 10px;
     border-radius: 5px;
 }
 /*Interest*/
@@ -251,39 +259,31 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     width: 100%;
     margin-top: 20px;
 }
-.Interest .Cont .box{
+.Interest .Cont div{
     background-color: #333333;
     display: flex;
     align-items: center;
     height: 70px;
     border-radius: 10px;
 }
-.Interest .Cont .box i{
+.Interest .Cont div i{
     color: #0045e5;
     font-size: 22px;
     margin: 0 10px 0 20px;
 }
-.Interest .Cont .box p{
+.Interest .Cont div p{
     color: #e3e3e3;
     font-size: 17px;
 }
 /*Achievements*/
-.Achieve{
-    color: #e3e3e3;
-    text-align: justify;
-}
 .Achieve h4{
     color: #0045e5;
     margin-bottom: 5px;
 }
-.Achieve img{
-    object-fit: cover;
-    width: 400px;
-    height: 300px;
-    border-radius: 10px;
-}
 .Achieve .Cont div{
     background-color: #181818;
+    color: #e3e3e3;
+    text-align: justify;
     border-radius: 10px;
 }
 .Achieve .Cont .left{
@@ -292,6 +292,12 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
 .Achieve .Cont .right{
     display: flex;
     flex-direction: row-reverse;
+}
+.Achieve img{
+    object-fit: cover;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
 }
 .Achieve .Cont aside{
     margin: 20px 30px 0 30px;
@@ -329,6 +335,7 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     max-height: 154px;
     margin: 0 auto;
     padding: 5px;
+    border-radius: 10px;
 }
 .Classes .Class-Grid a{
     color: #e3e3e3;
@@ -347,46 +354,69 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     background-color: #e3e3e3;
     color: #464646;
 }
+.Classes .Class-Grid::-webkit-scrollbar{
+    width: 20px;
+}
+.Classes .Class-Grid::-webkit-scrollbar-track{
+    background-color: #464646;
+    border-radius: 10px;
+}
+.Classes .Class-Grid::-webkit-scrollbar-thumb{
+    background-color: #2149a7;
+    border: 5px solid #464646;
+    border-radius: 10px;
+}
 /*Highlights*/
 .Classes .Highlights{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-auto-rows: 250px;
-    gap: 20px;
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    height: 250px;
+    padding: 5px 0;
+}
+.Classes .Highlights > div{
+    position: relative;
+    margin-right: 20px;
+}
+.Classes .Highlights div:last-child{
+    margin-right: 0;
 }
 .Classes .Highlights img{
     object-fit: cover;
-    width: 100%;
+    width: 353.34px;
     height: 100%;
     border-radius: 10px;
 }
-.Classes .Highlights div{
-    position: relative;
-}
-.Classes .Highlights a{
-    color: #e3e3e3;
-    font-size: 20px;
-}
 .Classes .Highlights .hover{
-    background-color: rgb(51, 51, 51,0.7);
+    background-color: #2a2a2a80;
+    color: #e3e3e3;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
+    opacity: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    top: 0;
-    opacity: 0;
+    font-size: 25px;
     border-radius: 10px;
     transition: 0.3s;
 }
 .Classes .Highlights .hover:hover{
     opacity: 100;
 }
+.Classes .Highlights::-webkit-scrollbar-track{
+    background-color: #181818;
+}
+.Classes .Highlights::-webkit-scrollbar-thumb{
+    border: 5px solid #181818;
+    border-radius: 10px;
+}
 /*---===Resume===---*/
 .Resume{
     font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     background-color: rgba(24, 24, 24, 0.7);
+    color: #e3e3e3;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -396,7 +426,6 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     box-shadow: 0 0 20px #0c0c0c;
 }
 .Resume h1{
-    color: #e3e3e3;
     font-size: 40px;
 }
 .Resume h5{
@@ -408,7 +437,6 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     color: #0045e5;
 }
 .Resume ul{
-    color: #e3e3e3;
     margin: 5px 0 20px 20px;
 }
 .Resume .Cont{
@@ -423,75 +451,78 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     padding-left: 10px;
 }
 .Resume .btn{
-    width: 160px;
-    height: 45px;
+    width: fit-content;
+    height: 50px;
     margin-bottom: 20px;
 }
 .Resume .btn a{
-    background-color: #2149a7;
+    background-color: #00000000;
     color: #e3e3e3;
     display: flex;
     justify-content: center;
-    line-height: 40px;
+    align-items: center;
     width: 100%;
     height: 100%;
+    padding: 0 15px;
     border-radius: 10px;
     border: 2px solid #2149a7;
     transition: 0.3s;
 }
+.Resume .btn a p{
+    margin-left: 7px;
+}
 .Resume .btn a:hover{
-    background-color: #00000000;
+    background-color: #2149a7;
 }
 /*---===Activities===---*/
-.Active{
+.Activities{
     font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     background-color: #181818;
     padding: 20px 0 30px;
     box-shadow: 0 0 20px #0c0c0c;
 }
-.Active .Cont{
+.Activities .Cont{
     width: 1100px;
     margin: 0 auto;
 }
-.Active h1{
+.Activities h1{
     color: #e3e3e3;
     font-size: 40px;
 }
-.Active h5{
+.Activities h5{
     color: #2149a7;
     letter-spacing: 2px;
     margin-bottom: 12px;
 }
-.Active h4{
-    color: #0045e5;
-    margin-bottom: 5px;
-}
 /*Seminar & Conference*/
 
 /*Extra-Curricular Activities*/
-.Active .Acts div{
-    background-color: #2a2a2a;
+.Activities h4{
+    color: #0045e5;
+    margin-bottom: 5px;
+}
+.Activities .Acts div{
+    background-color: #333333;
+    color: #e3e3e3;
+    text-align: justify;
     border-radius: 10px;
 }
-.Active .Acts img{
+.Activities .Acts .left{
+    display: flex;
+}
+.Activities .Acts .right{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.Activities .Acts img{
     object-fit: cover;
     width: 400px;
     height: 300px;
     border-radius: 10px;
 }
-.Active .Acts .left{
-    display: flex;
-}
-.Active .Acts .right{
-    display: flex;
-    flex-direction: row-reverse;
-}
-.Active .Acts div aside{
-    text-align: justify;
-    margin: 20px 30px 0 30px;
-}
-.Active .Acts div s{
-    color: #e3e3e3;
+.Activities .Acts aside{
+    width: 700px;
+    padding: 20px 30px;
 }
 /*---===Footer===---*/
 .Footer{
@@ -504,22 +535,18 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
 .Footer .Cont{
     display: flex;
     justify-content: space-between;
-    margin: 0 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .Footer .Cont img{
     width: 160px;
     height: fit-content;
 }
-.Footer aside{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
 .Footer .Cont .txt{
     display: flex;
     flex-direction: column;
 }
-.Footer .Cont h3{
+.Footer .Cont h4{
     margin-bottom: 10px;
 }
 .Footer .Cont .txt .SiteLink div{
@@ -535,27 +562,30 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     color:#a3a3a3;
     margin-bottom: 7px;
 }
-.Footer .Cont .Contact .socmed{
-    display: flex;
-    margin-top: 12px;
+.Footer .Cont .Contact i{
+    margin-right: 8px;
 }
-.Footer .Cont .Contact .socmed a{
+.Footer .Cont .socmed{
+    display: flex;
+    flex-direction: column;
+}
+.Footer .Cont .socmed div{
+    display: flex;
+}
+.Footer .Cont .socmed a{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2a2a2a;
-    color: #e3e3e3;
-    font-size: 20px;
-    width: 36px;
-    height: 36px;
-    margin: 0 6px;
-    border-radius: 18px;
+    color: #a3a3a3;
+    font-size: 32px;
+    margin-right: 15px;
     transition: 0.3s;
 }
-.Footer .Cont .Contact .socmed a:hover{
-    box-shadow: 0 0 13px #2149a7;
-    text-shadow: 0 0 3px #0045e5;
-    color: #0045e5;
+.Footer .Cont .socmed a:last-child{
+    margin-right: 0;
+}
+.Footer .Cont .socmed a:hover{
+    color: #e3e3e3;
 }
 .Footer footer{
     display: flex;
@@ -574,37 +604,22 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
         margin-right: 100px;
     }
     /*---===Banner===---*/
-    .Intro .Cont{
+    .Home .Cont{
         width: 830px;
     }
-    .Intro .txt .p1{
-        font-size: 12px;
-    }
-    .Intro .txt .p2{
-        font-size: 30px;
-    }
-    .Intro .txt .p3{
-        font-size: 15px;
-    }
-    .Intro .socmed a{
-        font-size: 20px;
-        width: 34px;
-        height: 34px;
-        border-radius: 17px;
-    }
-    /*---===Home===---*/
-    .Home{
+    /*---===About Me====---*/
+    .AboutMe{
         width: 830px;
     }
     /*Profile*/
-    .AboutMe .Cont .Profile{
+    .Intro .Cont .Profile{
         flex-direction: column;
     }
     /*Interest*/
-    .Interest .Cont .box i{
+    .Interest .Cont div i{
         margin-right: 5px;
     }
-    .Interest .Cont .box p{
+    .Interest .Cont div p{
         font-size: 16px;
     }
     /*---===Classes===---*/
@@ -616,16 +631,24 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
         grid-template-columns: repeat(4,1fr);
     }
     /*Highlights*/
-    .Classes .Highlights{
-        grid-template-columns: repeat(2,1fr);
+    .Classes .Highlights img{
+        width: 405px;
     }
     /*---===Resume===---*/
     .Resume{
         width: 830px;
     }
     /*---===Activities===---*/
-    .Active .Cont{
+    .Activities .Cont{
         width: 830px;
+    }
+    /*Extra-Curricular Activities*/
+    .Activities .Acts aside{
+        width: 430px;
+    }
+    /*---===Footer===---*/
+    .Footer .Cont{
+        max-width: 1000px;
     }
 }
 @media(max-width: 950px){
@@ -640,58 +663,88 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
         width: 220px;
         height: 100vh;
         margin: 0;
-        padding-left: 10px;
         top: 0;
         right: -100%;
         box-shadow: 0 0 20px #181818;
         transition: 0.5s;
     }
     nav ul li{
-        margin-bottom: 25px;
+        margin: 0 25px 25px;
     }
-    nav ul a:hover{
+    nav ul a:hover,nav .Arrow:hover{
         border-bottom: 0;
         color: #2149a7;
     }
     nav ul .BClose{
         display: flex;
         font-size: 20px;
-        margin: 30px 0 60px 10px;
+        width: fit-content;
+        margin: 30px 0 60px 25px;
         cursor: pointer;
-    }
-    nav ul .Class{
-        display: flex;
-        justify-content: space-between;
     }
     nav .BOpen{
         display: flex;
         margin-right: 50px;
         font-size: 20px;
         cursor: pointer;
-        transition: 0.5s;
+        opacity: 100;
+        transition: 0.3s;
     }
     #Burger:checked ~ ul{
         right: 0;
     }
     #Burger:checked ~ .BOpen{
-        display: none;
+        opacity: 0;
+    }
+    /*Sub Class*/
+    nav .Class p{
+        display: flex;
+        justify-content: space-between;
+    }
+    nav .Arrow{
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    nav .Sub-Class{
+        background-color: #00000000;
+        display: flex;
+        align-items: center;
+        position: static;
+        box-shadow: none;
+        width: 100%;
+        height: 0;
+        max-height: 260px;
+        margin: 0;
+    }
+    nav .Sub-Class li{
+        margin: 0;
+        border: 0;
+    }
+    #Arrow:checked ~ ul .Class{
+        margin-bottom: 0;
+    }
+    #Arrow:checked ~ ul .Class p .Arrow{
+        transform: rotate(180deg);
+    }
+    #Arrow:checked ~ ul .Class .Sub-Class{
+        height: fit-content;
     }
     /*---===Banner===---*/
-    .Intro .Cont{
+    .Home .Cont{
         padding: 0 30px;
     }
-    /*---===Home===---*/
-    .Home{
+    /*---===About Me====---*/
+    .AboutMe{
         width: 700px;
     }
-    /*About Me*/
-    .AboutMe .Cont img{
+    /*Introduction*/
+    .Intro .Cont img{
         margin: 0 auto;
     }
-    .AboutMe .Cont{
+    .Intro .Cont{
         flex-direction: column;
     }
-    .AboutMe .Cont div{
+    .Intro .Cont div{
         margin: 15px 0 0 0;
     }
     /*Skills*/
@@ -720,6 +773,10 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     .Classes .Class-Grid{
         grid-template-columns: repeat(3,1fr);
     }
+    /*Highlights*/
+    .Classes .Highlights img{
+        width: 340px;
+    }
     /*---===Resume===---*/
     .Resume{
         width: 700px;
@@ -728,40 +785,48 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
     flex-direction: column;
     }
     /*---===Activities===---*/
-    .Active .Cont{
+    .Activities .Cont{
         width: 700px;
     }
-    .Active .Acts img{
+    /*Extra-Curricular Activities*/
+    .Activities .Acts img{
         width: 100%;
         height: 300px;
     }
-    .Active .Acts .left, .Active .Acts .right{
+    .Activities .Acts img[src="Pictures/Guitar.jpg"]{
+        object-position: center -270px;
+    }
+    .Activities .Acts .left, .Activities .Acts .right{
         flex-direction: column;
     }
-    .Active .Acts div aside{
-        text-align: justify;
-        margin-bottom: 20px;
+    .Activities .Acts aside{
+        width: 100%;
+    }
+    /*---===Footer===---*/
+    .Footer .Cont{
+        max-width: 800px;
     }
 }
 @media(max-width: 740px){
     /*---===Banner===---*/
-    .Intro{
-        align-items: flex-end;
-        height: 680px;
+    .Home{
+        align-items: flex-start;
+        height: 100vh;
         padding-bottom: 30px;
     }
-    .Intro .Cont{
+    .Home .Cont{
         flex-direction: column;
+        margin-top: 100px;
     }
-    .Intro .txt{
+    .Home .txt{
         text-align: center;
         margin-bottom: 15px;
     }
-    .Intro .socmed{
+    .Home .socmed{
         justify-content: center;
     }
-    /*---===Home===--- */
-    .Home{
+    /*---===About Me====--- */
+    .AboutMe{
         width: 540px;
     }
     /*---===Classes===---*/
@@ -769,50 +834,81 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
         width: 540px;
     }
     /*Highlights*/
-    .Classes .Highlights{
-        grid-template-columns: 1fr;
+    .Classes .Highlights img{
+        width: 540px;
     }
     /*---===Resume===---*/
     .Resume{
         width: 540px;
     }
     /*---===Activities===---*/
-    .Active .Cont{
+    .Activities .Cont{
         width: 540px;
+    }
+    /*Extra-Curricular Activities*/
+    .Activities .Acts img[src="Pictures/Guitar.jpg"]{
+        object-position: center -200px;
     }
     /*---===Footer===---*/
     .Footer .Cont{
-        margin: 0;
+        max-width: 650px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .Footer .Cont img{
+        margin-bottom: 20px;
     }
     .Footer aside{
         flex-direction: column;
-        justify-content: flex-start;
-        margin-left: 20px;
-    }
-    .Footer aside{
         align-items: center;
     }
-    .Footer .Cont .txt .SiteLink,.Footer .Cont .Contact{
+    .Footer .SiteLink,.Footer .Contact,.Footer .socmed{
         text-align: center;
     }
-    .Footer .Cont .Contact .socmed{
-        justify-content: center;
+    .Footer .Cont .socmed a{
+        margin: 0;
+        padding: 0 7.5px;
     }
 }
 @media(max-width: 560px){
+    /*---===Banner===---*/
+    .Home .Cont{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .Home .txt{
+        margin-bottom: 20px;
+    }
+    .Home .txt .p1{
+        font-size: 12px;
+    }
+    .Home .txt .p2{
+        font-size: 30px;
+    }
+    .Home .txt .p3{
+        font-size: 15px;
+    }
+    .Home img{
+        width: 100%;
+        height: auto;
+    }
+    .Home .socmed a{
+        font-size: 20px;
+        width: 34px;
+        height: 34px;
+        border-radius: 17px;
+    }
     /* ---===Navigation Bar===--- */
     nav .logo{
         margin-left: 50px;
     }
-    nav .logo s{
-        display: none;
-    }
-    /*---===Home===--- */
-    .Home{
+    /*---===About Me====--- */
+    .AboutMe{
         width: 100%;
     }
-    /*About Me*/
-    .AboutMe .Cont img{
+    /*Introduction*/
+    .Intro .Cont img{
         width: 100%;
     }
     /*Interest*/
@@ -820,28 +916,28 @@ nav .Sub-Class ul::-webkit-scrollbar-track{
         grid-template-columns: 1fr;
     }
     /*---===Classes===---*/
-    .Classes aside{
+    .Classes > aside{
         width: 100%;
         padding: 0 20px;
     }
+    /*Highlights*/
+    .Classes .Highlights img{
+        width: 230px;
+    }
+    
     /*---===Resume===---*/
     .Resume{
         width: 100%;
     }
     /*---===Activities===---*/
-    .Active .Cont{
+    .Activities{
+        padding: 0 30px;
+    }
+    .Activities .Cont{
         width: 100%;
-        padding: 0 20px;
     }
-    /*---===Footer===---*/
-    .Footer .Cont{
-        flex-direction: column;
-        align-items: center;
-    }
-    .Footer .Cont img{
-        margin-bottom: 20px;
-    }
-    .Footer aside{
-        margin: 0;
+    /*Extra-Curricular Activities*/
+    .Activities .Acts img[src="Pictures/Guitar.jpg"]{
+        object-position: center -160px;
     }
 }
