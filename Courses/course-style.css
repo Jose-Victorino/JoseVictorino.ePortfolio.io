@@ -5,10 +5,6 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-body{
-    background-image: url("/ePortfolio/Pictures/asfalt-dark.png");
-    background-color: #2a2a2a;
-}
 /*Default Custom Scroll Bar*/
 ::-webkit-scrollbar{
     width: 10px;
@@ -25,14 +21,14 @@ body{
 /*---===Navigation Bar===---*/
 nav{
     font-family: 'roboto', 'Open Sans', sans-serif;
-    background-color: rgba(12, 12, 12, 0.7);
-    backdrop-filter: blur(5px);
+    background-color: rgba(12, 12, 12, 0.5);
+    backdrop-filter: blur(2px);
     color: #e3e3e3;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     height: 80px;
@@ -109,27 +105,30 @@ nav .Sub-Class::-webkit-scrollbar-thumb{
 /*---===Banner===---*/
 .Banner{
     background-image: url(/ePortfolio/Pictures/Temp.jpg);
-    background-size: cover;
+    font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     color: #e3e3e3;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 320px;
-    margin-top: 80px;
-    box-shadow: 0 0 20px #181818;
-}
-.Banner h3{
-    font-family: 'Poppins', sans-serif;
     font-size: 40px;
+    width: 100%;
+    height: 400px;
+    margin-top: -80px;
 }
 /*---===Summary===---*/
 .Summary{
-    background-color: rgba(24, 24, 24, 0.7);
+    background-image: url("/ePortfolio/Pictures/asfalt-dark.png");
+    background-color: #2a2a2a;
+    width: 100%;
+    padding: 40px 0;
+}
+.Summary .Cont{
+    background-color: rgba(24, 24, 24, 0.8);
     font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     color: #e3e3e3;
     width: 1100px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px 20px 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px #0c0c0c;
 }
@@ -161,7 +160,7 @@ nav .Sub-Class::-webkit-scrollbar-thumb{
     grid-auto-rows: 350px;
     gap: 16px;
 }
-.Proj .Grid input[type=checkbox]{
+.Proj .Grid input{
     display: none;
 }
 .Proj .Grid > div{
@@ -170,10 +169,10 @@ nav .Sub-Class::-webkit-scrollbar-thumb{
 .Proj .Grid img{
     object-fit: cover;
     width: 100%;
-    height: 350px;
+    height: 100%;
     border-radius: 10px;
 }
-.Proj .Grid .hover{
+.Proj .Grid label{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -182,9 +181,10 @@ nav .Sub-Class::-webkit-scrollbar-thumb{
     top: 0;
     width: 100%;
     height: 100%;
+    border-radius: 10px;
     transition: 0.3s;
 }
-.Proj .Grid .hover div{
+.Proj .Grid .hover{
     background-color: #2149a7;
     display: flex;
     align-items: center;
@@ -197,30 +197,34 @@ nav .Sub-Class::-webkit-scrollbar-thumb{
 }
 .Proj .Grid .hover h1{
     overflow: hidden;
-    font-size: 16px;
     font-weight: normal;
+    font-size: 16px;
 }
 .Proj .Grid .click{
+    position: absolute;
+    bottom: 0;
     cursor: pointer;
     opacity: 0;
     width: 100%;
-    height: fit-content;   
+    height: fit-content;
     border-radius: 10px;
     transition: 0.3s;
 }
 .Proj .Grid .click p{
     padding: 14px;
+    border-radius: 10px;
 }
+.Proj input:hover ~ label .hover,
 .Proj input:checked ~ label .hover{
-    background-image: -webkit-gradient(linear,left top,left bottom,from(transparent),to(rgba(0,0,0,.9)));
-}
-.Proj input:checked ~ label .click{
-    opacity: 100;
-}
-.Proj input:hover ~ label .hover div,.Proj input:checked ~ label .hover div{
     width: fit-content;
     padding-left: 18px;
     padding-right: 18px;
+}
+.Proj input:checked ~ label{
+    background-color: #00000070;
+}
+.Proj input:checked ~ label .click{
+    opacity: 100;
 }
 /*---===Footer===---*/
 .Footer{
@@ -302,7 +306,7 @@ nav .Sub-Class::-webkit-scrollbar-thumb{
         margin-right: 100px;
     }
     /*Summary*/
-    .Summary{
+    .Summary .Cont{
         width: 830px;
     }
     /*Projects*/
@@ -320,15 +324,15 @@ nav .Sub-Class::-webkit-scrollbar-thumb{
         margin-left: 80px;
     }
     nav ul{
-        background-color: rgba(12, 12, 12, 0.7);
+        background-color: rgba(12, 12, 12, 0.5);
         flex-direction: column;
-        position: fixed;
+        position: absolute;
         width: 220px;
         height: 100vh;
         margin: 0;
         top: 0;
         right: -100%;
-        box-shadow: 0 0 20px #181818;
+        box-shadow: 0 0 20px #0c0c0c;
         transition: 0.5s;
     }
     nav ul li{
@@ -392,18 +396,17 @@ nav .Sub-Class::-webkit-scrollbar-thumb{
     #Arrow:checked ~ ul .Class .Sub-Class{
         height: fit-content;
     }
-    /*Summary*/
-    .Summary{
-        width: 700px;
+    .Summary .Cont{
+        max-width: 700px;
     }
     /*---===Footer===---*/
     .Footer .Cont{
-        max-width: 800px;
+        max-width: 700px;
     }
 }
 @media(max-width: 740px){
     /*Summary*/
-    .Summary{
+    .Summary .Cont{
         width: 540px;
     }
     /*Projects*/
@@ -433,8 +436,12 @@ nav .Sub-Class::-webkit-scrollbar-thumb{
     }
 }
 @media(max-width: 560px){
+    /* ---===Navigation Bar===--- */
+    nav .logo s{
+        display: none;
+    }
     /*Summary*/
-    .Summary{
+    .Summary .Cont{
         width: 100%;
     }
 }
