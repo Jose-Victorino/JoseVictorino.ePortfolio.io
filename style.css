@@ -1,0 +1,698 @@
+body{
+    background-image: url(Pictures/asfalt-dark.png);
+    background-color: #2a2a2a;
+}
+/*---===Banner===---*/
+.wrapper{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    perspective: 10px;
+}
+.Home{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: -80px;
+    z-index: -1;
+    transform-style: preserve-3d;
+}
+.Home .Background{
+    background-image: url(Pictures/black-linen.png);
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    transform: translateZ(-10px) scale(202%);
+}
+.Home .Cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1100px;
+}
+.Home .txt{
+    font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+    color: #e3e3e3;
+}
+.Home .txt .p1{
+    font-size: 15px;
+}
+.Home .txt .p2{
+    font-size: 40px;
+}
+.Home .txt .p2 span{
+    color: #2149a7;
+}
+.Home .txt .p3{
+    font-size: 18px;
+}
+.Home .txt .p3 b{
+    color: #2149a7;
+}
+.Home .socmed{
+    display: flex;
+    margin-top: 5px;
+}
+.Home .socmed a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    color: #e3e3e3;
+    font-size: 20px;
+    width: 34px;
+    height: 34px;
+    margin: 0 7px;
+    border-radius: 17px;
+    transition: 0.3s;
+}
+.Home .socmed a:hover{
+    box-shadow: 0 0 13px #2149a7;
+    text-shadow: 0 0 3px #2149a7;
+    color: #0045e5;
+}
+.Home aside{
+    width: 320px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #2a2a2a;
+}
+.Home aside img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+/*---===About Me====---*/
+.AboutMe{
+    background-image: url(Pictures/asfalt-dark.png);
+    background-color: #2a2a2a;
+    color: #e3e3e3;
+    padding: 80px 0;
+    box-shadow: 0 0 50px #2a2a2a;
+}
+.AboutMe .About-Cont{
+    font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+    background-color: rgba(24, 24, 24, 0.8);
+    width: 1100px;
+    margin: 0 auto;
+    padding: 20px 30px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #0c0c0c;
+}
+.AboutMe .About-Cont > div{
+    margin-bottom: 20px;
+}
+.AboutMe .About-Cont > div:last-child{
+    margin: 0;
+}
+.AboutMe h5{
+    color: #2149a7;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+/*Introduction*/
+.Intro h1{
+    font-size: 40px;
+}
+.Intro .Cont{
+    display: flex;
+    text-align: justify;
+}
+.Intro .Cont img{
+    object-fit: cover;
+    object-position: 43% 50%;
+    filter: grayscale(50%);
+    width: 300px;
+    height: 420px;
+    border-radius: 10px;
+}
+.Intro .Cont div{
+    margin-left: 20px;
+}
+.Intro .Cont div h3{
+    margin: 10px 0 5px;
+    color: #0045e5;
+}
+.Intro .Cont div h3:first-child{
+    margin-top: 0;
+}
+/*Profile*/
+.Intro .Cont .Profile{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    margin-left: 20px;
+}
+.Intro .Cont .Profile ul{
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+/*Skills*/
+.Skills .Cont{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 10px;
+    column-gap: 20px;
+}
+.Skills .Cont p{
+    margin-bottom: 5px;
+}
+.Skills .Cont .txt{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+.Skills .Cont .barWrap{
+    background-color: #333333;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+}
+.Skills .Cont .barWrap div{
+    background-color: #0045e5;
+    width: 0%;
+    height: 10px;
+    border-radius: 5px;
+}
+/*Interest*/
+.Interest h5{
+    margin-bottom: -10px;
+}
+.Interest .Cont{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+.Interest .Cont div{
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    border-radius: 10px;
+}
+.Interest .Cont div i{
+    color: #0045e5;
+    font-size: 22px;
+    margin: 0 10px 0 20px;
+}
+.Interest .Cont div p{
+    font-size: 17px;
+}
+/*Achievements*/
+.Achieve h4{
+    color: #0045e5;
+    margin-bottom: 5px;
+}
+.Achieve .Cont div{
+    background-color: #181818;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.Achieve .Cont div:last-child{
+    margin-bottom: 0;
+}
+.Achieve .Cont .left{
+    display: flex;
+}
+.Achieve .Cont .right{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.Achieve img{
+    object-fit: cover;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+}
+.Achieve .Cont aside{
+    width: 600px;
+    margin: 20px;
+}
+/*---===Classes===---*/
+.Classes{
+    font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #181818;
+    color: #e3e3e3;
+    padding: 20px 0 30px;
+    box-shadow: 0 0 20px #0c0c0c;
+}
+.Classes aside{
+    width: 1100px;
+    margin: 0 auto;
+}
+.Classes h1{
+    font-size: 40px;
+}
+.Classes h5{
+    color: #2149a7;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+/*Courses/Subjects*/
+.Classes .Class-Grid{
+    background-color: #464646;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    overflow: auto;
+    width: fit-content;
+    min-height: fit-content;
+    max-height: 154px;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 10px;
+}
+.Classes .Class-Grid a{
+    color: #e3e3e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 50px;
+    padding: 30px;
+    margin: 5px;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.Classes .Class-Grid a:hover{
+    background-color: #e3e3e3;
+    color: #464646;
+}
+.Classes .Class-Grid::-webkit-scrollbar{
+    width: 20px;
+}
+.Classes .Class-Grid::-webkit-scrollbar-track{
+    background-color: transparent;
+    border-radius: 10px;
+}
+.Classes .Class-Grid::-webkit-scrollbar-thumb{
+    background-color: #2149a7;
+    border: 5px solid #464646;
+    border-radius: 10px;
+}
+/*Highlights*/
+.Classes .Highlights{
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    height: 250px;
+    padding: 5px 0;
+}
+.Classes .Highlights > div{
+    position: relative;
+    margin-right: 20px;
+}
+.Classes .Highlights div:last-child{
+    margin-right: 0;
+}
+.Classes .Highlights img{
+    object-fit: cover;
+    width: 353.34px;
+    height: 100%;
+    border-radius: 10px;
+}
+.Classes .Highlights .hover{
+    background-color: #2a2a2a80;
+    color: #e3e3e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.Classes .Highlights .hover:hover{
+    opacity: 100;
+}
+.Classes .Highlights::-webkit-scrollbar-track{
+    background-color: #181818;
+}
+.Classes .Highlights::-webkit-scrollbar-thumb{
+    border: 5px solid #181818;
+    border-radius: 10px;
+}
+/*---===Resume===---*/
+.Resume{
+    padding: 80px 0;
+}
+.Resume .Resume-Cont{
+    font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+    background-color: rgba(24, 24, 24, 0.8);
+    color: #e3e3e3;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1100px;
+    padding: 20px 30px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #0c0c0c;
+}
+.Resume h1{
+    font-size: 40px;
+}
+.Resume h5{
+    color: #2149a7;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+.Resume h4{
+    color: #0045e5;
+}
+.Resume ul{
+    margin: 5px 0 20px 20px;
+}
+.Resume .Cont{
+    display: flex;
+    flex-direction: row;
+}
+.Resume .Cont aside{
+    width: 100%;
+    height: fit-content;
+}
+.Resume .line{
+    border-left: 2px solid #0045e5;
+    padding-left: 10px;
+    
+}
+.Resume .btn{
+    width: fit-content;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.Resume .btn a{
+    background-color: #00000000;
+    color: #e3e3e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    border-radius: 10px;
+    border: 2px solid #2149a7;
+    transition: 0.3s;
+}
+.Resume .btn a p{
+    margin-right: 7px;
+}
+.Resume .btn a:hover{
+    background-color: #2149a7;
+}
+/*---===Activities===---*/
+.Activities{
+    font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+    background-color: #181818;
+    padding: 20px 0 40px;
+    box-shadow: 0 0 20px #0c0c0c;
+}
+.Activities .Cont{
+    width: 1100px;
+    margin: 0 auto;
+}
+.Activities h1{
+    color: #e3e3e3;
+    font-size: 40px;
+}
+.Activities h5{
+    color: #2149a7;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+/*Seminar & Conference*/
+
+/*Extra-Curricular Activities*/
+.Activities .Acts{
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+}
+.Activities .Acts h4{
+    color: #0045e5;
+}
+.Activities .Acts div{
+    background-color: #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+}
+.Activities .Acts div:last-child{
+    margin-right: 0;
+}
+.Activities .Acts img{
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+.Activities .Acts aside{
+    color: #e3e3e3;
+    padding: 8px 20px 20px;
+    width: 100%;
+}
+.Activities .Acts::-webkit-scrollbar{
+    width: 20px;
+}
+.Activities .Acts::-webkit-scrollbar-track{
+    background-color: transparent;
+    border-radius: 10px;
+}
+.Activities .Acts::-webkit-scrollbar-thumb{
+    background-color: #2149a7;
+    border: 5px solid #181818;
+    border-radius: 10px;
+}
+/*---===Responsive===---*/
+@media(max-width: 1200px){
+    /*---===Banner===---*/
+    .Home .Cont{
+        width: 830px;
+    }
+    /*---===About Me====---*/
+    .AboutMe .About-Cont{
+        width: 830px;
+    }
+    /*Profile*/
+    .Intro .Cont .Profile{
+        flex-direction: column;
+    }
+    /*Interest*/
+    .Interest .Cont div i{
+        margin-right: 5px;
+    }
+    .Interest .Cont div p{
+        font-size: 16px;
+    }
+    /*Achievements*/
+    .Achieve .Cont aside{
+        width: 330px;
+    }
+    /*---===Classes===---*/
+    .Classes aside{
+        width: 830px;
+    }
+    /*Courses/Subjects*/
+    .Classes .Class-Grid{
+        grid-template-columns: repeat(4,1fr);
+    }
+    /*---===Resume===---*/
+    .Resume .Resume-Cont{
+        width: 830px;
+    }
+    /*---===Activities===---*/
+    .Activities .Cont{
+        width: 830px;
+    }
+    /*Extra-Curricular Activities*/
+    .Activities .Acts img{
+        width: 405px;
+        height: 280px;
+    }
+}
+@media(max-width: 950px){
+    /*---===Banner===---*/
+    .Home .Cont{
+        padding: 0 30px;
+    }
+    /*---===About Me====---*/
+    .AboutMe .About-Cont{
+        width: 700px;
+    }
+    /*Introduction*/
+    .Intro .Cont img{
+        margin: 0 auto;
+    }
+    .Intro .Cont{
+        flex-direction: column;
+    }
+    .Intro .Cont div{
+        margin: 15px 0 0 0;
+    }
+    /*Skills*/
+    .Skills .Cont{
+        grid-template-columns: 1fr;
+    }
+    /*Interest*/
+    .Interest .Cont{
+        grid-template-columns: repeat(2,1fr);
+    }
+    /*Achievements*/
+    .Achieve .Cont .left,.Achieve .Cont .right{
+        flex-direction: column;
+    }
+    .Achieve .Cont img{
+        width: 100%;
+    }
+    .Achieve .Cont aside{
+        width: fit-content;
+    }
+    /*---===Classes===---*/
+    .Classes aside{
+        width: 700px;
+    }
+    /*Courses/Subjects*/
+    .Classes .Class-Grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+    /*Highlights*/
+    .Classes .Highlights img{
+        width: 340px;
+    }
+    /*---===Resume===---*/
+    .Resume .Resume-Cont{
+        width: 700px;
+    }
+    .Resume .Cont{
+    flex-direction: column;
+    }
+    /*---===Activities===---*/
+    .Activities .Cont{
+        width: 700px;
+    }
+    /*Extra-Curricular Activities*/
+    .Activities .Acts img{
+        width: 340px;
+        height: 250px;
+    }
+}
+@media(max-width: 740px){
+    /*---===Banner===---*/
+    .Home{
+        align-items: flex-start;
+        height: 100vh;
+        padding-bottom: 30px;
+    }
+    .Home .Cont{
+        flex-direction: column;
+    }
+    .Home .txt{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .Home .socmed{
+        justify-content: center;
+    }
+    /*---===About Me====--- */
+    .AboutMe .About-Cont{
+        width: 540px;
+    }
+    /*---===Classes===---*/
+    .Classes aside{
+        width: 540px;
+    }
+    /*Highlights*/
+    .Classes .Highlights img{
+        width: 540px;
+    }
+    /*---===Resume===---*/
+    .Resume .Resume-Cont{
+        width: 540px;
+    }
+    /*---===Activities===---*/
+    .Activities .Cont{
+        width: 540px;
+    }
+    /*Extra-Curricular Activities*/
+    .Activities .Acts img{
+        width: 540px;
+        height: 300px;
+    }
+}
+@media(max-width: 560px){
+    /*---===Banner===---*/
+    .Home .Cont{
+        width: 100%;
+        height: 530px;
+        padding: 0 20px;
+    }
+    .Home .txt{
+        margin-bottom: 20px;
+    }
+    .Home .txt .p1{
+        font-size: 12px;
+    }
+    .Home .txt .p2{
+        font-size: 30px;
+    }
+    .Home .txt .p3{
+        font-size: 15px;
+    }
+    .Home aside{
+        width: 100%;
+        height: 100%;
+    }
+    /*---===About Me====--- */
+    .AboutMe .About-Cont{
+        width: 100%;
+        padding: 20px;
+    }
+    /*Introduction*/
+    .Intro .Cont img{
+        width: 100%;
+        max-width: 300px;
+    }
+    /*Interest*/
+    .Interest .Cont{
+        grid-template-columns: 1fr;
+    }
+    /*---===Classes===---*/
+    .Classes > aside{
+        width: 100%;
+        padding: 0 20px;
+    }
+    /*Highlights*/
+    .Classes .Highlights img{
+        width: 230px;
+    }
+    /*---===Resume===---*/
+    .Resume .Resume-Cont{
+        width: 100%;
+    }
+    /*---===Activities===---*/
+    .Activities{
+        padding: 0 20px 20px;
+    }
+    .Activities .Cont{
+        width: 100%;
+    }
+    /*Extra-Curricular Activities*/
+    .Activities .Acts img{
+        width: 350px;   
+        height: 250px;
+    }
+}
