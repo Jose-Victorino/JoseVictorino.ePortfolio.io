@@ -8,9 +8,50 @@
     --black4: #222222;
     --black5: #1b1b1b;
     --black6: #181818;
-    --black7: #0c0c0c;
+    --black7: #131313;
+    --black8: #0c0c0c;
     --blue1: #0045e5;
     --blue2: #2149a7;
+}
+#load-Cont{
+    background-color: var(--black7);
+    display: none;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+}
+.loading-spinner{
+    height: 70px;
+    width: 49.25px;
+    -webkit-mask-image: url(Pictures/Crest-Logo.png);
+    mask-image: url(Pictures/Crest-Logo.png);
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+.loading-spinner .bg1{
+    background-color: var(--white1);
+    width: 49.25px;
+    animation: whitef 1.5s ease-in-out infinite;
+}
+.loading-spinner .bg2{
+    background-color: var(--blue1);
+    width: 49.25px;
+    animation: bluef 1.5s ease-in-out infinite;
+}
+@keyframes whitef{
+    0% {height: 100%;}
+    90% {height: 0%;}
+    100% {height: 0%;}
+}
+@keyframes bluef{
+    0% {height: 0%;}
+    90% {height: 100%;}
+    100% {height: 100%;}
 }
 /*general style*/
 *,*::before,*::after{
@@ -19,9 +60,6 @@
     text-decoration: none;
     box-sizing: border-box;
     scroll-behavior: smooth;
-}
-body{
-    overflow-x: hidden;
 }
 h1{
     color: var(--white1);
@@ -43,25 +81,28 @@ h5{
     letter-spacing: 2px;
     margin-bottom: 12px;
 }
-/*Default Custom Scroll Bar*/
+/*Custom Scroll Bar*/
+body::-webkit-scrollbar,
 ::-webkit-scrollbar{
     width: 10px;
 }
+body::-webkit-scrollbar-track,
 ::-webkit-scrollbar-track{
     background-color: var(--black2);
 }
+body::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb{
     background-color: var(--blue2);
 }
+body::-webkit-scrollbar-thumb:hover,
 ::-webkit-scrollbar-thumb:hover{
     background-color: var(--blue1);
 }
 /*---===Navigation Bar===---*/
 nav{
-    --black7: #0c0c0c80;
     font-family: 'roboto', 'Open Sans', sans-serif;
     background-color: var(--black7);
-    backdrop-filter: blur(2px);
+    /* backdrop-filter: blur(2px); */
     color: var(--white1);
     display: flex;
     flex-direction: row;
@@ -71,21 +112,14 @@ nav{
     top: 0;
     width: 100%;
     height: 75px;
-    box-shadow: 0 0 5px var(--black7);
-    z-index: 10;
+    box-shadow: 0 0 5px var(--black8);
+    z-index: 1;
 }
-nav a.logo{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+nav .logo{
     margin-left: 150px;
 }
-nav a.logo img{
-    height: 40px;
-}
-nav a.logo p{
-    margin-left: 15px;
-    font-size: 18px;
+nav .logo img{
+    height: 45px;
 }
 nav > ul{
     display: flex;
@@ -97,101 +131,118 @@ nav a{
     color: var(--white1);
     cursor: pointer;
 }
-nav ul a:hover{
-    border-bottom: 3px solid var(--blue2);
+nav > ul > li:not(.Class){
+    position: relative;
 }
-nav input#Burger,
-nav label.BClose,
-nav label.BOpen,
-nav input#Arrow{
+nav > ul > li > a::after{
+    content: '';
+    background-color: var(--blue2);
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    transition: width 0.3s;
+    transform-origin: left;
+}
+nav > ul > li > a:hover::after{
+    width: 100%;
+}
+nav #Burger,
+nav .BClose,
+nav .BOpen,
+nav #Arrow{
     display: none;
 }
 /*Sub Class*/
-nav ul.DDown{
+nav .DDown{
     background: var(--black6);
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 50px;
+    top: 48px;
     overflow: auto;
     width: fit-content;
     max-height: 248.2px;
     gap: 0;
-    box-shadow: 0 0 10px var(--black7);
+    box-shadow: 0 0 10px var(--black8);
 }
-nav ul.DDown li{
+nav .DDown li{
     padding: 15px 50px;
     border-bottom: 1px solid var(--black2);
 }
-nav ul.DDown li:last-child{
+nav .DDown li:last-child{
     border-bottom: none;
 }
-nav li.Class:hover ul.DDown{
+nav .Class:hover .DDown{
     display: flex;
 }
-nav ul.DDown::-webkit-scrollbar-track{
+nav .DDown a:hover{
+    color: var(--blue2);
+}
+nav .DDown::-webkit-scrollbar-track{
     background-color: var(--black6);
 }
 /*---===Footer===---*/
-section.Footer{
+.Footer{
     font-family: 'Roboto', system-ui, 'Segoe UI', 'Open Sans', sans-serif;
     background-color: var(--black3);
     color: var(--white1);
-    padding: 40px 20px 0;
+    padding: 40px 30px 0;
 }
-section.Footer div.Cont{
+.Footer .fCont{
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto 30px;
 }
-section.Footer img{
+.Footer img{
     width: 160px;
     height: fit-content;
 }
-section.Footer h4{
+.Footer h4{
     color: var(--white1);
     margin-bottom: 10px;
 }
-section.Footer div.txt{
+.Footer .txt{
     display: flex;
     flex-direction: column;
 }
-section.Footer div.txt div.SiteLink div{
+.Footer .txt .SiteLink div{
     margin-bottom: 7px;
 }
-section.Footer div.txt div.SiteLink a{
+.Footer .txt .SiteLink a{
     color:var(--white2);
 }
-section.Footer div.txt div.SiteLink a:hover{
+.Footer .txt .SiteLink a:hover{
     text-decoration: underline;
 }
-section.Footer div.Contact p{
+.Footer .Contact p{
     color:var(--white2);
     margin-bottom: 7px;
 }
-section.Footer div.Contact span{
+.Footer .Contact span{
     margin-left: 4px;
 }
-section.Footer div.socmed{
+.Footer .socmed{
     display: flex;
     flex-direction: column;
 }
-section.Footer div.socmed div{
+.Footer .socmed div{
     display: flex;
     gap: 10px;
 }
-section.Footer div.socmed a{
+.Footer .socmed a{
     color: var(--white2);
     display: flex;
     font-size: 24px;
     transition: 0.3s;
 }
-section.Footer div.Contact i:hover,
-section.Footer div.socmed a:hover{
+.Footer .Contact i:hover,
+.Footer .socmed a:hover{
     color: var(--white1);
 }
-section.Footer footer{
+.Footer footer{
     display: flex;
     justify-content: center;
     padding: 15px 0;
@@ -200,78 +251,85 @@ section.Footer footer{
 /*---===Responsive===---*/
 @media(max-width: 1200px){
     /*---===Navigation Bar===---*/
-    nav a.logo{
+    nav .logo{
         margin-left: 80px;
     }
     nav > ul{
         margin-right: 100px;
     }
-    /*---===Footer===---*/
-    section.Footer div.Cont{
-        max-width: 1000px;
-    }
 }
 @media(max-width: 950px){
     /* ---===Navigation Bar===--- */
-    nav > ul{
-        --black7: #0c0c0c80;
-        background-color: var(--black7);
+    nav .logo{
         position: absolute;
+        right: 60px;
+        margin-left: 0;
+    }
+    nav > ul{
+        --black8: #0c0c0c80;
+        background-color: var(--black8);
+        position: fixed;
         top: 0;
-        right: -100%;
+        left: -220px;
+        backdrop-filter: blur(1px);
         flex-direction: column;
         width: 220px;
         height: 100vh;
         margin: 0;
         padding: 0 20px;
         gap: 30px;
-        box-shadow: 0 0 20px var(--black7);
+        box-shadow: 0 0 20px var(--black8);
         transition: 0.5s;
     }
     nav ul a:hover,
-    nav label.Arrow:hover{
+    nav .Arrow:hover{
         border-bottom: 0;
         color: var(--blue2);
     }
-    nav ul label.BClose{
+    nav ul .BClose{
         display: flex;
+        justify-content: flex-end;
         font-size: 20px;
-        width: fit-content;
-        margin: 30px 0 60px 25px;
+        width: 100%;
+        height: 75px;
+        margin: 0 0 30px 0;
         cursor: pointer;
     }
-    nav label.BOpen{
+    nav ul .BClose i{
+        line-height: 75px;
+    }
+    nav .BOpen{
         display: flex;
-        margin-right: 50px;
+        position: absolute;
+        left: 50px;
         font-size: 20px;
         cursor: pointer;
         opacity: 100;
         transition: 0.3s;
     }
-    input#Burger:checked ~ ul{
-        right: 0;
+    #Burger:checked ~ ul{
+        left: 0;
     }
-    input#Burger:checked ~ label.BOpen{
+    #Burger:checked ~ .BOpen{
         opacity: 0;
     }
     /*Sub Class*/
-    nav li.Class{
+    nav .Class{
         display: flex;
         flex-direction: column;
         gap: 0;
         height: 19.2px;
-        max-height: 285.2px;
-        transition: 0.5s;
+        transition: 0.5s ease-in-out;
     }
-    nav li.Class p{
+    nav .Class div{
         display: flex;
         justify-content: space-between;
     }
-    nav label.Arrow{
+    nav .Arrow i{
         cursor: pointer;
-        transition: 0.3s;
+        transition: 0.4s;
     }
-    nav ul.DDown{
+    nav .DDown{
         background-color: transparent;
         display: flex;
         align-items: center;
@@ -282,22 +340,25 @@ section.Footer footer{
         height: fit-content;
         margin-top: 20px;
     }
-    nav ul.DDown li{
+    nav .DDown li{
         padding: 15px 0;
         border: 0;
     }
-    input#Arrow:checked ~ ul li.Class{
-        height: 100%;
+    #Arrow:checked ~ ul .Class{
+        height: clamp(19.2px, 50%, 88.4px);
+        /* height: clamp(19.2px, 50%, 137.6px); */
+        /* height: clamp(19.2px, 50%, 186.8px); */
+        /* height: clamp(19.2px, 50%, 236px); */
+        /* height: clamp(19.2px, 50%, 285.2px); */
     }
-    input#Arrow:checked ~ ul li.Class label.Arrow{
+    #Arrow:checked ~ ul .Arrow i{
         transform: rotate(180deg);
     }
-    nav ul.DDown::-webkit-scrollbar-track{
-        background-color: VAR(--BLACK2);
+    nav .DDown::-webkit-scrollbar-thumb{
+        border-radius: 5px;
     }
-    /*---===Footer===---*/
-    section.Footer div.Cont{
-        max-width: 800px;
+    nav .DDown::-webkit-scrollbar-track{
+        background-color: transparent;
     }
 }
 @media(max-width: 740px){
@@ -308,23 +369,16 @@ section.Footer footer{
         width: 105px;
     }
     /*---===Footer===---*/
-    section.Footer div.Cont{
-        max-width: 650px;
+    .Footer .fCont{
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 10px;
     }
-    section.Footer div.socmed div{
+    .Footer .socmed div{
         justify-content: center;
     }
 }
 @media(max-width: 560px){
-    /* ---===Navigation Bar===--- */
-    nav a.logo{
-        margin-left: 50px;
-    }
-    nav a.logo p{
-        display: none;
-    }
+
 }
