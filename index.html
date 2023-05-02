@@ -7,19 +7,26 @@
     <title>Jose Victorino</title>
     <link href="global-style.css" rel="stylesheet">
     <link href="index-style.css" rel="stylesheet">
-    <script src="script.js"></script>
-    <link href="Pictures/Crest Icon.png" rel="shortcut icon" type="png">
+    <link href="Pictures/Crest-Icon.png" rel="shortcut icon" type="png">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel="stylesheet">
     <script src="https://kit.fontawesome.com/ec6c50ff9c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="load-Cont">
+        <div class="loading-spinner">
+            <div class="bg1"></div>
+            <div class="bg2"></div>
+        </div>
+    </div>
     <!-- Navigation Bar -->
     <nav>
         <input type="checkbox" id="Burger">
         <input type="checkbox" id="Arrow">
+        <label class="BOpen" for="Burger">
+            <i class="fa-solid fa-bars"></i>
+        </label>
         <a class="logo" href="index.html#Home">
-            <img src="Pictures/Crest Logo.png" alt="Logo img">
-            <p>Jose Victorino</p>
+            <img src="Pictures/Crest-Logo.png" alt="Logo img">
         </a>
         <ul>
             <label class="BClose" for="Burger">
@@ -29,15 +36,15 @@
                 <a href="index.html#AboutMe">About Me</a>
             </li>
             <li class="Class">
-                <p>
+                <div>
                     <a href="index.html#Classes">Classes</a>
                     <label class="Arrow" for="Arrow">
                         <i class="fa-solid fa-angle-down"></i>
                     </label>
-                </p>
+                </div>
                 <ul class="DDown"><!--Insert-->
                     <li>
-                        <a href="course 1.html">Course 1</a>
+                        <a href="Courses/course.html">Course 1</a>
                     </li>
                 </ul>
             </li>    
@@ -51,11 +58,8 @@
                 <a href="index.html#Contact">Contact</a>
             </li>
         </ul>
-        <label class="BOpen" for="Burger">
-            <i class="fa-solid fa-bars"></i>
-        </label>
     </nav>
-    <!-- Banner -->
+    <!-- Banner (parallax scroll effect do)-->
     <section id="Home" class="Home">
         <div class="Cont">
             <div class="txt">  
@@ -63,28 +67,28 @@
                 <p class="p2"><b>I'm <span>Jose Victorino</span></b></p>
                 <p class="p3">a <b>1st year I.T. Student</b> of Mapúa University.</p>
                 <div class="socmed">
-                    <a href="https://www.facebook.com/JoseVictorinoo/" target="_blank">
+                    <a href="https://www.facebook.com/JoseVictorinoo/" title="Facebook" target="_blank">
                         <i class="fa-brands fa-facebook"></i>
                     </a>
-                    <a href="https://www.instagram.com/joseeevictorino/" target="_blank">
+                    <a href="https://www.instagram.com/joseeevictorino/" title="Instagram" target="_blank">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://twitter.com/JoseeVictorino" target="_blank">
+                    <a href="https://twitter.com/JoseeVictorino" title="Twitter" target="_blank">
                         <i class="fa-brands fa-twitter"></i>
                     </a>
                 </div>
             </div>
-            <img src="Pictures/Banner.jpg" alt="Banner img">
+            <div class="img"></div>
         </div>
     </section>
     <!-- About Me -->
     <section id="AboutMe" class="AboutMe">
-        <div class="About-Cont">
+        <div class="Cont">
             <!-- Introduction -->
             <div class="Intro">
                 <h1>ABOUT ME</h1>
                 <h5>INFORMATION</h5>
-                <div class="Cont">
+                <div class="Intro-Cont">
                     <img src="Pictures/Intro.JPG" alt="Introduction img">
                     <div>
                         <h3>Introduction</h3>
@@ -94,7 +98,7 @@
                             <ul>
                                 <li><b>Full name:</b> Jose Lorenzo L. Victorino</li>
                                 <li><b>Phone Number:</b> (+63) 9284650259</li>
-                                <li><b>City:</b> Quezon City, Metro Manila</li>
+                                <li><b>Address:</b> Quezon City, Metro Manila</li>
                             </ul>
                             <ul>
                                 <li><b>Academic Level:</b> 1st Year College</li>
@@ -108,56 +112,77 @@
             </div>
             <!-- Skills -->
             <div class="Skills">
-                <h5>SKILLS & STRENGTHS</h5>
-                <div class="Cont">
-                    <div>
+                <h5>SKILLS & STRENGTHS</h5> 
+                <div class="Skills-Cont" id="skills">
+                    <div class="a2">
                         <div class="txt">
                             <p>C++</p>
-                            <p>Basics</p>
+                            <p class="lvl"></p>
                         </div>
-                        <div class="barWrap"><div class="cpp" style="width: 40%;"></div></div>
+                        <div class="barWrap">
+                            <div class="prog"></div>
+                        </div>
                     </div>
-                    <div>
+                    <div class="a2">
                         <div class="txt">
                             <p>Python</p>
-                            <p>Fundamentals</p>
+                            <p class="lvl"></p>
                         </div>
-                        <div class="barWrap"><div class="python" style="width: 20%;"></div></div>
+                        <div class="barWrap">
+                            <div class="prog"></div>
+                        </div>
                     </div>
-                    <div>
+                    <div class="a2">
                         <div class="txt">
                             <p>HTML</p>
-                            <p>Basics</p>
+                            <p class="lvl"></p>
                         </div>
-                        <div class="barWrap"><div class="html" style="width: 40%;"></div></div>
+                        <div class="barWrap">
+                            <div class="prog"></div>
+                        </div>
                     </div>
-                    <div>
+                    <div class="a2">
                         <div class="txt">
                             <p>CSS</p>
-                            <p>Basics</p>
+                            <p class="lvl"></p>
                         </div>
-                        <div class="barWrap"><div class="css" style="width: 40%;"></div></div>
+                        <div class="barWrap">
+                            <div class="prog"></div>
+                        </div>
                     </div>
-                    <div>
+                    <div class="a1">
+                        <div class="txt">
+                            <p>JavaScript</p>
+                            <p class="lvl"></p>
+                        </div>
+                        <div class="barWrap">
+                            <div class="prog"></div>
+                        </div>
+                    </div>
+                    <div class="a2">
                         <div class="txt">
                             <p>Photo Editing</p>
-                            <p>Basics</p>
+                            <p class="lvl"></p>
                         </div>
-                        <div class="barWrap"><div class="photo" style="width: 40%;"></div></div>
+                        <div class="barWrap">
+                            <div class="prog"></div>
+                        </div>
                     </div>
-                    <div>
+                    <div class="a3">
                         <div class="txt">
                             <p>Video Editing</p>
-                            <p>Intermediate</p>
+                            <p class="lvl"></p>
                         </div>
-                        <div class="barWrap"><div class="video" style="width: 60%;"></div></div>
+                        <div class="barWrap">
+                            <div class="prog"></div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- Interests -->
             <div class="Interest">
                 <h5>INTEREST</h5>
-                <div class="Cont">
+                <div class="Interest-Cont">
                     <div>
                         <i class="fa-solid fa-film"></i>
                         <p>Watching Movies</p>
@@ -195,51 +220,51 @@
             <!-- Achievements -->
             <div class="Achieve">
                 <h5>ACHIEVEMENTS</h5>
-                <input type="checkbox" id="s1" value="s1" onclick="achieveP1()">
-                <input type="checkbox" id="s2" value="s2" onclick="achieveP2()">
-                <input type="checkbox" id="s3" value="s3" onclick="achieveP3()">
-                <div class="Cont">
+                <input type="checkbox" class="box1" id="s1" onclick="achieveP1()">
+                <input type="checkbox" class="box2" id="s2" onclick="achieveP2()">
+                <input type="checkbox" class="box3" id="s3" onclick="achieveP3()">
+                <div class="Achieve-Cont gShow">
                     <div class="pic1">
-                        <img src="Pictures/Thesis.jpg" alt="Merloin Cup img">
                         <label for="s1">
-                            <div class="click">
-                                <div class="hover">
-                                    <p>Investigatory Project</p>
+                            <img src="Pictures/Thesis.jpg" alt="Merloin Cup img">
+                           <div class="hover">
+                                <div>Investigatory Project</div>
+                            </div>
+                            <div class="txt">
+                                <div>
+                                    <h4>Most Outstanding Investigatory Project</h4>
+                                    <p>In grade 9, my group was nominated to the Science Research Congress against other sections. My group's research topic is "Aubergine Moringa & Hisbiscus with Aloe Rejuvenating Hair Mask." We won the most outstanding Investigatory Project.</p>
                                 </div>
                             </div>
                         </label>
-                        <div class="txt">
-                            <h4>Most Outstanding Investigatory Project</h4>
-                            <p>In grade 9, my group was nominated to the Science Research Congress against other sections. My group's research topic is "Aubergine Moringa & Hisbiscus with Aloe Rejuvenating Hair Mask." We won the most outstanding Investigatory Project.</p>
-                        </div>
                     </div>
                     <div class="pic2">
-                        <img src="Pictures/Robothon1.jpg" alt="Philippine Robothon img">
                         <label for="s2">
-                            <div class="click">
-                                <div class="hover">
-                                    <p>Philippine Robothon</p> <!--change to remove p-->
+                            <img src="Pictures/Robothon1.jpg" alt="Philippine Robothon img">
+                            <div class="hover">
+                                <div>Philippine Robothon</div>
+                            </div>
+                            <div class="txt">
+                                <div>
+                                    <h4>3rd Philippine Robothon</h4>
+                                    <p>Me and my team participated at the 3rd Philippine Robothon in 2014, representing our school as the veteran robotics team. We would practice after class hours and during our robotics class. After our efforts building up to the competition, we got 3rd place overall in the veteran category.</p>
                                 </div>
                             </div>
                         </label>
-                        <div class="txt">
-                            <h4>3rd Philippine Robothon</h4>
-                            <p>Me and my team participated at the 3rd Philippine Robothon in 2014, representing our school as the veteran robotics team. We would practice after class hours and during our robotics class. After our efforts building up to the competition, we got 3rd place overall in the veteran category.</p>
-                        </div>
                     </div>
                     <div class="pic3">
-                        <img src="Pictures/Merlion Cup.jpg" alt="Merloin Cup img">
                         <label for="s3">
-                            <div class="click">
-                                <div class="hover">
-                                    <p>Altus Football Club</p>
+                            <img src="Pictures/Merlion Cup.jpg" alt="Merloin Cup img">
+                            <div class="hover">
+                                <div>Altus Football Club</div>
+                            </div>
+                            <div class="txt">
+                                <div>
+                                    <h4>Altus Football Club</h4>
+                                    <p>I was a member of Altus FC from 2013 to 2017. During that time we won multiple medals competing against other schools in numerous competitions. To name one, we got 1st runner up in the Merlion Cup held in Singapore School Manila.</p>
                                 </div>
                             </div>
                         </label>
-                        <div class="txt">
-                            <h4>Altus Football Club</h4>
-                            <p>I was a member of Altus FC from 2013 to 2017. During that time we won multiple medals competing against other schools in numerous competitions. To name one, we got 1st runner up in the Merlion Cup held in Singapore School Manila.</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -252,15 +277,15 @@
             <!-- Courses -->    
             <h5>COURSES</h5>
             <div class="Class-Grid"><!--Insert-->
-                <a href="course 1.html" target="_blank">Course 1</a>
+                <a href="Courses/course.html" target="_blank">Course 1</a>
             </div>
-            <br><br>
+            <br>
             <!-- Highlights -->
             <h5>HIGHLIGHTS</h5>
             <div class="Highlights"><!--Insert-->
                 <div>
                     <img src="Pictures/Temp.jpg" alt="Project 1 img">
-                    <a href="course 1.html" target="_blank">
+                    <a href="Courses/course.html#Proj" target="_blank">
                         <div class="hover">Project 1</div>
                     </a>
                 </div>
@@ -332,36 +357,60 @@
             </div>
             <br><br> -->
             <!-- Extra-Curricular Activities -->
-            <h5>EXTRA-CURRICULAR ACTIVITIES</h5>
-            <div class="Acts">
-                <div>
-                    <img src="Pictures/Soccer.jpg" alt="Soccer img">
-                    <aside>
-                        <h4>Football</h4>
-                        <s>When I was young, I joined the Altus FC, a football club that started at my former school UST Angelicum. I started training in the summer of 2013, building my skills as a football player. Since then, I have been participating in competitions and tournaments, winning medals and certificates.</s>    
-                    </aside>
+            <h5>EXTRACURRICULAR ACTIVITIES</h5>
+            <input type="checkbox" class="box1" id="a1" onclick="actsA1()">
+            <input type="checkbox" class="box2" id="a2" onclick="actsA2()">
+            <input type="checkbox" class="box3" id="a3" onclick="actsA3()">
+            <div class="Acts gShow">
+                <div class="pic1">
+                    <label for="a1">
+                        <img src="Pictures/Soccer.jpg" alt="Soccer img">
+                        <div class="hover">
+                            <div>Football</div>
+                        </div>
+                        <div class="txt">
+                            <div>
+                                <h4>Football</h4>
+                                <p>When I was young, I joined the Altus FC, a football club that started at my former school UST Angelicum. I started training in the summer of 2013, building my skills as a football player. Since then, I have been participating in competitions and tournaments, winning medals and certificates.</p>
+                            </div>
+                        </div>
+                    </label>
                 </div>
-                <div>
-                    <img src="Pictures/Robothon2.jpg" alt="Robothon img">
-                    <aside>
-                        <h4>Robotics</h4>
-                        <s>I joined the robotics club at my former school UST Angelicum in 2014. We would build robots out of Lego pieces, program the robot to perform certain actions, then execute them in a given area with obstacles and tasks to complete. I enjoyed building and programming robots and seeing them perform successfully.</s>
-                    </aside>
+                <div class="pic2">
+                    <label for="a2">
+                        <img src="Pictures/Robothon2.jpg" alt="Robothon img">
+                        <div class="hover">
+                            <div>Robotics</div>
+                        </div>
+                        <div class="txt">
+                            <div>
+                                <h4>Robotics</h4>
+                                <p>I joined the robotics club at my former school UST Angelicum in 2014. We would build robots out of Lego pieces, program the robot to perform certain actions, then execute them in a given area with obstacles and tasks to complete. I enjoyed building and programming robots and seeing them perform successfully.</p>
+                            </div>
+                        </div>
+                    </label>
                 </div>
-                <div>
-                    <img src="Pictures/Guitar.jpg" alt="Concert img">
-                    <aside>
-                        <h4>Guitarist</h4>
-                        <s>I started playing guitar when I was in Grade 6 at my previous school. A year later, I enrolled in guitar lessons at Music First Talent Training Center. Since then I have performed in multiple recitals and concerts across Quezon City. In my first debut, I was introduced as a percussive guitarist. I am mostly the lead guitarist.</s>
-                    </aside>
+                <div class="pic3">
+                    <label for="a3">
+                        <img src="Pictures/Guitar.jpg" alt="Concert img">
+                        <div class="hover">
+                            <div>Guitarist</div>
+                        </div>
+                        <div class="txt">
+                            <div>
+                                <h4>Guitarist</h4>
+                                <p>I started playing guitar when I was in Grade 6 at my previous school. A year later, I enrolled in guitar lessons at Music First Talent Training Center. Since then I have performed in multiple recitals and concerts across Quezon City. In my first debut, I was introduced as a percussive guitarist. I am mostly the lead guitarist.</p>
+                            </div>
+                        </div>
+                    </label>
                 </div>
             </div>
         </div>
     </section>
     <!-- Footer -->
-    <section class="Footer">
-        <div class="Cont">
-            <img src="Pictures/Crest Logo.png" alt="Logo img">
+    <section id="Contact" class="Footer">
+        <div class="fCont">
+            <img src="Pictures/Crest-Logo.png" alt="Logo img">
             <div class="txt">
                 <h4>SITE LINKS</h4>
                 <div class="SiteLink">
@@ -393,13 +442,13 @@
                 <div class="socmed">
                     <p>SOCIAL MEDIA:</p>
                     <div>
-                        <a href="https://www.facebook.com/JoseVictorinoo/" target="_blank">
+                        <a href="https://www.facebook.com/JoseVictorinoo/" title="Facebook" target="_blank">
                             <i class="fa-brands fa-square-facebook"></i>
                         </a>
-                        <a href="https://www.instagram.com/joseeevictorino/" target="_blank">
+                        <a href="https://www.instagram.com/joseeevictorino/" title="Instagram" target="_blank">
                             <i class="fa-brands fa-square-instagram"></i>
                         </a>
-                        <a href="https://twitter.com/JoseeVictorino" target="_blank">
+                        <a href="https://twitter.com/JoseeVictorino" title="Twitter" target="_blank">
                             <i class="fa-brands fa-square-twitter"></i>
                         </a>
                     </div>
@@ -410,5 +459,6 @@
             <p>Jose Victorino © 2023. All Rights Reserved.</p>
         </footer>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>
