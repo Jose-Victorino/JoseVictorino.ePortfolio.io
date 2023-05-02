@@ -1,5 +1,103 @@
+/*Achievement & Activities gShow*/
+.gShow{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.gShow > div{
+    position: relative;
+    width: 356.66px;
+    height: 300px;
+    transition: 0.5s;
+}
+.gShow label{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.gShow img{
+    background-color: var(--black5);
+    object-fit: cover;
+    filter: opacity(100%);
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    transition: 0.5s;
+}
+.gShow .hover{
+    background-color: var(--blue2);
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 0;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 0 10px 10px 0;
+    transition: 0.4s;
+}
+.gShow .txt{
+    background-color: var(--black3);
+    overflow: hidden;
+    width: 0;
+    padding: 0;
+    border-radius: 0 7px 7px 0;
+    transition: 0.5s;
+}
+.gShow .txt div{
+    width: 392.5px;
+    margin: 15px;
+}
+.box1:checked ~ .gShow .pic1,
+.box2:checked ~ .gShow .pic2,
+.box3:checked ~ .gShow .pic3{
+    width: calc(60% - 10px);
+}
+.box1:checked ~ .gShow .pic2,
+.box1:checked ~ .gShow .pic3,
+.box2:checked ~ .gShow .pic1,
+.box2:checked ~ .gShow .pic3,
+.box3:checked ~ .gShow .pic1,
+.box3:checked ~ .gShow .pic2{
+    width: calc(20% - 10px);
+}
+.box1:checked ~ .gShow .pic1 img,
+.box2:checked ~ .gShow .pic2 img,
+.box3:checked ~ .gShow .pic3 img{
+    width: 35%;
+    border-radius: 7px 0 0 7px;
+}
+.box1:checked ~ .gShow div:not(.pic1) img,
+.box2:checked ~ .gShow div:not(.pic2) img,
+.box3:checked ~ .gShow div:not(.pic3) img{
+    filter: opacity(50%);
+}
+.box1:checked ~ .gShow label:hover .hover,
+.box2:checked ~ .gShow label:hover .hover,
+.box3:checked ~ .gShow label:hover .hover{
+    width: 0;
+    padding: 0;
+}
+.box1:checked ~ .gShow .pic1 .txt,
+.box2:checked ~ .gShow .pic2 .txt,
+.box3:checked ~ .gShow .pic3 .txt{
+    width: 65%;
+}
+.box1:checked ~ .gShow .pic1 .txt div,
+.box2:checked ~ .gShow .pic2 .txt div,
+.box3:checked ~ .gShow .pic3 .txt div{
+    opacity: 100%;
+}
+/* Cont */
+section:not(.Home) .Cont{
+    width: 1100px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
 /*---===Banner===---*/
-section.Home{
+.Home{
     background-image: url(Pictures/black-linen.png);
     background-color: var(--black6);
     position: relative;
@@ -10,36 +108,37 @@ section.Home{
     height: 100vh;
     margin-top: -80px;
 }
-section.Home div.Cont{
+.Home .Cont{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 1100px;
+    margin: 0 30px;
 }
-section.Home div.txt{
+.Home .txt{
     font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     color: var(--white1);
 }
-section.Home div.txt p.p1{
+.Home .txt .p1{
     font-size: 15px;
 }
-section.Home div.txt p.p2{
+.Home .txt .p2{
     font-size: 40px;
 }
-section.Home div.txt p.p2 span{
+.Home .txt .p2 span{
     color: var(--blue2);
 }
-section.Home div.txt p.p3{
+.Home .txt .p3{
     font-size: 18px;
 }
-section.Home div.txt p.p3 b{
+.Home .txt .p3 b{
     color: var(--blue2);
 }
-section.Home div.socmed{
+.Home .socmed{
     display: flex;
-    margin-top: 5px;
+    margin-top: 10px;
 }
-section.Home div.socmed a{
+.Home .socmed a{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,104 +151,116 @@ section.Home div.socmed a{
     border-radius: 17px;
     transition: 0.3s;
 }
-section.Home div.socmed a:hover{
+.Home .socmed a:hover{
     color: var(--blue1);
     text-shadow: 0 0 3px var(--blue2);
     box-shadow: 0 0 15px var(--blue2);
 }
-section.Home img{
-    object-fit: cover;
+.Home .img{
+    background-image: url('Pictures/Banner.jpg');
+    background-size: 168%;
+    background-position: 54% 15%;
     width: 320px;
-    height: 420px;
-    border-radius: 7px;
-    box-shadow: 7px 7px 13px var(--black1);
+    height: 380px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--black1);
 }
 /*---===About Me====---*/
-section.AboutMe{
+.AboutMe{
     background-color: var(--black5);
     font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     color: var(--white1);
 }
-section.AboutMe div.About-Cont{
-    width: 1100px;
-    margin: 0 auto;
-    padding: 60px 0;
-    border-radius: 7px;
-}
-section.AboutMe div.About-Cont > div{
+.AboutMe .Cont > div{
     margin-bottom: 25px;
 }
-section.AboutMe div.About-Cont > div:last-child{
+.AboutMe .Cont > div:last-child{
     margin: 0;
 }
 /*Introduction*/
-div.Intro div.Cont{
+.Intro .Intro-Cont{
     text-align: justify;
     display: flex;
     gap: 20px;
 }
-div.Intro img{
+.Intro img{
     object-fit: cover;
-    object-position: 43% 50%;
-    filter: grayscale(50%);
+    object-position: 45% 50%;
+    filter: grayscale(30%);
     width: 300px;
     height: 420px;
     border-radius: 7px;
 }
-div.Intro div h3{
+.Intro div h3{
     margin: 10px 0 5px;
     color: var(--blue1);
 }
-div.Intro div h3:first-child{
+.Intro div h3:first-child{
     margin-top: 0;
 }
 /*Profile*/
-div.Profile{
+.Profile{
     display: flex;
     flex-direction: row;
     text-align: left;
     margin-left: 20px;
 }
-div.Profile ul{
+.Profile ul{
     display: flex;
     flex-direction: column;
     margin-right: 40px;
 }
 /*Skills*/
-div.Skills div.Cont{
+.Skills .Skills-Cont{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     row-gap: 10px;
     column-gap: 20px;
 }
-div.Skills p{
+.Skills p{
     margin-bottom: 5px;
 }
-div.Skills div.txt{
+.Skills .txt{
     display: flex;
     justify-content: space-between;
     margin-right: 5px;
 }
-div.Skills div.barWrap{
+.Skills .barWrap{
     background: var(--black3);
     width: 100%;
     height: 10px;
     border-radius: 5px;
 }
-div.Skills div.barWrap div{
+.Skills .prog{
     background: var(--blue1);
     width: 0%;
     height: 10px;
     border-radius: 5px;
+    transition: width 1s;
+}
+.Skills .a1 .lvl:after{
+    content: 'Novice';
+}
+.Skills .a2 .lvl:after{
+    content: 'Fundamentals';
+}
+.Skills .a3 .lvl:after{
+    content: 'Intermediate';
+}
+.Skills .a4 .lvl:after{
+    content: 'Advance';
+}
+.Skills .a5 .lvl:after{
+    content: 'Professional';
 }
 /*Interest*/
-div.Interest div.Cont{
+.Interest .Interest-Cont{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 15px;
     width: 100%;
 }
-div.Interest div.Cont div{
+.Interest .Interest-Cont div{
     background: var(--black3);
     display: flex;
     align-items: center;
@@ -157,196 +268,86 @@ div.Interest div.Cont div{
     border-radius: 7px;
     transition: 0.3s;
 }
-div.Interest div.Cont div:hover{
+.Interest .Interest-Cont div:hover{
     background: var(--black2);
 }
-div.Interest i{
+.Interest i{
     color: var(--blue1);
     font-size: 22px;
     margin: 0 10px 0 20px;
 }
-div.Interest p{
+.Interest p{
     font-size: 17px;
 }
 /*Achievements*/
-div.Achieve input{
+.Achieve input{
     display: none;
 }
-div.Achieve div.Cont{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 300px;
-    gap: 15px;
-    width: 100%;
-    transition: 0.5s;
+.Achieve .pic1 img{
+    object-position: 35% center;
 }
-div.Achieve div.Cont > div{
-    display: flex;
-    position: relative;
-    transition: 0.5s;
+.Achieve .pic2 img{
+    object-position: 30% center;
 }
-div.Achieve div.Cont label{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-div.Achieve div.Cont div.pic1 div.click,
-div.Achieve div.Cont div.pic2 div.click,
-div.Achieve div.Cont div.pic3 div.click{
-    width: 100%;
-    height: 100%;
-    border-radius: 7px;
-    transition: 0.5s;
-}
-div.Achieve div.Cont div.pic1 label div.hover,
-div.Achieve div.Cont div.pic2 label div.hover,
-div.Achieve div.Cont div.pic3 label div.hover{
-    background-color: var(--blue2);
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    top: 25px;
-    width: 0;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 0 10px 10px 0;
-    transition: 0.4s;
-}
-div.Achieve input#s1:checked ~ div.Cont div label div.hover p,
-div.Achieve input#s2:checked ~ div.Cont div label div.hover p,
-div.Achieve input#s3:checked ~ div.Cont div label div.hover p{
-    opacity: 0;
-}
-div.Achieve div.Cont div.pic1 label:hover div.hover,
-div.Achieve div.Cont div.pic2 label:hover div.hover,
-div.Achieve div.Cont div.pic3 label:hover div.hover{
+.Achieve .gShow div label:hover .hover{
     width: 169px;
     padding: 0 12px;
 }
-div.Achieve div.Cont > div div.txt{
-    background-color: var(--black3);
-    overflow: hidden;
-    width: 0;
-    padding: 0;
-    border-radius: 0 7px 7px 0;
-    transition: 0.5s;
-}
-div.Achieve div.Cont > div div.txt p,
-div.Achieve div.Cont > div div.txt h4{
-    opacity: 0;
-    transition: 0.5s;
-}
-div.Achieve div.Cont img{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 7px 7px 7px 7px;
-    transition: 0.5s;
-}
-div.Achieve div.Cont label{
-    cursor: pointer;
-}
-div.Achieve input#s1:checked ~ div.Cont{
-    grid-template-columns: 3fr 1fr 1fr;
-}
-div.Achieve input#s2:checked ~ div.Cont{
-    grid-template-columns: 1fr 3fr 1fr;
-}
-div.Achieve input#s3:checked ~ div.Cont{
-    grid-template-columns: 1fr 1fr 3fr;
-}
-div.Achieve input#s1:checked ~ div.Cont div.pic1 img,
-div.Achieve input#s2:checked ~ div.Cont div.pic2 img,
-div.Achieve input#s3:checked ~ div.Cont div.pic3 img{
-    width: 35%;
-    border-radius: 7px 0 0 7px;
-}
-div.Achieve input#s1:checked ~ div.Cont div.pic2 div.click,
-div.Achieve input#s1:checked ~ div.Cont div.pic3 div.click,
-div.Achieve input#s2:checked ~ div.Cont div.pic1 div.click,
-div.Achieve input#s2:checked ~ div.Cont div.pic3 div.click,
-div.Achieve input#s3:checked ~ div.Cont div.pic1 div.click,
-div.Achieve input#s3:checked ~ div.Cont div.pic2 div.click{
-    --black3: #2a2a2a80;
-    background-color: var(--black3);
-}
-div.Achieve input#s1:checked ~ div.Cont div label div.hover,
-div.Achieve input#s2:checked ~ div.Cont div label div.hover,
-div.Achieve input#s3:checked ~ div.Cont div label div.hover{
-    width: 0;
-    padding: 0;
-}
-div.Achieve input#s1:checked ~ div.Cont div.pic1 div.txt,
-div.Achieve input#s2:checked ~ div.Cont div.pic2 div.txt,
-div.Achieve input#s3:checked ~ div.Cont div.pic3 div.txt{
-    width: 65%;
-    padding: 15px;
-}
-div.Achieve input#s1:checked ~ div.Cont div.pic1 div.txt p,
-div.Achieve input#s2:checked ~ div.Cont div.pic2 div.txt p,
-div.Achieve input#s3:checked ~ div.Cont div.pic3 div.txt p,
-div.Achieve input#s1:checked ~ div.Cont div.pic1 div.txt h4,
-div.Achieve input#s2:checked ~ div.Cont div.pic2 div.txt h4,
-div.Achieve input#s3:checked ~ div.Cont div.pic3 div.txt h4{
-    opacity: 100%;
+.Achieve .gShow .hover div{
+    width: 145px;
 }
 /*---===Classes===---*/
-section.Classes{
+.Classes{
     background: var(--black3);
     font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     color: var(--white1);
     display: flex;
     flex-direction: column;
 }
-section.Classes div.Cont{
-    width: 1100px;
-    margin: 0 auto;
-    padding: 60px 0;
-}
 /*Courses*/
-section.Classes div.Class-Grid{
+.Classes .Class-Grid{
     background: var(--black1);
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(auto-fit,minmax(100px,110px));
+    /* grid-template-columns: repeat(auto-fit,minmax(100px,1fr)); */
     overflow: auto;
-    width: fit-content;
+    width: 970px;
     min-height: fit-content;
-    max-height: 153.2px;
+    max-height: 153px;
     margin: 0 auto;
     padding: 10px;
     gap: 10px;
     border-radius: 7px;
 }
-section.Classes div.Class-Grid a{
+.Classes .Class-Grid a{
     color: var(--white1);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 130px;
     height: 50px;
-    padding: 30px;
-    border: 1px solid var(--white1);
+    padding: 30px 0;
     border-radius: 7px;
+    border: 1px solid var(--white1);
     transition: 0.3s;
 }
-section.Classes div.Class-Grid a:hover{
+.Classes .Class-Grid a:hover{
     background: var(--white1);
     color: var(--black1);
 }
-section.Classes div.Class-Grid::-webkit-scrollbar{
+.Classes .Class-Grid::-webkit-scrollbar{
     width: 20px;
 }
-section.Classes div.Class-Grid::-webkit-scrollbar-track{
+.Classes .Class-Grid::-webkit-scrollbar-track{
     background: transparent;
     border-radius: 7px;
 }
-section.Classes div.Class-Grid::-webkit-scrollbar-thumb{
+.Classes .Class-Grid::-webkit-scrollbar-thumb{
     background: var(--blue2);
     border: 5px solid var(--black1);
-    border-radius: 7px;
+    border-radius: 10px;
 }
 /*Highlights*/
-section.Classes div.Highlights{
+.Classes .Highlights{
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
@@ -354,19 +355,20 @@ section.Classes div.Highlights{
     height: 250px;
     gap: 15px;
 }
-section.Classes div.Highlights > div{
+.Classes .Highlights > div{
     position: relative;
 }
-section.Classes div.Highlights img{
+.Classes .Highlights img{
     object-fit: cover;
-    width: 357px;
+    width: calc((1100px - 30px) / 3);
     height: 100%;
     border-radius: 7px;
 }
-section.Classes div.Highlights div.hover{
+.Classes .Highlights .hover{
     --black3: #2a2a2a80;
     background: var(--black3);
     color: var(--white1);
+    font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -375,53 +377,45 @@ section.Classes div.Highlights div.hover{
     top: 0;
     width: 100%;
     height: 100%;
-    font-size: 25px;
-    border-radius: 7px;
     transition: 0.3s;
 }
-section.Classes div.Highlights div.hover:hover{
+.Classes .Highlights .hover:hover{
     opacity: 100;
 }
-section.Classes div.Highlights::-webkit-scrollbar-track{
-    background: var(--black6);
+.Classes .Highlights::-webkit-scrollbar-track{
+    background: transparent;
 }
-section.Classes div.Highlights::-webkit-scrollbar-thumb{
-    border: 5px solid var(--black6);
+.Classes .Highlights::-webkit-scrollbar-thumb{
+    border: 5px solid var(--black3);
     border-radius: 7px;
 }
 /*---===Resume===---*/
-section.Resume{
+.Resume{
     background: var(--black4);
     font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     color: var(--white1);
     display: flex;
     flex-direction: column;
 }
-section.Resume div.Cont{
-    width: 1100px;
-    margin: 0 auto;
-    padding: 60px 0;
-    border-radius: 7px;
-}
-section.Resume div.col{
+.Resume .col{
     display: flex;
 }
-section.Resume div.col > div{
+.Resume .col > div{
     width: 100%;
 }
-section.Resume ul{
+.Resume ul{
     margin: 5px 0 10px 20px;
 }
-section.Resume div.bar{
+.Resume .bar{
     border-left: 2px solid var(--blue1);
     padding-left: 10px;
 }
-section.Resume div.btn{
+.Resume .btn{
     width: fit-content;
     height: 50px;
     margin-bottom: 10px;
 }
-section.Resume div.btn a{
+.Resume .btn a{
     background: transparent;
     color: var(--white1);
     display: flex;
@@ -434,278 +428,282 @@ section.Resume div.btn a{
     border: 2px solid var(--blue2);
     transition: 0.3s;
 }
-section.Resume div.btn a p{
+.Resume .btn a p{
     margin-right: 7px;
 }
-section.Resume div.btn a:hover{
+.Resume .btn a:hover{
     background: var(--blue2);
 }
 /*---===Activities===---*/
-section.Activities{
+.Activities{
     background: var(--black5);
     font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
-}
-section.Activities div.Cont{
-    width: 1100px;
-    margin: 0 auto;
-    padding: 60px 0;
+    color: var(--white1);
 }
 /*Seminar & Conference*/
 
 /*Extra-Curricular Activities*/
-section.Activities div.Acts{
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
+.Activities input{
+    display: none;
 }
-section.Activities div.Acts div{
-    background: var(--black3);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-radius: 7px;
+.Activities .gShow div label:hover .hover{
+    width: 100px;
+    padding: 0 12px;
 }
-section.Activities div.Acts div:last-child{
-    margin-right: 0;
+.Activities .gShow .hover div{
+    width: 76px;
 }
-section.Activities div.Acts img{
-    object-fit: cover;
-    width: 100%;
-    height: 300px;
-    border-radius: 7px;
-}
-section.Activities div.Acts aside{
-    color: var(--white1);
-    padding: 10px 15px;
-    width: 100%;
-}
-section.Activities div.Acts::-webkit-scrollbar{
-    width: 20px;
-}
-section.Activities div.Acts::-webkit-scrollbar-track{
-    background: transparent;
-    border-radius: 7px;
-}
-section.Activities div.Acts::-webkit-scrollbar-thumb{
-    background: var(--blue2);
-    border: 5px solid var(--black5);
-    border-radius: 7px;
+.Activities .pic1 img{
+    object-position: 30% center;
 }
 /*---===Responsive===---*/
 @media(max-width: 1200px){
-    /*---===Banner===---*/
-    section.Home div.Cont{
+    /*Achievement & Activities gShow*/
+    .gShow > div{
+        width: 266.66px;
+    }
+    .gShow .txt div{
+        width: 287.2px;
+    }
+    /* Cont */
+    section:not(.Home) .Cont{
         width: 830px;
     }
     /*---===About Me====---*/
-    section.AboutMe div.About-Cont{
-        width: 830px;
-    }
     /*Introduction*/
-    div.Intro div.Cont div.Profile{
+    .Intro .Intro-Cont .Profile{
         flex-direction: column;
     }
     /*Interest*/
-    div.Interest div.Cont div p{
+    .Interest .Interest-Cont div p{
         font-size: 16px;
     }
-    /*Achievements*/
-
     /*---===Classes===---*/
-    section.Classes div.Cont{
-        width: 830px;
-    }
     /*Courses*/
-    section.Classes div.Class-Grid{
-        grid-template-columns: repeat(4,1fr);
+    .Classes .Class-Grid{
+        width: 730px;
     }
     /*Highlights*/
-    section.Classes div.Highlights img{
+    .Classes .Highlights img{
         width: 407.5px;
-    }
-    /*---===Resume===---*/
-    section.Resume div.Cont{
-        width: 830px;
-    }
-    /*---===Activities===---*/
-    section.Activities div.Cont{
-        width: 830px;
-    }
-    /*Extra-Curricular Activities*/
-    section.Activities div.Acts img{
-        width: 405px;
-        height: 280px;
     }
 }
 @media(max-width: 950px){
-    /*---===Banner===---*/
-    section.Home div.Cont{
-        padding: 0 30px;
+    /*Achievement & Activities gShow*/
+    .gShow .txt div{
+        width: 283.63px;
     }
-    section.Home img{
-        width: 280px;
+    .gShow > div,
+    .box1:checked ~ .gShow .pic3,
+    .box2:checked ~ .gShow .pic3,
+    .box3:checked ~ .gShow .pic1,
+    .box3:checked ~ .gShow .pic2{
+        width: 342.5px;
+    }
+    .box1:checked ~ .gShow .pic1,
+    .box2:checked ~ .gShow .pic2,
+    .box3:checked ~ .gShow .pic3{
+        width: calc(70% - 7.5px);
+    }
+    .box1:checked ~ .gShow .pic2,
+    .box2:checked ~ .gShow .pic1{
+        width: calc(30% - 7.5px);
+    }
+    /* Cont */
+    .Home .Cont{
+        width: 700px;
+    }
+    section:not(.Home) .Cont{
+        width: 700px;
+        padding: 40px 0;
+    }
+    /*---===Banner===---*/
+    .Home .img{
+        background-position: 54% 17%;
+        width: 100%;
+        min-width: 0;
+        max-width: 280px;
         height: 350px;
     }
     /*---===About Me====---*/
-    section.AboutMe div.About-Cont{
-        width: 700px;
-        padding: 40px 0;
-    }
     /*Introduction*/
-    div.Intro div.Cont img{
-        margin: 0 auto;
-        width: 310px;
-    }
-    div.Intro div.Cont{
+    .Intro .Intro-Cont{
         flex-direction: column;
     }
+    .Intro .Intro-Cont img{
+        margin: 0 auto;
+        width: 320px;
+    }
     /*Skills*/
-    div.Skills div.Cont{
+    .Skills .Skills-Cont{
         grid-template-columns: 1fr;
     }
     /*Interest*/
-    div.Interest div.Cont{
+    .Interest .Interest-Cont{
         grid-template-columns: repeat(2,1fr);
     }
-    /*Achievements*/
-
     /*---===Classes===---*/
-    section.Classes div.Cont{
-        width: 700px;
-        padding: 40px 0;
-    }
     /*Courses*/
-    section.Classes div.Class-Grid{
-        grid-template-columns: repeat(3,1fr);
+    .Classes .Class-Grid{
+        width: 610px;
     }
     /*Highlights*/
-    section.Classes div.Highlights img{
+    .Classes .Highlights img{
         width: 340px;
     }
     /*---===Resume===---*/
-    section.Resume div.Cont{
-        width: 700px;
-        padding: 40px 0;
-    }
-    section.Resume div.col{
+    .Resume .col{
         flex-direction: column;
-    }
-    /*---===Activities===---*/
-    section.Activities div.Cont{
-        width: 700px;
-        padding: 40px 0;
-    }
-    /*Extra-Curricular Activities*/
-    section.Activities div.Acts img{
-        width: 340px;
-        height: 250px;
     }
 }
 @media(max-width: 740px){
+    /*Achievement & Activities gShow*/
+    .gShow .txt div{
+        width: 245.93px;
+    }
+    .gShow > div,
+    .box1:checked ~ .gShow .pic3,
+    .box2:checked ~ .gShow .pic3,
+    .box3:checked ~ .gShow .pic1,
+    .box3:checked ~ .gShow .pic2{
+        width: 262.5px;
+    }
+    .box1:checked ~ .gShow .pic1,
+    .box2:checked ~ .gShow .pic2,
+    .box3:checked ~ .gShow .pic3{
+        width: calc(85% - 7.5px);
+    }
+    .box1:checked ~ .gShow .pic2,
+    .box2:checked ~ .gShow .pic1{
+        width: calc(15% - 7.5px);
+    }
+    /* Cont */
+    section:not(.Home) .Cont{
+        width: 540px;
+    }
     /*---===Banner===---*/
-    section.Home{
+    .Home{
         height: 100vh;
         padding-top: 30px;
     }
-    section.Home div.Cont{
+    .Home .Cont{
         flex-direction: column;
+        gap: 30px
     }
-    section.Home div.txt{
+    .Home .txt{
         text-align: center;
-        margin-bottom: 20px;
     }
-    section.Home div.txt p.p1{
+    .Home .txt .p1{
         font-size: 13px;
     }
-    section.Home div.txt p.p2{
+    .Home .txt .p2{
         font-size: 30px;
     }
-    section.Home div.socmed{
+    .Home .socmed{
         justify-content: center;
     }
-    section.Home img{
+    .Home img{
         width: 250px;
         height: 320px;
     }
-    /*---===About Me====--- */
-    section.AboutMe div.About-Cont{
-        width: 540px;
-    }
     /*---===Classes===---*/
-    section.Classes div.Cont{
-        width: 540px;
+    /*Courses*/
+    .Classes .Class-Grid{
+        width: 490px;
     }
     /*Highlights*/
-    section.Classes div.Highlights img{
+    .Classes .Highlights img{
         width: 262.5px;
-    }
-    /*---===Resume===---*/
-    section.Resume div.Cont{
-        width: 540px;
-    }
-    /*---===Activities===---*/
-    section.Activities div.Cont{
-        width: 540px;
-    }
-    /*Extra-Curricular Activities*/
-    section.Activities div.Acts img{
-        width: 540px;
-        height: 300px;
     }
 }
 @media(max-width: 560px){
+    /*Achievement & Activities gShow*/
+    .gShow .txt div{
+        text-align: justify;
+        width: 100%;
+        margin: 0;
+    }
+    .gShow > div,
+    .box1:checked ~ .gShow .pic1,
+    .box1:checked ~ .gShow .pic2,
+    .box1:checked ~ .gShow .pic3,
+    .box2:checked ~ .gShow .pic2,
+    .box2:checked ~ .gShow .pic1,
+    .box2:checked ~ .gShow .pic3,
+    .box3:checked ~ .gShow .pic1,
+    .box3:checked ~ .gShow .pic2,
+    .box3:checked ~ .gShow .pic3{
+        width: 100%;
+    }
+    .box1:checked ~ .gShow .pic1 img,
+    .box2:checked ~ .gShow .pic2 img,
+    .box3:checked ~ .gShow .pic3 img{
+        width: 100%;
+        border-radius: 7px;
+    }
+    .gShow .txt{
+        background-color: transparent;
+        background-image: linear-gradient(#00000033,#00000080,#000000cc);
+        position: absolute;
+        display: flex;
+        align-items: end;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        opacity: 0;
+        border-radius: 7px;
+        transition: 0.5s;
+    }
+    .box1:checked ~ .gShow .pic1 .txt,
+    .box2:checked ~ .gShow .pic2 .txt,
+    .box3:checked ~ .gShow .pic3 .txt{
+        width: 100%;
+        opacity: 1;
+    }
+    /* Cont */
+    section:not(.Home) .Cont{
+        width: 100%;
+        padding: 20px 20px 30px;
+    }
     /*---===Banner===---*/
-    section.Home{
+    .Home{
         padding-top: 0;
     }
-    section.Home div.Cont{
+    .Home .Cont{
         padding: 0 20px;
     }
-    section.Home div.txt p.p1{
+    .Home .txt .p1{
         font-size: 12px;
     }
-    section.Home div.txt p.p2{
+    .Home .txt .p2{
         font-size: 28px;
     }
-    section.Home div.txt p.p3{
+    .Home .txt .p3{
         font-size: 15px;
     }
-    /*---===About Me====--- */
-    section.AboutMe div.About-Cont{
-        width: 100%;
-        padding: 20px;
+    /*Profile*/
+    .Profile ul{
+        margin-right: 0;
     }
     /*Introduction*/
-    div.Intro div.Cont img{ 
+    .Intro .Intro-Cont img{ 
         width: 100%;
-        max-width: 310px;
+        min-width: 0;
+        max-width: 240px;
+        height: 320px;
     }
     /*Interest*/
-    div.Interest div.Cont{
+    .Interest .Interest-Cont{
         grid-template-columns: 1fr;
     }
     /*---===Classes===---*/
-    section.Classes div.Cont{
+    /*Courses*/
+    .Classes .Class-Grid{
+        /* grid-template-columns: repeat(auto-fit,minmax(100px,1fr)); */
         width: 100%;
-        padding: 20px 20px 30px;
     }
     /*Highlights*/
-    section.Classes div.Highlights img{
+    .Classes .Highlights img{
         width: 230px;
-    }
-    /*---===Resume===---*/
-    section.Resume div.Cont{
-        width: 100%;
-        padding: 20px;
-    }
-    /*---===Activities===---*/
-    section.Activities div.Cont{
-        width: 100%;
-        padding: 20px 20px 30px;
-    }
-    /*Extra-Curricular Activities*/
-    section.Activities div.Acts img{
-        width: 350px;   
-        height: 250px;
     }
 }
