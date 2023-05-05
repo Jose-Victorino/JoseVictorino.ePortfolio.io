@@ -88,7 +88,7 @@
 .box1:checked ~ .gShow .pic1 .txt div,
 .box2:checked ~ .gShow .pic2 .txt div,
 .box3:checked ~ .gShow .pic3 .txt div{
-    opacity: 100%;
+    opacity: 1;
 }
 /* Cont */
 section:not(.Home) .Cont{
@@ -113,24 +113,22 @@ section:not(.Home) .Cont{
     justify-content: space-between;
     align-items: center;
     width: 1100px;
-    margin: 0 30px;
+    margin: 0 40px;
 }
 .Home .txt{
     font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     color: var(--white1);
 }
 .Home .txt .p1{
-    font-size: 15px;
+    font-size: clamp(0.875rem, 0.6406rem + 0.625vw, 1rem);
 }
 .Home .txt .p2{
-    font-size: 40px;
-}
-.Home .txt .p2 span{
-    color: var(--blue2);
+    font-size: clamp(2rem, 0.3438rem + 3.75vw, 2.5rem);
 }
 .Home .txt .p3{
-    font-size: 18px;
+    font-size: clamp(1rem, 0.7656rem + 0.625vw, 1.125rem);
 }
+.Home .txt .p2 span,
 .Home .txt .p3 b{
     color: var(--blue2);
 }
@@ -156,13 +154,11 @@ section:not(.Home) .Cont{
     text-shadow: 0 0 3px var(--blue2);
     box-shadow: 0 0 15px var(--blue2);
 }
-.Home .img{
-    background-image: url('Pictures/Banner.jpg');
-    background-size: 168%;
-    background-position: 54% 15%;
+.Home img{
+    object-fit: cover;
     width: 320px;
     height: 380px;
-    border-radius: 8px;
+    border-radius: 7px;
     box-shadow: 0 0 10px var(--black1);
 }
 /*---===About Me====---*/
@@ -171,11 +167,10 @@ section:not(.Home) .Cont{
     font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     color: var(--white1);
 }
-.AboutMe .Cont > div{
-    margin-bottom: 25px;
-}
-.AboutMe .Cont > div:last-child{
-    margin: 0;
+.AboutMe .Cont{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 /*Introduction*/
 .Intro .Intro-Cont{
@@ -201,8 +196,6 @@ section:not(.Home) .Cont{
 /*Profile*/
 .Profile{
     display: flex;
-    flex-direction: row;
-    text-align: left;
     margin-left: 20px;
 }
 .Profile ul{
@@ -215,15 +208,12 @@ section:not(.Home) .Cont{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     row-gap: 10px;
-    column-gap: 20px;
-}
-.Skills p{
-    margin-bottom: 5px;
+    column-gap: 15px;
 }
 .Skills .txt{
     display: flex;
     justify-content: space-between;
-    margin-right: 5px;
+    margin-bottom: 5px;
 }
 .Skills .barWrap{
     background: var(--black3);
@@ -256,7 +246,7 @@ section:not(.Home) .Cont{
 /*Interest*/
 .Interest .Interest-Cont{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 15px;
     width: 100%;
 }
@@ -265,6 +255,8 @@ section:not(.Home) .Cont{
     display: flex;
     align-items: center;
     height: 70px;
+    padding: 0 15px;
+    gap: 10px;
     border-radius: 7px;
     transition: 0.3s;
 }
@@ -274,10 +266,6 @@ section:not(.Home) .Cont{
 .Interest i{
     color: var(--blue1);
     font-size: 22px;
-    margin: 0 10px 0 20px;
-}
-.Interest p{
-    font-size: 17px;
 }
 /*Achievements*/
 .Achieve input{
@@ -349,26 +337,26 @@ section:not(.Home) .Cont{
 /*Highlights*/
 .Classes .Highlights{
     display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    width: 100%;
-    height: 250px;
+    overflow: auto;
     gap: 15px;
+    height: 275px;
+    scroll-snap-type: x mandatory;
 }
 .Classes .Highlights > div{
     position: relative;
+    width: fit-content;
+    height: 100%;
+    scroll-snap-align: start;
 }
 .Classes .Highlights img{
-    object-fit: cover;
     width: calc((1100px - 30px) / 3);
-    height: 100%;
-    border-radius: 7px;
+    height: 250px;
 }
 .Classes .Highlights .hover{
     --black3: #2a2a2a80;
     background: var(--black3);
     color: var(--white1);
-    font-size: 25px;
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -380,14 +368,14 @@ section:not(.Home) .Cont{
     transition: 0.3s;
 }
 .Classes .Highlights .hover:hover{
-    opacity: 100;
+    opacity: 1;
 }
 .Classes .Highlights::-webkit-scrollbar-track{
     background: transparent;
 }
 .Classes .Highlights::-webkit-scrollbar-thumb{
-    border: 5px solid var(--black3);
-    border-radius: 7px;
+    border-top: 3px solid var(--black3);
+    border-bottom: 3px solid var(--black3);
 }
 /*---===Resume===---*/
 .Resume{
@@ -410,26 +398,19 @@ section:not(.Home) .Cont{
     border-left: 2px solid var(--blue1);
     padding-left: 10px;
 }
-.Resume .btn{
-    width: fit-content;
-    height: 50px;
-    margin-bottom: 10px;
-}
 .Resume .btn a{
     background: transparent;
     color: var(--white1);
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 0 15px;
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 12px;
+    padding: 0.8em 1.4em;
+    gap: 7px;
     border-radius: 7px;
     border: 2px solid var(--blue2);
     transition: 0.3s;
-}
-.Resume .btn a p{
-    margin-right: 7px;
 }
 .Resume .btn a:hover{
     background: var(--blue2);
@@ -474,10 +455,6 @@ section:not(.Home) .Cont{
     .Intro .Intro-Cont .Profile{
         flex-direction: column;
     }
-    /*Interest*/
-    .Interest .Interest-Cont div p{
-        font-size: 16px;
-    }
     /*---===Classes===---*/
     /*Courses*/
     .Classes .Class-Grid{
@@ -485,7 +462,7 @@ section:not(.Home) .Cont{
     }
     /*Highlights*/
     .Classes .Highlights img{
-        width: 407.5px;
+        width: calc((830px - 15px) / 2);
     }
 }
 @media(max-width: 950px){
@@ -511,19 +488,16 @@ section:not(.Home) .Cont{
     }
     /* Cont */
     .Home .Cont{
-        width: 700px;
+        width: 100%;
     }
     section:not(.Home) .Cont{
         width: 700px;
         padding: 40px 0;
     }
     /*---===Banner===---*/
-    .Home .img{
-        background-position: 54% 17%;
-        width: 100%;
-        min-width: 0;
-        max-width: 280px;
-        height: 350px;
+    .Home img{
+        width: 270px;
+        height: 340px;
     }
     /*---===About Me====---*/
     /*Introduction*/
@@ -534,14 +508,6 @@ section:not(.Home) .Cont{
         margin: 0 auto;
         width: 320px;
     }
-    /*Skills*/
-    .Skills .Skills-Cont{
-        grid-template-columns: 1fr;
-    }
-    /*Interest*/
-    .Interest .Interest-Cont{
-        grid-template-columns: repeat(2,1fr);
-    }
     /*---===Classes===---*/
     /*Courses*/
     .Classes .Class-Grid{
@@ -549,7 +515,7 @@ section:not(.Home) .Cont{
     }
     /*Highlights*/
     .Classes .Highlights img{
-        width: 340px;
+        width: calc((700px - 15px) / 2);
     }
     /*---===Resume===---*/
     .Resume .col{
@@ -593,18 +559,13 @@ section:not(.Home) .Cont{
     .Home .txt{
         text-align: center;
     }
-    .Home .txt .p1{
-        font-size: 13px;
-    }
-    .Home .txt .p2{
-        font-size: 30px;
-    }
     .Home .socmed{
         justify-content: center;
     }
-    .Home img{
-        width: 250px;
-        height: 320px;
+    /*---===About Me====---*/
+    /*Skills*/
+    .Skills .Skills-Cont{
+        grid-template-columns: 1fr;
     }
     /*---===Classes===---*/
     /*Courses*/
@@ -613,7 +574,7 @@ section:not(.Home) .Cont{
     }
     /*Highlights*/
     .Classes .Highlights img{
-        width: 262.5px;
+        width: calc((540px - 15px) / 2);
     }
 }
 @media(max-width: 560px){
@@ -663,38 +624,30 @@ section:not(.Home) .Cont{
     /* Cont */
     section:not(.Home) .Cont{
         width: 100%;
-        padding: 20px 20px 30px;
+        padding: 20px 17px 30px;
     }
     /*---===Banner===---*/
     .Home{
         padding-top: 0;
     }
     .Home .Cont{
-        padding: 0 20px;
+        margin: 0;
+        padding: 0 17px;
     }
-    .Home .txt .p1{
-        font-size: 12px;
+    .Home img{
+        width: 100%;
+        max-width: 270px;
     }
-    .Home .txt .p2{
-        font-size: 28px;
-    }
-    .Home .txt .p3{
-        font-size: 15px;
-    }
-    /*Profile*/
-    .Profile ul{
-        margin-right: 0;
-    }
+    /*---===About Me====---*/
     /*Introduction*/
     .Intro .Intro-Cont img{ 
         width: 100%;
         min-width: 0;
-        max-width: 240px;
-        height: 320px;
+        max-width: 320px;
     }
-    /*Interest*/
-    .Interest .Interest-Cont{
-        grid-template-columns: 1fr;
+    /*Profile*/
+    .Profile ul{
+        margin-right: 0;
     }
     /*---===Classes===---*/
     /*Courses*/
@@ -704,6 +657,6 @@ section:not(.Home) .Cont{
     }
     /*Highlights*/
     .Classes .Highlights img{
-        width: 230px;
+        width: calc(100vw - 34px);
     }
 }
