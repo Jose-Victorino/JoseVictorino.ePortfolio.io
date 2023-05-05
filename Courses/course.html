@@ -5,61 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sub</title>
-    <link href="/ePortfolio/global-style.css" rel="stylesheet">
-    <link href="/ePortfolio/course-style.css" rel="stylesheet">
-    <link href="/ePortfolio/Pictures/Crest-Icon.png" rel="shortcut icon" type="png">
+    <link href="../global-style.css" rel="stylesheet">
+    <link href="../course-style.css" rel="stylesheet">
+    <link href="../Pictures/Crest-Icon.png" rel="shortcut icon" type="png">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel="stylesheet">
     <script src="https://kit.fontawesome.com/ec6c50ff9c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- custom loading screen -->
+    <div id="load-Cont">
+        <div class="loading-spinner">
+            <div class="bg1"></div>
+            <div class="bg2"></div>
+        </div>
+    </div>
     <!-- Navigation Bar -->
-    <nav>
+    <nav class="nav">
         <input type="checkbox" id="Burger">
         <input type="checkbox" id="Arrow"> 
         <label class="BOpen" for="Burger">
             <i class="fa-solid fa-bars"></i>
         </label>
-        <a class="logo" href="/ePortfolio/index.html#Home">
-            <img src="/ePortfolio/Pictures/Crest-Logo.png" alt="Logo">
-            <p>Jose Victorino</p>
+        <a class="logo" href="../index.html#Home">
+            <img src="../Pictures/Crest-Logo.png" alt="Logo">
         </a>
         <ul>
             <label class="BClose" for="Burger">
                 <i class="fa-solid fa-xmark"></i>
             </label>
             <li>
-                <a href="/ePortfolio/index.html#AboutMe">About Me</a>
+                <a href="../index.html#AboutMe">About Me</a>
             </li>
             <li class="Class">
                 <div>
-                    <a href="/ePortfolio/index.html#Classes">Classes</a>
+                    <a href="../index.html#Classes">Classes</a>
                     <label class="Arrow" for="Arrow">
                         <i class="fa-solid fa-angle-down"></i>
                     </label>
                 </div>
                 <ul class="DDown"><!--Insert-->
                     <li>
-                        <a href="/ePortfolio/course 1.html">Course 1</a>
+                        <a href="../Courses/course.html">Course 1</a>
                     </li>
                 </ul>
             </li>    
             <li>
-                <a href="/ePortfolio/index.html#Resume">Resume</a>
+                <a href="../index.html#Resume">Resume</a>
             </li>
             <li>
-                <a href="/ePortfolio/index.html#Activities">Activities</a>
+                <a href="../index.html#Activities">Activities</a>
             </li>
             <li>
-                <a href="/ePortfolio/index.html#Contact">Contact</a>
+                <a href="../index.html#Contact">Contact</a>
             </li>
         </ul>
     </nav>
     <!-- Banner -->
     <section class="Banner">
-        <h3>Sub</h3>
+        <h3>SUB</h3>
     </section>
     <!-- Summary -->
-    <section class="Summary">
+    <section class="Summary navBg">
         <div class="Cont">
             <h1>SUMMARY</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem architecto non et adipisci cupiditate nemo incidunt eligendi quo debitis esse. Expedita hic officiis aliquid eum. Earum fugiat repellendus corporis esse.</p>
@@ -71,7 +77,7 @@
         <div class="Grid"><!--Insert new projects here-->
             <div>
                 <input type="checkbox" id="View1">
-                <img src="/ePortfolio/Pictures/Temp.jpg" alt="Temp">
+                <img src="../Pictures/Temp.jpg" alt="Temp">
                 <label for="View1">
                     <div class="hover">
                         <p>Project 1</p>
@@ -84,23 +90,23 @@
         </div>
     </section>
     <!-- Footer -->
-    <section class="Footer" id="Contact">
-        <div class="Cont">
-            <img src="/ePortfolio/Pictures/Crest-Logo.png" alt="Logo">
+    <section id="Contact" class="Footer">
+        <div class="fCont">
+            <img src="../Pictures/Crest-Logo.png" alt="Logo img">
             <div class="txt">
                 <h4>SITE LINKS</h4>
                 <div class="SiteLink">
                     <div>
-                        <a href="/ePortfolio/index.html#AboutMe">About Me</a>
+                        <a href="#AboutMe">About Me</a>
                     </div>
                     <div>
-                        <a href="/ePortfolio/index.html#Classes">Classes</a>
+                        <a href="#Classes">Classes</a>
                     </div>
                     <div>
-                        <a href="/ePortfolio/index.html#Resume">Resume</a>
+                        <a href="#Resume">Resume</a>
                     </div>
                     <div>
-                        <a href="/ePortfolio/index.html#Activities">Activities</a>
+                        <a href="#Activities">Activities</a>
                     </div>
                 </div>
             </div>
@@ -135,5 +141,6 @@
             <p>Jose Victorino © 2023. All Rights Reserved.</p>
         </footer>
     </section>
+    <script src="../script.js"></script>
 </body>
 </html>
