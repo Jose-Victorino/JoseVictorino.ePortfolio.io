@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jose Victorino</title>
-    <link href="global-style.css" rel="stylesheet">
-    <link href="index-style.css" rel="stylesheet">
     <link href="Pictures/Crest-Icon.png" rel="shortcut icon" type="png">
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel="stylesheet">
-    <script src="https://kit.fontawesome.com/ec6c50ff9c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="global-style.css">
+    <link rel="stylesheet" href="index-style.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Poppins'>
+    <script type="text/javascript" src="https://kit.fontawesome.com/ec6c50ff9c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- custom loading screen -->
     <div id="load-Cont">
         <div class="loading-spinner">
             <div class="bg1"></div>
@@ -19,7 +20,7 @@
         </div>
     </div>
     <!-- Navigation Bar -->
-    <nav>
+    <nav class="nav">
         <input type="checkbox" id="Burger">
         <input type="checkbox" id="Arrow">
         <label class="BOpen" for="Burger">
@@ -78,11 +79,11 @@
                     </a>
                 </div>
             </div>
-            <div class="img"></div>
+            <img src="Pictures/Banner.jpg" alt="">
         </div>
     </section>
     <!-- About Me -->
-    <section id="AboutMe" class="AboutMe">
+    <section id="AboutMe" class="AboutMe navBg">
         <div class="Cont">
             <!-- Introduction -->
             <div class="Intro">
@@ -113,7 +114,7 @@
             <!-- Skills -->
             <div class="Skills">
                 <h5>SKILLS & STRENGTHS</h5> 
-                <div class="Skills-Cont" id="skills">
+                <div class="Skills-Cont">
                     <div class="a2">
                         <div class="txt">
                             <p>C++</p>
@@ -331,12 +332,10 @@
             <!--Certificates-->
             <div>
                 <h5>CERTIFICATES</h5>
-                <div class="btn">
-                    <a href="Files/Certificates.html" target="_blank">
-                        <p>View Certificates</p>
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                </div>
+                <a href="Files/Certificates.html" target="_blank">
+                    <p>View Certificates</p>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
                 <div class="bar">
                     <ul type="square">
                         <li>CREOTEC Philippines Inc.</li>
@@ -345,6 +344,7 @@
                 </div>
             </div>
         </div>
+        
     </section>
     <!-- Activities -->
     <section id="Activities" class="Activities">
@@ -459,6 +459,6 @@
             <p>Jose Victorino © 2023. All Rights Reserved.</p>
         </footer>
     </section>
-    <script src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
