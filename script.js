@@ -11,27 +11,36 @@ window.addEventListener("load", function() {
         preloader.style.display = "none";
     }, 2000);
 });
-
 function togglePreloader() {
-  if (mediaQuery1.matches || mediaQuery2.matches || mediaQuery3.matches || mediaQuery4.matches ) {
-    preloader.style.display = "grid";
-    setTimeout(() => {
+    if (mediaQuery1.matches || mediaQuery2.matches || mediaQuery3.matches || mediaQuery4.matches){
+        preloader.style.display = "grid";
+        setTimeout(() => {
+            preloader.style.display = "none";
+        }, 2000);
+    }
+    else{
         preloader.style.display = "none";
-    }, 2000);
-  }
-  else {
-    preloader.style.display = "none";
-  }
+    }
 }
 
 togglePreloader();
-
 mediaQuery1.addListener(togglePreloader);
 mediaQuery2.addListener(togglePreloader);
 mediaQuery3.addListener(togglePreloader);
 mediaQuery4.addListener(togglePreloader);
 
-// skills
+// Nav bar change
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.nav');
+    const skillsSection = document.querySelector('.navBg');
+    const sectionPos = skillsSection.getBoundingClientRect().top;
+    if(sectionPos < 70)
+        nav.classList.add('show');
+    else if(sectionPos > 0)
+        nav.classList.remove('show');
+});
+
+// skills progress bar
 document.querySelectorAll('.a1').forEach(element => {
     element.querySelector('.prog').setAttribute('id', '20');
 });
@@ -49,8 +58,8 @@ document.querySelectorAll('.a5').forEach(element => {
 });
 
 window.addEventListener('scroll', () => {
-    const skillsSection = document.getElementById('skills');
     const progressBars = document.querySelectorAll('.prog');
+    const skillsSection = document.querySelector('.Skills-Cont');
     const sectionPos = skillsSection.getBoundingClientRect().top;
     const screenPos = window.innerHeight;
     if(sectionPos < screenPos)
