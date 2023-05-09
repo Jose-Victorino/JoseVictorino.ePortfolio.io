@@ -6,22 +6,22 @@
 }
 .gShow > div{
     position: relative;
-    width: 356.66px;
     height: 300px;
+    width: 356.66px;
     transition: 0.5s;
 }
 .gShow label{
     display: flex;
-    width: 100%;
     height: 100%;
+    width: 100%;
     cursor: pointer;
 }
 .gShow img{
     background-color: var(--black5);
     object-fit: cover;
     filter: opacity(100%);
-    width: 100%;
     height: 100%;
+    width: 100%;
     border-radius: 7px;
     transition: 0.5s;
 }
@@ -32,9 +32,9 @@
     position: absolute;
     top: 25px;
     left: 0;
-    width: 0;
-    height: 50px;
     line-height: 50px;
+    height: 50px;
+    width: 0;
     border-radius: 0 10px 10px 0;
     transition: 0.4s;
 }
@@ -90,22 +90,15 @@
 .box3:checked ~ .gShow .pic3 .txt div{
     opacity: 1;
 }
-/* Cont */
-section:not(.Home) .Cont{
-    width: 1100px;
-    margin: 0 auto;
-    padding: 60px 0;
-}
 /*---===Banner===---*/
 .Home{
-    background-image: url(Pictures/black-linen.png);
-    background-color: var(--black6);
+    background: url(Pictures/black-linen.png) var(--black5);
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 100vh;
+    width: 100%;
     margin-top: -80px;
 }
 .Home .Cont{
@@ -132,38 +125,19 @@ section:not(.Home) .Cont{
 .Home .txt .p3 b{
     color: var(--blue2);
 }
-.Home .socmed{
-    display: flex;
-    margin-top: 10px;
-}
-.Home .socmed a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--black2);
-    color: var(--white1);
-    font-size: 20px;
-    width: 34px;
-    height: 34px;
-    margin: 0 7px;
-    border-radius: 17px;
-    transition: 0.3s;
-}
-.Home .socmed a:hover{
-    color: var(--blue1);
-    text-shadow: 0 0 3px var(--blue2);
-    box-shadow: 0 0 15px var(--blue2);
+.Home .txt div{
+    margin-top: 20px;
 }
 .Home img{
     object-fit: cover;
-    width: 320px;
     height: 380px;
+    width: 320px;
     border-radius: 7px;
-    box-shadow: 0 0 10px var(--black1);
+    box-shadow: 0 0 12px var(--black3);
 }
 /*---===About Me====---*/
 .AboutMe{
-    background-color: var(--black5);
+    background-color: var(--black4);
     font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     color: var(--white1);
 }
@@ -179,16 +153,16 @@ section:not(.Home) .Cont{
     gap: 20px;
 }
 .Intro img{
+    filter: grayscale(30%);
     object-fit: cover;
     object-position: 45% 50%;
-    filter: grayscale(30%);
-    width: 300px;
     height: 420px;
+    width: 300px;
     border-radius: 7px;
 }
-.Intro div h3{
-    margin: 10px 0 5px;
-    color: var(--blue1);
+.Intro div h4{
+    color: var(--blue2);
+    margin: 5px 0;
 }
 .Intro div h3:first-child{
     margin-top: 0;
@@ -201,71 +175,88 @@ section:not(.Home) .Cont{
 .Profile ul{
     display: flex;
     flex-direction: column;
+    text-align: left;
     margin-right: 40px;
 }
+/*---===Skill===---*/
+.Skill{
+    background: var(--black5);
+    font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+    color: var(--white1);
+}
 /*Skills*/
-.Skills .Skills-Cont{
+.Skill .Skills-Cont{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     row-gap: 10px;
     column-gap: 15px;
 }
-.Skills .txt{
+.Skill .txt{
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
 }
-.Skills .barWrap{
+.Skill .barWrap{
     background: var(--black3);
+    height: 11px;
     width: 100%;
-    height: 10px;
-    border-radius: 5px;
+    border-radius: 5.5px;
 }
-.Skills .prog{
+.Skill .prog{
     background: var(--blue1);
+    height: 11px;
     width: 0%;
-    height: 10px;
-    border-radius: 5px;
+    border-radius: 5.5px;
     transition: width 1s;
 }
-.Skills .a1 .lvl:after{
+.Skill .a1 .lvl:after{
     content: 'Novice';
 }
-.Skills .a2 .lvl:after{
+.Skill .a2 .lvl:after{
     content: 'Fundamentals';
 }
-.Skills .a3 .lvl:after{
+.Skill .a3 .lvl:after{
     content: 'Intermediate';
 }
-.Skills .a4 .lvl:after{
+.Skill .a4 .lvl:after{
     content: 'Advance';
 }
-.Skills .a5 .lvl:after{
+.Skill .a5 .lvl:after{
     content: 'Professional';
 }
-/*Interest*/
-.Interest .Interest-Cont{
+.Skill .Interest-Cont{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-auto-rows: 55px;
     gap: 15px;
     width: 100%;
 }
-.Interest .Interest-Cont div{
+.Skill .Interest-Cont > div{
     background: var(--black3);
     display: flex;
     align-items: center;
-    height: 70px;
-    padding: 0 15px;
-    gap: 10px;
     border-radius: 7px;
     transition: 0.3s;
 }
-.Interest .Interest-Cont div:hover{
+.Skill .Interest-Cont > div:hover{
     background: var(--black2);
 }
-.Interest i{
+.Skill .Interest-Cont .icon{
+    background: var(--black4);
+    border-radius: 7px 0 0 7px;
+}
+.Skill .Interest-Cont i{
     color: var(--blue1);
     font-size: 22px;
+    text-align: center;
+    line-height: 55px;
+    height: 55px;
+    width: 55px;
+}
+.Skill .Interest-Cont .txt{
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 /*Achievements*/
 .Achieve input{
@@ -284,102 +275,75 @@ section:not(.Home) .Cont{
 .Achieve .gShow .hover div{
     width: 145px;
 }
-/*---===Classes===---*/
-.Classes{
-    background: var(--black3);
+/*---===Courses===---*/
+.Courses{
+    background: var(--black4);
     font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     color: var(--white1);
     display: flex;
     flex-direction: column;
 }
-/*Courses*/
-.Classes .Class-Grid{
-    background: var(--black1);
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(100px,110px));
-    /* grid-template-columns: repeat(auto-fit,minmax(100px,1fr)); */
-    overflow: auto;
-    width: 970px;
-    min-height: fit-content;
-    max-height: 153px;
-    margin: 0 auto;
-    padding: 10px;
-    gap: 10px;
-    border-radius: 7px;
+/*Course List*/
+.Courses .courseList{
+    margin: 5px 0 10px 20px;
 }
-.Classes .Class-Grid a{
+.Courses .courseList a{
     color: var(--white1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    padding: 30px 0;
-    border-radius: 7px;
-    border: 1px solid var(--white1);
-    transition: 0.3s;
 }
-.Classes .Class-Grid a:hover{
-    background: var(--white1);
-    color: var(--black1);
-}
-.Classes .Class-Grid::-webkit-scrollbar{
-    width: 20px;
-}
-.Classes .Class-Grid::-webkit-scrollbar-track{
-    background: transparent;
-    border-radius: 7px;
-}
-.Classes .Class-Grid::-webkit-scrollbar-thumb{
-    background: var(--blue2);
-    border: 5px solid var(--black1);
-    border-radius: 10px;
+.Courses .courseList a:hover{
+    text-decoration: underline;
 }
 /*Highlights*/
-.Classes .Highlights{
+.Courses .Highlights{
     display: flex;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     gap: 15px;
     height: 275px;
     scroll-snap-type: x mandatory;
 }
-.Classes .Highlights > div{
+.Courses .Highlights > div{
     position: relative;
-    width: fit-content;
     height: 100%;
+    width: fit-content;
     scroll-snap-align: start;
 }
-.Classes .Highlights img{
+.Courses .Highlights img{
+    object-fit: cover;
+    height: 100%;
     width: calc((1100px - 30px) / 3);
-    height: 250px;
+    border-radius: 7px;
 }
-.Classes .Highlights .hover{
+.Courses .Highlights .hover{
     --black3: #2a2a2a80;
     background: var(--black3);
-    color: var(--white1);
     font-size: 1.5rem;
+    color: var(--white1);
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    opacity: 0;
     top: 0;
-    width: 100%;
+    opacity: 0;
     height: 100%;
+    width: 100%;
+    border-radius: 7px;
     transition: 0.3s;
 }
-.Classes .Highlights .hover:hover{
+.Courses .Highlights .hover:hover{
     opacity: 1;
 }
-.Classes .Highlights::-webkit-scrollbar-track{
+.Courses .Highlights::-webkit-scrollbar-track{
     background: transparent;
 }
-.Classes .Highlights::-webkit-scrollbar-thumb{
-    border-top: 3px solid var(--black3);
-    border-bottom: 3px solid var(--black3);
+.Courses .Highlights::-webkit-scrollbar-thumb{
+    border-top: 3px solid var(--black4);
+    border-bottom: 3px solid var(--black4);
+    border-radius: 10px;
 }
 /*---===Resume===---*/
 .Resume{
-    background: var(--black4);
+    background: var(--black5);
     font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     color: var(--white1);
     display: flex;
@@ -395,29 +359,12 @@ section:not(.Home) .Cont{
     margin: 5px 0 10px 20px;
 }
 .Resume .bar{
-    border-left: 2px solid var(--blue1);
     padding-left: 10px;
-}
-.Resume .btn a{
-    background: transparent;
-    color: var(--white1);
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    height: fit-content;
-    margin-bottom: 12px;
-    padding: 0.8em 1.4em;
-    gap: 7px;
-    border-radius: 7px;
-    border: 2px solid var(--blue2);
-    transition: 0.3s;
-}
-.Resume .btn a:hover{
-    background: var(--blue2);
+    border-left: 2px solid var(--blue1);
 }
 /*---===Activities===---*/
 .Activities{
-    background: var(--black5);
+    background: var(--black4);
     font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     color: var(--white1);
 }
@@ -446,22 +393,14 @@ section:not(.Home) .Cont{
     .gShow .txt div{
         width: 287.2px;
     }
-    /* Cont */
-    section:not(.Home) .Cont{
-        width: 830px;
-    }
     /*---===About Me====---*/
     /*Introduction*/
     .Intro .Intro-Cont .Profile{
         flex-direction: column;
     }
-    /*---===Classes===---*/
-    /*Courses*/
-    .Classes .Class-Grid{
-        width: 730px;
-    }
+    /*---===Courses===---*/    
     /*Highlights*/
-    .Classes .Highlights img{
+    .Courses .Highlights img{
         width: calc((830px - 15px) / 2);
     }
 }
@@ -490,14 +429,10 @@ section:not(.Home) .Cont{
     .Home .Cont{
         width: 100%;
     }
-    section:not(.Home) .Cont{
-        width: 700px;
-        padding: 40px 0;
-    }
     /*---===Banner===---*/
     .Home img{
-        width: 270px;
         height: 340px;
+        width: 270px;
     }
     /*---===About Me====---*/
     /*Introduction*/
@@ -505,16 +440,12 @@ section:not(.Home) .Cont{
         flex-direction: column;
     }
     .Intro .Intro-Cont img{
-        margin: 0 auto;
         width: 320px;
+        margin: 0 auto;
     }
-    /*---===Classes===---*/
-    /*Courses*/
-    .Classes .Class-Grid{
-        width: 610px;
-    }
+    /*---===Courses===---*/
     /*Highlights*/
-    .Classes .Highlights img{
+    .Courses .Highlights img{
         width: calc((700px - 15px) / 2);
     }
     /*---===Resume===---*/
@@ -543,10 +474,6 @@ section:not(.Home) .Cont{
     .box2:checked ~ .gShow .pic1{
         width: calc(15% - 7.5px);
     }
-    /* Cont */
-    section:not(.Home) .Cont{
-        width: 540px;
-    }
     /*---===Banner===---*/
     .Home{
         height: 100vh;
@@ -559,22 +486,13 @@ section:not(.Home) .Cont{
     .Home .txt{
         text-align: center;
     }
-    .Home .socmed{
-        justify-content: center;
-    }
-    /*---===About Me====---*/
-    /*Skills*/
-    .Skills .Skills-Cont{
-        grid-template-columns: 1fr;
-    }
-    /*---===Classes===---*/
-    /*Courses*/
-    .Classes .Class-Grid{
-        width: 490px;
-    }
+    /*---===Courses===---*/
     /*Highlights*/
-    .Classes .Highlights img{
+    .Courses .Highlights img{
         width: calc((540px - 15px) / 2);
+    }
+    .Courses .Highlights.mobile .hover{
+        opacity: 1;
     }
 }
 @media(max-width: 560px){
@@ -603,28 +521,22 @@ section:not(.Home) .Cont{
         border-radius: 7px;
     }
     .gShow .txt{
-        background-color: transparent;
-        background-image: linear-gradient(#00000033,#00000080,#000000cc);
+        background: transparent linear-gradient(#00000033,#00000080,#000000cc);
         position: absolute;
         display: flex;
         align-items: end;
-        width: 100%;
-        height: 100%;
-        padding: 15px;
         opacity: 0;
+        height: 100%;
+        width: 100%;
+        padding: 15px;
         border-radius: 7px;
         transition: 0.5s;
     }
     .box1:checked ~ .gShow .pic1 .txt,
     .box2:checked ~ .gShow .pic2 .txt,
     .box3:checked ~ .gShow .pic3 .txt{
-        width: 100%;
         opacity: 1;
-    }
-    /* Cont */
-    section:not(.Home) .Cont{
         width: 100%;
-        padding: 20px 17px 30px;
     }
     /*---===Banner===---*/
     .Home{
@@ -642,21 +554,20 @@ section:not(.Home) .Cont{
     /*Introduction*/
     .Intro .Intro-Cont img{ 
         width: 100%;
-        min-width: 0;
         max-width: 320px;
+        min-width: 0;
     }
     /*Profile*/
     .Profile ul{
         margin-right: 0;
     }
-    /*---===Classes===---*/
-    /*Courses*/
-    .Classes .Class-Grid{
-        /* grid-template-columns: repeat(auto-fit,minmax(100px,1fr)); */
-        width: 100%;
+    /*Skills*/
+    .Skill .Skills-Cont{
+        grid-template-columns: 1fr;
     }
+    /*---===Courses===---*/
     /*Highlights*/
-    .Classes .Highlights img{
+    .Courses .Highlights img{
         width: calc(100vw - 34px);
     }
 }
