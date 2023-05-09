@@ -23,7 +23,7 @@ const mediaQuery2 = window.matchMedia('(max-width: 950px)');
 const mediaQuery3 = window.matchMedia('(max-width: 740px)');
 const mediaQuery4 = window.matchMedia('(max-width: 560px)');
 
-// window.addEventListener("load", function() {
+window.addEventListener("load", function() {
     preloader.style.display = "grid";
     body[0].style.overflow = 'hidden';
     setTimeout(() => {
