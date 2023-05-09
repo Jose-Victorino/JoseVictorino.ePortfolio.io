@@ -1,45 +1,3 @@
-// loading screen
-const preloader = document.getElementById("load-Cont");
-const mediaQuery1 = window.matchMedia("(max-width: 1200px)");
-const mediaQuery2 = window.matchMedia("(max-width: 950px)");
-const mediaQuery3 = window.matchMedia("(max-width: 740px)");
-const mediaQuery4 = window.matchMedia("(max-width: 560px)");
-
-window.addEventListener("load", function() {
-    preloader.style.display = "grid";
-    setTimeout(() => {
-        preloader.style.display = "none";
-    }, 2000);
-});
-function togglePreloader() {
-    if (mediaQuery1.matches || mediaQuery2.matches || mediaQuery3.matches || mediaQuery4.matches){
-        preloader.style.display = "grid";
-        setTimeout(() => {
-            preloader.style.display = "none";
-        }, 2000);
-    }
-    else{
-        preloader.style.display = "none";
-    }
-}
-
-togglePreloader();
-mediaQuery1.addListener(togglePreloader);
-mediaQuery2.addListener(togglePreloader);
-mediaQuery3.addListener(togglePreloader);
-mediaQuery4.addListener(togglePreloader);
-
-// Nav bar change
-window.addEventListener('scroll', () => {
-    const nav = document.querySelector('.nav');
-    const skillsSection = document.querySelector('.navBg');
-    const sectionPos = skillsSection.getBoundingClientRect().top;
-    if(sectionPos < 70)
-        nav.classList.add('show');
-    else if(sectionPos > 0)
-        nav.classList.remove('show');
-});
-
 // skills progress bar
 document.querySelectorAll('.a1').forEach(element => {
     element.querySelector('.prog').setAttribute('id', '20');
@@ -97,3 +55,12 @@ function actsA3(){
     document.querySelector('#a1').checked = false;
     document.querySelector('#a2').checked = false;
 }
+
+const highlights = document.querySelector('.Highlights');
+
+// if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+//     highlights.classList.add('mobile');
+// }
+// else
+//     highlights.classList.remove('mobile');
+    
