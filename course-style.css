@@ -1,14 +1,17 @@
+/*---===General Style===---*/
+h1 > span{
+    color: var(--blue2);
+}
 /*---===Banner===---*/
 .Banner{
-    background-image: url(Pictures/black-linen.png);
-    background-color: var(--black6);
+    background: url(Pictures/black-linen.png) var(--black5);
     font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     color: var(--blue2);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     height: 450px;
+    width: 100%;
     margin-top: -80px;
 }
 .Banner h3{
@@ -17,125 +20,123 @@
 }
 /*---===Summary===---*/
 .Summary{
-    background-color: var(--black3);
-    width: 100%;
-    padding: 80px 0;
-}
-.Summary .Cont{
+    background: var(--black3);
     font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     color: var(--white1);
-    width: 1100px;
-    margin: 0 auto;
+    width: 100%;
 }
 .Summary p{
     text-align: justify;
 }
-/*---===Projects===---*/
-.Proj{
-    background-color: var(--black6);
+/*---===Activities===---*/
+.Acts{
+    background: var(--black4);
     font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     color: var(--white1);
     width: 100%;
-    height: fit-content;
-    padding: 40px;
 }
-.Proj .Grid{
+.Acts .Grid{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-auto-rows: 350px;
+    grid-auto-rows: 280px;
     gap: 16px;
 }
-.Proj .Grid input{
+.Acts input{
     display: none;
 }
-.Proj .Grid > div{
+.Acts .Grid > div{
     position: relative;
 }
-.Proj .Grid img{
+.Acts img{
     object-fit: cover;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 7px;
 }
-.Proj .Grid label{
+.Acts label{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    cursor: pointer;
     position: absolute;
     top: 0;
-    width: 100%;
     height: 100%;
-    border-radius: 10px;
+    width: 100%;
+    border-radius: 7px;
+    cursor: pointer;
 }
-.Proj .Grid .hover{
+.Acts .hover{
     background-color: var(--blue2);
     overflow: hidden;
-    width: 0;
-    height: 50px;
+    text-align: center;
     line-height: 50px;
+    height: 50px;
+    width: 0;
     margin-top: 30px;
-    border-radius: 0 10px 10px 0px;
+    border-radius: 0 7px 7px 0px;
     transition: 0.3s;
 }
-.Proj .Grid .click{
+.Acts .Grid div:nth-child(1) .hover div{
+    width: 40px;
+}
+.Acts .Grid div:nth-child(2) .hover div{
+    width: 90px;
+}
+.Acts .Grid div:nth-child(3) .hover div{
+    width: 130px;
+}
+.Acts .Grid div:nth-child(4) .hover div{
+    width: 110px;
+}
+.Acts .click{
     position: absolute;
     bottom: 0;
     opacity: 0;
-    width: 100%;
     height: fit-content;
+    width: 100%;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 7px;
     transition: opacity 0.5s ease-in-out;
 }
-.Proj .Grid .click p{
+.Acts .click p{
     padding: 14px;
+    border-radius: 7px;
 }
-.Proj input:hover ~ label .hover,
-.Proj input:checked ~ label .hover{
-    width: 110px;
+.Acts input#View1:hover ~ label .hover,
+.Acts input#View1:checked ~ label .hover{
+    width: 80px;
+}
+.Acts input#View2:hover ~ label .hover,
+.Acts input#View2:checked ~ label .hover{
+    width: 130px;
+}
+.Acts input#View3:hover ~ label .hover,
+.Acts input#View3:checked ~ label .hover{
+    width: 170px;
+}
+.Acts input#View4:hover ~ label .hover,
+.Acts input#View4:checked ~ label .hover{
+    width: 150px;
+}
+.Acts input:hover ~ label .hover,
+.Acts input:checked ~ label .hover{
     padding: 0 20px;
 }
-.Proj input:checked ~ label{
-    background-image: linear-gradient(#00000033,#00000080,#000000cc);
+.Acts input:checked ~ label{
+    background: linear-gradient(#00000033,#00000080,#000000cc);
 }
-.Proj input:checked ~ label .click{
+.Acts input:checked ~ label .click{
     opacity: 1;
 }
 /*---===Responsive===---*/
 @media(max-width: 1200px){
-    /*Summary*/
-    .Summary .Cont{
-        width: 830px;
-    }
-    /*Projects*/
-    .Proj .Grid{
+    /*---===Activities===---*/
+    .Acts .Grid{
         grid-template-columns: repeat(2,1fr);
     }
 }
-@media(max-width: 950px){
-    /*Summary*/
-    .Summary .Cont{
-        width: 700px;
-    }
-}
 @media(max-width: 740px){
-    /*Summary*/
-    .Summary .Cont{
-        width: 540px;
-        padding: 0 20px;
-    }
-    /*Projects*/
-    .Proj{
-        padding: 40px 20px;
-    }
-    .Proj .Grid{
+    /*---===Activities===---*/
+    .Acts .Grid{
         grid-template-columns: 1fr;
-    }
-}
-@media(max-width: 560px){
-    /*Summary*/
-    .Summary .Cont{
-        width: 100%;
     }
 }
