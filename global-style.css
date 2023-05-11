@@ -1,24 +1,24 @@
 /*color pallet*/
 :root{
-    --white1: #e3e3e3;
-    --white2: #a3a3a3;
-    --black1: #464646;
-    --black2: #333333;
-    --black3: #2a2a2a; 
-    --black4: #222222; 
-    --black5: #181818; 
-    --black6: #131313; 
-    --black7: #0c0c0c; 
-    --blue1: #0045e5;
-    --blue2: #2149a7;
+    --white1: hsl(0, 0%, 89%);
+    --white2: hsl(0, 0%, 64%);
+    --black1: hsl(222, 4%, 27%);
+    --black2: hsl(222, 4%, 20%);
+    --black3: hsl(222, 4%, 16%);
+    --black4: hsl(222, 4%, 13%);
+    --black5: hsl(220, 6%, 10%);
+    --black6: hsl(222, 4%, 7%);
+    --black7: hsl(222, 4%, 5%);
+    --blue1: hsl(222, 100%, 45%);
+    --blue2: hsl(222, 67%, 39%);
 }
-/*Custom Scroll Bar*/
+/*Scroll Bar*/
 ::-webkit-scrollbar{
     width: 8px;
     height: 8px;
 }
 ::-webkit-scrollbar-track{
-    background: var(--black1);
+    background: var(--black2);
 }
 ::-webkit-scrollbar-thumb{
     background: var(--blue2);
@@ -32,9 +32,13 @@
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
-    /* border: 1px dashed red; */
     box-sizing: border-box;
 }
+body{
+    font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+    color: var(--white1);
+}
+/*loading screen*/
 #load-Cont{
     background: var(--black6);
     display: none;
@@ -58,29 +62,30 @@
 .loading-spinner .bg1{
     background: var(--white1);
     width: 49.25px;
-    animation: whitef 1.5s ease-in-out infinite;
+    animation: whitef 2s ease-in-out;
 }
 .loading-spinner .bg2{
     background: var(--blue1);
     width: 49.25px;
-    animation: bluef 1.5s ease-in-out infinite;
+    animation: bluef 2s ease-in-out;
 }
 @keyframes whitef{
     0% {height: 100%;}
-    90% {height: 0%;}
+    70% {height: 0%;}
     100% {height: 0%;}
 }
 @keyframes bluef{
     0% {height: 0%;}
-    90% {height: 100%;}
+    70% {height: 100%;}
     100% {height: 100%;}
 }
 h1{
-    font-size: clamp(2rem, 0.125rem + 4vw, 2.5rem);
+    font-size: clamp(2rem, 0.5rem + 4vw, 2.5rem);
     color: var(--white1);
-    font-family: 'Libre Franklin';
-    width: fit-content;
-    margin: 0 auto 12px;
+    font-family: 'Libre Franklin', Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 12px;
 }
 h1 > span{
     color: var(--blue2);
@@ -89,14 +94,10 @@ h4{
     color: var(--blue1);
 }
 h5{
-    letter-spacing: 2px;
     color: var(--blue2);
-    margin-bottom: 12px;
-}
-section:not(.Footer){
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
 }
 .btn{
     background: transparent;
@@ -112,47 +113,51 @@ section:not(.Footer){
     background: var(--blue2);
     box-shadow: 0 0 10px var(--blue2);
 }
-/* section:not(.Home):not(.Footer):not(.Summary){
-    height: 100vh;
-} */
-section:not(.Home):not(.Footer) .Cont{
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section:not(.Home, .Contact, .Banner):nth-child(even){
+    background: var(--black4);
+}
+section:not(.Home, .Contact, .Banner):nth-child(odd){
+    background: var(--black5);
+}
+section:not(.Home, .Contact) .Cont{
     height: fit-content;
     width: 1100px;
     padding: 75px 0;
 }
 /*---===Navigation Bar===---*/
 nav{
-    background: transparent;
     font-family: 'roboto', 'Open Sans', sans-serif;
-    /* backdrop-filter: blur(2px); */
-    color: var(--white1);
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 1;
     height: 75px;
-    width: 100%;
-    box-shadow: 0;
     transition: 0.3s;
 }
 nav.show{
-    background: var(--black6);
-    box-shadow: 0 0 5px var(--black7);
+    background: #0d0d0d80;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 5px var(--black5);
 }
 nav .logo{
-    margin-left: 150px;
+    margin-left: 8vw;
 }
 nav .logo img{
+    object-fit: contain;
     height: 45px;
 }
 nav > ul{
     list-style: none;
     display: flex;
     gap: 25px;
-    margin-right: 200px;
+    margin-right: clamp(10vw, 0%, 14vw);
 }
 nav a{
     text-transform: uppercase;
@@ -190,8 +195,6 @@ nav .DDown{
     top: 48px;
     overflow: auto;
     max-height: 248.2px;
-    width: fit-content;
-    gap: 0;
     box-shadow: 0 0 10px var(--black7);
 }
 nav .DDown li{
@@ -210,149 +213,131 @@ nav .DDown a:hover{
 nav .DDown::-webkit-scrollbar-track{
     background: var(--black5);
 }
-/*---===Footer===---*/
-.Footer{
+/*---===Contact===---*/
+.Contact{
     font-family: 'Roboto', system-ui, 'Segoe UI', 'Open Sans', sans-serif;
     background: var(--black3);
-    color: var(--white1);
 }
-.Footer .Cont{
+.Contact .Cont{
     width: clamp(1100px, 100%, 90vw);
-    margin: 0 auto;
 }
-.Footer .Cont > div{
+.Contact .Cont > div{
     display: flex;
     justify-content: space-around;
-    padding: 40px 0;
+    padding: 50px 0 40px;
 }
-.Footer img{
-    height: fit-content;
+.Contact img{
+    object-fit: contain;
     width: 160px;
 }
-.Footer h1{
-    font-size: 1.7em;
-}
-.Footer h4{
-    color: var(--white1);
-    margin-bottom: 10px;
-}
-.Footer .txt{
+.Contact .txt{
     display: flex;
     flex-direction: column;
 }
-.Footer .txt .SiteLink div{
+.Contact h4{
+    color: var(--white1);
+    margin-bottom: 10px;
+}
+.Contact .txt .SiteLink div{
     margin-bottom: 7px;
 }
-.Footer .txt .SiteLink a{
+.Contact .txt .SiteLink a{
     color:var(--white2);
 }
-.Footer .txt .SiteLink a:hover{
+.Contact .txt .SiteLink a:hover{
     text-decoration: underline;
 }
-.Footer .socmed{
+.Contact .socmed{
     display: flex;
     gap: 7px;
 }
-.Footer .socmed a{
+.Contact .socmed a{
     font-size: 1.6em;
     color: var(--white2);
-    display: flex;
     transition: 0.3s;
 }
-.Footer .socmed a:hover{
+.Contact .socmed a:hover{
     color: var(--white1);
 }
-.Footer form{
-    width: clamp(300px, -13.6029rem + 58.8235vw, 400px);
-    /* width: 400px; */
+.Contact form{
+    width: clamp(240px, -45rem + 106.6667vw, 400px);
 }
-.Footer .Inputs{
+.Contact h1{
+    font-size: 1.7em;
+}
+.Contact .Inputs{
     display: flex;
     flex-direction: column;
     gap: 8px;
     margin-bottom: 8px;
 }
-.Footer .Inputs div{
+.Contact .Inputs div{
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
-.Footer #Name,
-.Footer #Email{
-    flex: 1 0 120px;
+.Contact #name,
+.Contact #email{
+    flex: 1 0 100px;
 }
-.Footer input,
-.Footer textarea{
+.Contact input,
+.Contact textarea{
     background: var(--black2);
     font-family: 'Roboto', system-ui, 'Segoe UI', 'Open Sans', sans-serif;
     color: var(--white1);
-    height: 25px;
-    width: 100%;
+    height: 30px;
     padding: 5px;
     outline: none;
     border: 1px solid var(--black1);
     border-radius: 7px;
 }
-.Footer input:focus{
+.Contact input:focus{
     border: 1px solid var(--white2);
 }
-.Footer .Inputs textarea{
+.Contact .Inputs textarea{
     resize: none;
-    max-width: 100%;
-    min-width: 100%;
-    min-height: 80px;
-    max-height: 80px;
+    width: 100%;
+    height: 80px;
 }
-.Footer .Bottom{
+.Contact .Bottom{
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
 }
-.Footer footer{
+.Contact footer{
     font-size: clamp(0.875rem, 0.375rem + 2.5vw, 1rem);
     color: var(--white2);
     display: flex;
     justify-content: center;
-    width: 100%;
-    padding: 15px 0;
+    padding: 20px 0;
     border-top: 2px solid var(--black1);
 }
 /*---===Responsive===---*/
 @media(max-width: 1200px){
     /*general style*/
-    section:not(.Home):not(.Footer) .Cont{
+    section:not(.Home, .Contact) .Cont{
         width: 830px;
     }
-    /*---===Navigation Bar===---*/
-    nav .logo{
-        margin-left: 80px;
-    }
-    nav > ul{
-        margin-right: 100px;
-    }
-    /*---===Footer===---*/
-    .Footer .Cont{
+    /*---===Contact===---*/
+    .Contact .Cont{
         width: 910px;
     }
 }
 @media(max-width: 950px){
     /*general style*/
-    section:not(.Home):not(.Footer){
-        height: fit-content;
-    }
-    section:not(.Home):not(.Footer) .Cont{
+    section:not(.Home, .Contact) .Cont{
         width: 700px;
-        padding: 40px 0;
+        padding: 50px 0;
     }
     /* ---===Navigation Bar===--- */
     nav .logo{
         position: absolute;
-        right: 60px;
+        right: 50px;
         margin-left: 0;
     }
     nav > ul{
         --black7: #0c0c0c80;
         background: var(--black7);
-        backdrop-filter: blur(1px);
+        backdrop-filter: blur(2px);
         flex-direction: column;
         position: fixed;
         top: 0;
@@ -362,7 +347,7 @@ nav .DDown::-webkit-scrollbar-track{
         gap: 30px;
         margin: 0;
         padding: 0 20px;
-        box-shadow: 0 0 20px var(--black7   );
+        box-shadow: 0 0 5px var(--black7);
         transition: 0.5s;
     }
     nav ul a:hover,
@@ -378,7 +363,6 @@ nav .DDown::-webkit-scrollbar-track{
         justify-content: flex-end;
         height: 75px;
         width: 100%;
-        margin: 0 0 30px 0;
         cursor: pointer;
     }
     nav ul .BClose i{
@@ -389,7 +373,6 @@ nav .DDown::-webkit-scrollbar-track{
         display: flex;
         position: absolute;
         left: 50px;
-        opacity: 1;
         cursor: pointer;
         transition: 0.3s;
     }
@@ -403,9 +386,8 @@ nav .DDown::-webkit-scrollbar-track{
     nav .Class{
         display: flex;
         flex-direction: column;
-        gap: 0;
         height: 19.2px;
-        transition: 0.5s ease-in-out;
+        transition: 0.3s;
     }
     nav .Class div{
         display: flex;
@@ -413,7 +395,7 @@ nav .DDown::-webkit-scrollbar-track{
     }
     nav .Arrow i{
         cursor: pointer;
-        transition: 0.4s;
+        transition: 0.3s;
     }
     nav .DDown{
         background: transparent;
@@ -421,9 +403,10 @@ nav .DDown::-webkit-scrollbar-track{
         display: flex;
         align-items: center;
         position: static;
-        height: fit-content;
+        overflow: hidden;
+        /* overflow: auto; */
         width: 100%;
-        margin-top: 20px;
+        margin-top: 30px;
         box-shadow: none;
     }
     nav .DDown li{
@@ -431,11 +414,11 @@ nav .DDown::-webkit-scrollbar-track{
         border: 0;
     }
     #Arrow:checked ~ ul .Class{
-        height: clamp(19.2px, 50%, 88.4px);
-        /* height: clamp(19.2px, 50%, 137.6px); */
-        /* height: clamp(19.2px, 50%, 186.8px); */
-        /* height: clamp(19.2px, 50%, 236px); */
-        /* height: clamp(19.2px, 50%, 285.2px); */
+        height: 98.4px;
+        /* height: 147.6px; */
+        /* height: 196.8px; */
+        /* height: 246px; */
+        /* height: 295.2px; */
     }
     #Arrow:checked ~ ul .Arrow i{
         transform: rotate(180deg);
@@ -446,50 +429,42 @@ nav .DDown::-webkit-scrollbar-track{
     nav .DDown::-webkit-scrollbar-track{
         background: transparent;
     }
-    /*---===Footer===---*/
-    .Footer .Cont{
+    /*---===Contact===---*/
+    .Contact .Cont{
         width: 700px;
     }
-    .Footer .Cont > div{
+    .Contact .Cont > div{
         justify-content: space-between;
     }
 }
 @media(max-width: 740px){
     /* Cont */
-    section:not(.Home):not(.Footer) .Cont,
-    .Footer .Cont{
+    section:not(.Home, .Contact) .Cont,
+    .Contact .Cont{
         width: 540px;
     }
-    /*---===Footer===---*/
-    .Footer .Cont > div{
-        display: flex;
+    /*---===Contact===---*/
+    .Contact .Cont > div{
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         text-align: center;
         gap: 10px;
     }
-    .Footer form{
-        width: 85%;
+    .Contact img{
+        width: 120px;
+    }
+    .Contact form{
+        width: 100%;
     }
 }
 @media(max-width: 560px){
     /* Cont */
-    section:not(.Home):not(.Footer) .Cont{
+    section:not(.Home, .Contact) .Cont{
         width: 100%;
-        padding: 30px 17px;
+        padding: 40px 17px;
     }
-    /*---===Navigation Bar===---*/
-    nav .logo{
-        right: 50px;
-    }
-    /*---===Footer===---*/
-    .Footer .Cont{
-        width: 100%;
-    }
-    .Footer .Bottom{
-        flex-wrap: wrap-reverse;
-        justify-content: center;
-        gap: 10px;
+    /*---===Contact===---*/
+    .Contact .Cont{
+        width: calc(100% - 34px);
     }
 }
