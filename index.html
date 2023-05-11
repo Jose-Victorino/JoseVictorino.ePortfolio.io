@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jose Victorino</title>
-    <link href="Pictures/Crest-Icon.png" rel="shortcut icon" type="png">
+    <link rel="shortcut icon" href="Pictures/Crest-Icon.png" type="png">
     <link rel="stylesheet" href="global-style.css">
     <link rel="stylesheet" href="index-style.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins'>
@@ -13,7 +13,7 @@
     <script type="text/javascript" src="https://kit.fontawesome.com/ec6c50ff9c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- custom loading screen -->
+    <!-- Loading Screen -->
     <div id="load-Cont">
         <div class="loading-spinner">
             <div class="bg1"></div>
@@ -37,6 +37,9 @@
             <li>
                 <a href="index.html#AboutMe">About</a>
             </li>
+            <li>
+                <a href="index.html#Skills">Skills</a>
+            </li>
             <li class="Class">
                 <div>
                     <a href="index.html#Courses">Courses</a>
@@ -50,112 +53,64 @@
                 <a href="index.html#Resume">Resume</a>
             </li>
             <li>
-                <a href="index.html#Activities">Activities</a>
-            </li>
-            <li>
                 <a href="index.html#Contact">Contact</a>
             </li>
         </ul>
     </nav>
-    <!-- Banner (parallax scroll effect do)-->
+    <!-- Banner -->
     <section id="Home" class="Home">
         <div class="Cont">
             <div class="txt">  
-                <p class="p1">Hello there,</p>
-                <p class="p2"><b>I'm <span>Jose Victorino</span></b></p>
-                <p class="p3">a <b>1st year I.T. Student</b> of Mapúa University.</p>
-                <!-- CV (Curriculum Vitae) -->
-                <div>
-                    <a class="btn">Download CV</a>
-                </div>
+                <p class="p1"><b>Hi, I'm<span> Jose Victorino</span></b></p>
+                <p class="p2">a <b>1st year I.T. Student</b> of Mapúa University.</p>
+                <!-- CV (Curriculum Vitae) href="" download -->
+                <a class="btn">Download CV</a>
             </div>
-            <img src="Pictures/Banner.jpg" alt="">
+            <img src="Pictures/Banner.jpg" alt="Banner img">
         </div>
     </section>
     <!-- About Me -->
     <section id="AboutMe" class="AboutMe navBg">
         <div class="Cont">
-            <!-- Introduction -->
-            <div class="Intro">
-                <h1>About<span> Me</span></h1>
-                <div class="Intro-Cont">
-                    <img src="Pictures/Intro.JPG" alt="Introduction img">
+            <h1>About<span> Me</span></h1>
+            <div>
+                <img src="Pictures/Intro.JPG" alt="Introduction img">
+                <div class="txt">
                     <div>
-                        <h4>Introduction</h4>
-                        <p>Hello, I am Jose, a 1st year IT student. I enjoy editing images and videos and coding. I strive to learn more about how to code and edit pictures and videos. When I was in elementary, my initial dream was to become a pilot, to fly to places, and to travel the world. As I grew up, I slowly lost interest in it and took an interest in engineering because my father was a civil engineer. In high school, I became interested in photo editing, video editing, coding, and anything computer related. After the first year of Electrical Engineering, I shifted to IT due to my interest in coding. Now I enjoy coding, especially with HTML and CSS.</p>
-                        <h4>Profile</h4>
-                        <div class="Profile">
-                            <ul>
-                                <li><b>Full name:</b> Jose Lorenzo L. Victorino</li>
-                                <li><b>Phone Number:</b> (+63) 9284650259</li>
-                                <li><b>Address:</b> Quezon City, Metro Manila</li>
-                            </ul>
-                            <ul>
-                                <li><b>Academic Level:</b> 1st Year College</li>
-                                <li><b>Email Address:</b> josevictorino003@gmail.com</li>
-                            </ul>
-                        </div>
-                        <h4>Goals</h4>  
-                        <p>My short-term goals are to expand my knowledge and understanding of various programming languages such as C++, HTML, and CSS. Long-term wise, I plan to earn a job in a successful company with a substantial income and hopefully gain life long learning and new experiences.</p>
+                        <h5>Introduction</h5>
+                        <p>Hello, I am Jose Victorino aiming to be a future Web Developer. I enjoy programming, especially building websites. I strive to learn more about what it takes to be a Web Developer.</p>
+                    </div>
+                    <div>
+                        <h5>Profile</h5>
+                        <table class="Profile">
+                            <tr>
+                                <td><i class="fa-solid fa-user"></i></td>
+                                <td><p>Jose Lorenzo L. Victorino</p></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-phone"></i></td>
+                                <td><p>(+63) 9284650259</p></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-location-dot"></i></td>
+                                <td><p>Quezon City, Metro Manila</p></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-envelope"></i></td>
+                                <td><p>josevictorino003@gmail.com</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <p>When I was in elementary, my initial dream was to become a pilot, to fly to places, and to travel the world. As I grew up, I slowly lost interest in it and took an interest in engineering due to my father being an engineer. In high school, I became interested in photo and video editing, coding, and anything computer related. Now, I took IT because of my initial skills and interest in coding. I enjoy coding, especially with HTML, CSS, JavaScript.</p>
                     </div>
                 </div>
             </div>
-            <!-- Achievements -->
-            <!-- <div class="Achieve">
-                <h5>ACHIEVEMENTS</h5>
-                <input type="checkbox" class="box1" id="s1" onclick="achieveP1()">
-                <input type="checkbox" class="box2" id="s2" onclick="achieveP2()">
-                <input type="checkbox" class="box3" id="s3" onclick="achieveP3()">
-                <div class="Achieve-Cont gShow">
-                    <div class="pic1">
-                        <label for="s1">
-                            <img src="Pictures/Thesis.jpg" alt="Thesis img">
-                           <div class="hover">
-                                <div>Investigatory Project</div>
-                            </div>
-                            <div class="txt">
-                                <div>
-                                    <h4>Most Outstanding Investigatory Project</h4>
-                                    <p>In grade 9, my group was nominated to the Science Research Congress against other sections. My group's research topic is "Aubergine Moringa & Hisbiscus with Aloe Rejuvenating Hair Mask." We won the most outstanding Investigatory Project.</p>
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="pic2">
-                        <label for="s2">
-                            <img src="Pictures/Robothon1.jpg" alt="Philippine Robothon img">
-                            <div class="hover">
-                                <div>Philippine Robothon</div>
-                            </div>
-                            <div class="txt">
-                                <div>
-                                    <h4>3rd Philippine Robothon</h4>
-                                    <p>Me and my team participated at the 3rd Philippine Robothon in 2014, representing our school as the veteran robotics team. We would practice after class hours and during our robotics class. After our efforts building up to the competition, we got 3rd place overall in the veteran category.</p>
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="pic3">
-                        <label for="s3">
-                            <img src="Pictures/Merlion-Cup.jpg" alt="Merloin Cup img">
-                            <div class="hover">
-                                <div>Altus Football Club</div>
-                            </div>
-                            <div class="txt">
-                                <div>
-                                    <h4>Altus Football Club</h4>
-                                    <p>I was a member of Altus FC from 2013 to 2017. During that time we won multiple medals competing against other schools in numerous competitions. To name one, we got 1st runner up in the Merlion Cup held in Singapore School Manila.</p>
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </section>
-    <section id="Skills" class="Skill">
+    <!-- Skills -->
+    <section id="Skills" class="Skills">
         <div class="Cont">
-            <!-- Skills -->
             <h1>My<span> Skills</span></h1> 
             <div class="Skills-Cont">
                 <div class="a2">
@@ -167,7 +122,7 @@
                         <div class="prog"></div>
                     </div>
                 </div>
-                <div class="a2">
+                <div class="a1">
                     <div class="txt">
                         <p>Python</p>
                         <p class="lvl"></p>
@@ -299,14 +254,14 @@
             <!-- Course List -->
             <h1>My<span> Courses</span></h1>
             <div class="bar">
-                <ul type="square" class="courseList"></ul>
+                <div class="courseList"></div>
             </div>
             <br>
             <!-- Highlights -->
             <h5>HIGHLIGHTS</h5>
             <div class="Highlights"><!--Insert-->
                 <div>
-                    <img src="/Pictures/ITS131L/M2-SA1.png" alt="CRUD Form img">
+                    <img src="Pictures/ITS131L/M2-SA1.png" alt="CRUD Form img">
                     <a href="Courses/ITS131L.html#Activities">
                         <div class="hover">CRUD Form (ITS131L)</div>
                     </a>
@@ -362,114 +317,52 @@
                 </div>
             </div>
         </div>
-        
-    </section>
-    <!-- Activities -->
-    <section id="Activities" class="Activities">
-        <div class="Cont">
-            <h1>ACTIVITIES</h1>
-            <!-- Seminar & Conference -->
-            <!-- <h5>SEMINARS & CONFERENCES</h5>
-            <div class="Seminar">
-
-            </div>
-            <br><br> -->
-            <!-- Extra-Curricular Activities -->
-            <h5>EXTRACURRICULAR ACTIVITIES</h5>
-            <input type="checkbox" class="box1" id="a1" onclick="actsA1()">
-            <input type="checkbox" class="box2" id="a2" onclick="actsA2()">
-            <input type="checkbox" class="box3" id="a3" onclick="actsA3()">
-            <div class="Acts gShow">
-                <div class="pic1">
-                    <label for="a1">
-                        <img src="Pictures/Soccer.jpg" alt="Soccer img">
-                        <div class="hover">
-                            <div>Football</div>
-                        </div>
-                        <div class="txt">
-                            <div>
-                                <h4>Football</h4>
-                                <p>When I was young, I joined the Altus FC, a football club that started at my former school UST Angelicum. I started training in the summer of 2013, building my skills as a football player. Since then, I have been participating in competitions and tournaments, winning medals and certificates.</p>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-                <div class="pic2">
-                    <label for="a2">
-                        <img src="Pictures/Robothon2.jpg" alt="Robothon img">
-                        <div class="hover">
-                            <div>Robotics</div>
-                        </div>
-                        <div class="txt">
-                            <div>
-                                <h4>Robotics</h4>
-                                <p>I joined the robotics club at my former school UST Angelicum in 2014. We would build robots out of Lego pieces, program the robot to perform certain actions, then execute them in a given area with obstacles and tasks to complete. I enjoyed building and programming robots and seeing them perform successfully.</p>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-                <div class="pic3">
-                    <label for="a3">
-                        <img src="Pictures/Guitar.jpg" alt="Concert img">
-                        <div class="hover">
-                            <div>Guitarist</div>
-                        </div>
-                        <div class="txt">
-                            <div>
-                                <h4>Guitarist</h4>
-                                <p>I started playing guitar when I was in Grade 6 at my previous school. A year later, I enrolled in guitar lessons at Music First Talent Training Center. Since then I have performed in multiple recitals and concerts across Quezon City. In my first debut, I was introduced as a percussive guitarist. I am mostly the lead guitarist.</p>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-            </div>
-        </div>
     </section>
     <!-- Footer -->
-    <section id="Contact" class="Footer">
+    <section id="Contact" class="Contact">
         <div class="Cont">
             <div>
                 <img src="Pictures/Crest-Logo.png" alt="Logo img">
                 <div class="txt">
-                    <h4>Site Links</h4>
+                    <h4>Quick Links</h4>
                     <div class="SiteLink">
                         <div>
-                            <a href="#AboutMe">About</a>
+                            <a href="index.html#AboutMe">About</a>
                         </div>
                         <div>
-                            <a href="#Courses">Courses</a>
+                            <a href="index.html#Skills">Skills</a>
                         </div>
                         <div>
-                            <a href="#Resume">Resume</a>
+                            <a href="index.html#Courses">Courses</a>
                         </div>
                         <div>
-                            <a href="#Activities">Activities</a>
+                            <a href="index.html#Resume">Resume</a>
                         </div>
                     </div>
+                    <!-- socmed -->
+                    <div class="socmed">
+                        <a href="https://www.facebook.com/JoseVictorinoo/" title="Facebook" target="_blank">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/joseeevictorino/" title="Instagram" target="_blank">
+                            <i class="fa-brands fa-square-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/JoseeVictorino" title="Twitter" target="_blank">
+                            <i class="fa-brands fa-square-twitter"></i>
+                        </a>
+                    </div>
                 </div>
-                <form>
+                <form id="contactForm" action="mailto:josevictorino003@gmail.com" method="get">
                     <h1>Contact <span> Me</span></h1>
                     <div class="Inputs">
                         <div>
-                            <input type="name" name="Name" id="Name" placeholder="Name">
-                            <input type="email" name="Email" id="Email" placeholder="Email">
+                            <input type="name" name="name" id="name" placeholder="Name" required>
+                            <input type="email" name="email" id="email" placeholder="Email" required>
                         </div>
-                        <input type="text" name="Subject" id="Subject" placeholder="Subject">
-                        <textarea name="Message" id="Message" placeholder="Message"></textarea>
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                        <textarea name="body" id="message" placeholder="Message" required></textarea>
                     </div>
                     <div class="Bottom">
-                        <!-- socmed -->
-                        <div class="socmed">
-                            <a href="https://www.facebook.com/JoseVictorinoo/" title="Facebook" target="_blank">
-                                <i class="fa-brands fa-square-facebook"></i>
-                            </a>
-                            <a href="https://www.instagram.com/joseeevictorino/" title="Instagram" target="_blank">
-                                <i class="fa-brands fa-square-instagram"></i>
-                            </a>
-                            <a href="https://twitter.com/JoseeVictorino" title="Twitter" target="_blank">
-                                <i class="fa-brands fa-square-twitter"></i>
-                            </a>
-                        </div>
                         <button class="btn" type="submit">Send Message</button>
                     </div>
                 </form>
@@ -479,7 +372,7 @@
             </footer>
         </div>
     </section>
-    <script type="text/javascript" src="global-script.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="scripts/global-script.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
 </body>
 </html>
