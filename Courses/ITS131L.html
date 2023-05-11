@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jose Victorino | ITS131L</title>
-    <link href="../Pictures/Crest-Icon.png" rel="shortcut icon" type="png">
+    <link rel="shortcut icon" href="../Pictures/Crest-Icon.png" type="png">
     <link rel="stylesheet" href="../global-style.css">
     <link rel="stylesheet" href="../course-style.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins'>
@@ -13,7 +13,7 @@
     <script type="text/javascript" src="https://kit.fontawesome.com/ec6c50ff9c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- custom loading screen -->
+    <!-- loading screen -->
     <div id="load-Cont">
         <div class="loading-spinner">
             <div class="bg1"></div>
@@ -50,9 +50,6 @@
                 <a href="../index.html#Resume">Resume</a>
             </li>
             <li>
-                <a href="../index.html#Activities">Activities</a>
-            </li>
-            <li>
                 <a href="#Contact">Contact</a>
             </li>
         </ul>
@@ -80,9 +77,9 @@
                         <div class="hover">
                             <div>ERD</div>
                         </div>
-                        <aside class="click">
+                        <div class="click">
                             <p>In this activity, I was tasked with making an ERD from the given table. Then, I encoded the tables and its data into MySQL.</p>
-                        </aside>
+                        </div>
                     </label>
                 </div>
                 <div>
@@ -92,9 +89,9 @@
                         <div class="hover">
                             <div>CRUD Form</div>
                         </div>
-                        <aside class="click">
+                        <div class="click">
                             <p>In this activity, me and my group were tasked to create a CRUD Form that can input, edit, delete, sort, and download all table records.</p>
-                        </aside>
+                        </div>
                     </label>
                 </div>
                 <div>
@@ -104,9 +101,9 @@
                         <div class="hover">
                             <div>MySQL Database</div>
                         </div>
-                        <aside class="click">
+                        <div class="click">
                             <p>In this activity, I created a database and inserted records into tables. I learned how to update, delete, and display table records.</p>
-                        </aside>
+                        </div>
                     </label>
                 </div>
                 <div>
@@ -116,59 +113,60 @@
                         <div class="hover">
                             <div>Importing Data</div>
                         </div>
-                        <aside class="click">
+                        <div class="click">
                             <p>In this activity, I imported data to a MySQL database using CSV/Excel as the data file and Python as the server-side code.</p>
-                        </aside>
+                        </div>
                     </label>
                 </div>
             </div>
         </div>
     </section>
     <!-- Footer -->
-    <section id="Contact" class="Footer">
+    <section id="Contact" class="Contact">
         <div class="Cont">
             <div>
-                <img src="Pictures/Crest-Logo.png" alt="Logo img">
+                <img src="../Pictures/Crest-Logo.png" alt="Logo img">
                 <div class="txt">
-                    <h4>Site Links</h4>
+                    <h4>Quick Links</h4>
                     <div class="SiteLink">
                         <div>
-                            <a href="#AboutMe">About</a>
+                            <a href="../index.html#AboutMe">About</a>
                         </div>
                         <div>
-                            <a href="#Courses">Courses</a>
+                            <a href="../index.html#Skills">Skills</a>
                         </div>
                         <div>
-                            <a href="#Resume">Resume</a>
+                            <a href="../index.html#Courses">Courses</a>
                         </div>
                         <div>
-                            <a href="#Activities">Activities</a>
+                            <a href="../index.html#Resume">Resume</a>
                         </div>
+                    </div>
+                    <!-- socmed -->
+                    <div class="socmed">
+                        <a href="https://www.facebook.com/JoseVictorinoo/" title="Facebook" target="_blank">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/joseeevictorino/" title="Instagram" target="_blank">
+                            <i class="fa-brands fa-square-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/JoseeVictorino" title="Twitter" target="_blank">
+                            <i class="fa-brands fa-square-twitter"></i>
+                        </a>
                     </div>
                 </div>
-                <form>
+                <form id="contactForm" action="mailto:josevictorino003@gmail.com" method="get">
                     <h1>Contact <span> Me</span></h1>
+                    <div class="error"></div>
                     <div class="Inputs">
                         <div>
-                            <input type="name" name="Name" id="Name" placeholder="Name">
-                            <input type="email" name="Email" id="Email" placeholder="Email">
+                            <input type="name" name="name" id="name" placeholder="Name" required>
+                            <input type="email" name="email" id="email" placeholder="Email" required>
                         </div>
-                        <input type="text" name="Subject" id="Subject" placeholder="Subject">
-                        <textarea name="Message" id="Message" placeholder="Message"></textarea>
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                        <textarea name="body" id="message" placeholder="Message" required></textarea>
                     </div>
                     <div class="Bottom">
-                        <!-- socmed -->
-                        <div class="socmed">
-                            <a href="https://www.facebook.com/JoseVictorinoo/" title="Facebook" target="_blank">
-                                <i class="fa-brands fa-square-facebook"></i>
-                            </a>
-                            <a href="https://www.instagram.com/joseeevictorino/" title="Instagram" target="_blank">
-                                <i class="fa-brands fa-square-instagram"></i>
-                            </a>
-                            <a href="https://twitter.com/JoseeVictorino" title="Twitter" target="_blank">
-                                <i class="fa-brands fa-square-twitter"></i>
-                            </a>
-                        </div>
                         <button class="btn" type="submit">Send Message</button>
                     </div>
                 </form>
@@ -178,6 +176,6 @@
             </footer>
         </div>
     </section>
-    <script type="text/javascript" src="../global-script.js"></script>
+    <script type="text/javascript" src="../Scripts/global-script.js"></script>
 </body>
 </html>
