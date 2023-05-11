@@ -29,29 +29,3 @@ window.addEventListener('scroll', () => {
             element.style.width = 0;
         });
 });
-
-// checkbox
-function achieveP1(){
-    document.querySelector('#s2').checked = false;
-    document.querySelector('#s3').checked = false;
-}
-function achieveP2(){
-    document.querySelector('#s1').checked = false;
-    document.querySelector('#s3').checked = false;
-}
-function achieveP3(){
-    document.querySelector('#s1').checked = false;
-    document.querySelector('#s2').checked = false;
-}
-function actsA1(){
-    document.querySelector('#a2').checked = false;
-    document.querySelector('#a3').checked = false;
-}
-function actsA2(){
-    document.querySelector('#a1').checked = false;
-    document.querySelector('#a3').checked = false;
-}
-function actsA3(){
-    document.querySelector('#a1').checked = false;
-    document.querySelector('#a2').checked = false;
-}
