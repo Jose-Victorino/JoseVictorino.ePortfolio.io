@@ -76,7 +76,7 @@
     padding: 14px;
     border-radius: 7px;
     cursor: pointer;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 .Acts input#View1:hover ~ label .hover,
 .Acts input#View1:checked ~ label .hover{
