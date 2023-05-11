@@ -1,291 +1,150 @@
-/*Achievement & Activities gShow*/
-.gShow{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-.gShow > div{
-    position: relative;
-    height: 300px;
-    width: 356.66px;
-    transition: 0.5s;
-}
-.gShow label{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-}
-.gShow img{
-    background-color: var(--black5);
-    object-fit: cover;
-    filter: opacity(100%);
-    height: 100%;
-    width: 100%;
-    border-radius: 7px;
-    transition: 0.5s;
-}
-.gShow .hover{
-    background-color: var(--blue2);
-    text-align: center;
-    overflow: hidden;
-    position: absolute;
-    top: 25px;
-    left: 0;
-    line-height: 50px;
-    height: 50px;
-    width: 0;
-    border-radius: 0 10px 10px 0;
-    transition: 0.4s;
-}
-.gShow .txt{
-    background-color: var(--black3);
-    overflow: hidden;
-    width: 0;
-    padding: 0;
-    border-radius: 0 7px 7px 0;
-    transition: 0.5s;
-}
-.gShow .txt div{
-    width: 392.5px;
-    margin: 15px;
-}
-.box1:checked ~ .gShow .pic1,
-.box2:checked ~ .gShow .pic2,
-.box3:checked ~ .gShow .pic3{
-    width: calc(60% - 10px);
-}
-.box1:checked ~ .gShow .pic2,
-.box1:checked ~ .gShow .pic3,
-.box2:checked ~ .gShow .pic1,
-.box2:checked ~ .gShow .pic3,
-.box3:checked ~ .gShow .pic1,
-.box3:checked ~ .gShow .pic2{
-    width: calc(20% - 10px);
-}
-.box1:checked ~ .gShow .pic1 img,
-.box2:checked ~ .gShow .pic2 img,
-.box3:checked ~ .gShow .pic3 img{
-    width: 35%;
-    border-radius: 7px 0 0 7px;
-}
-.box1:checked ~ .gShow div:not(.pic1) img,
-.box2:checked ~ .gShow div:not(.pic2) img,
-.box3:checked ~ .gShow div:not(.pic3) img{
-    filter: opacity(50%);
-}
-.box1:checked ~ .gShow label:hover .hover,
-.box2:checked ~ .gShow label:hover .hover,
-.box3:checked ~ .gShow label:hover .hover{
-    width: 0;
-    padding: 0;
-}
-.box1:checked ~ .gShow .pic1 .txt,
-.box2:checked ~ .gShow .pic2 .txt,
-.box3:checked ~ .gShow .pic3 .txt{
-    width: 65%;
-}
-.box1:checked ~ .gShow .pic1 .txt div,
-.box2:checked ~ .gShow .pic2 .txt div,
-.box3:checked ~ .gShow .pic3 .txt div{
-    opacity: 1;
-}
 /*---===Banner===---*/
 .Home{
-    background: url(Pictures/black-linen.png) var(--black5);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(hsl(220, 6%, 10%), hsl(210, 5%, 8%), hsl(222, 4%, 7%));
+    font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+    color: var(--white1);
     height: 100vh;
-    width: 100%;
-    margin-top: -80px;
+    margin-top: -75px;
 }
 .Home .Cont{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1100px;
-    margin: 0 40px;
-}
-.Home .txt{
-    font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
-    color: var(--white1);
+    width: 1200px;
+    margin: 0 30px;
 }
 .Home .txt .p1{
-    font-size: clamp(0.875rem, 0.6406rem + 0.625vw, 1rem);
+    font-size: clamp(1.625rem, -0.7321rem + 6.2857vw, 3rem);/*26, 48*/
+    white-space: nowrap;
 }
 .Home .txt .p2{
-    font-size: clamp(2rem, 0.3438rem + 3.75vw, 2.5rem);
+    font-size: clamp(1rem, 0.5313rem + 1vw, 1.125rem);/*16, 18*/
 }
-.Home .txt .p3{
-    font-size: clamp(1rem, 0.7656rem + 0.625vw, 1.125rem);
-}
-.Home .txt .p2 span,
-.Home .txt .p3 b{
+.Home .txt .p1 span,
+.Home .txt .p2 b{
     color: var(--blue2);
 }
-.Home .txt div{
-    margin-top: 20px;
+.Home .txt a{
+    display: flex;
+    font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+    font-size: clamp(0.875rem, 0.6406rem + 0.625vw, 1rem);
+    width: fit-content;
+    margin-top: 12px;
 }
 .Home img{
     object-fit: cover;
-    height: 380px;
     width: 320px;
+    aspect-ratio: 3 / 4;
     border-radius: 7px;
-    box-shadow: 0 0 12px var(--black3);
 }
 /*---===About Me====---*/
-.AboutMe{
-    background-color: var(--black4);
-    font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
-    color: var(--white1);
-}
-.AboutMe .Cont{
+.AboutMe .Cont > div{
     display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-/*Introduction*/
-.Intro .Intro-Cont{
     text-align: justify;
-    display: flex;
     gap: 20px;
 }
-.Intro img{
+.AboutMe img{
     filter: grayscale(30%);
     object-fit: cover;
     object-position: 45% 50%;
-    height: 420px;
-    width: 300px;
-    border-radius: 7px;
+    width: 315px;
+    aspect-ratio: 3 / 4;
 }
-.Intro div h4{
-    color: var(--blue2);
-    margin: 5px 0;
-}
-.Intro div h3:first-child{
-    margin-top: 0;
-}
-/*Profile*/
-.Profile{
-    display: flex;
-    margin-left: 20px;
-}
-.Profile ul{
+.AboutMe .txt{
     display: flex;
     flex-direction: column;
-    text-align: left;
-    margin-right: 40px;
+    gap: 20px;
 }
-/*---===Skill===---*/
-.Skill{
-    background: var(--black5);
-    font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
-    color: var(--white1);
+.AboutMe .txt h5{
+    margin-bottom: 0;
 }
-/*Skills*/
-.Skill .Skills-Cont{
+.AboutMe .Profile{
+    border-spacing: 0;
+}
+.AboutMe .Profile tr:not(:last-child) td{
+    padding-bottom: 3px;
+}
+.AboutMe .Profile i{
+    color: var(--white2);
+    margin-right: 10px;
+}
+/*---===Skills===---*/
+.Skills .Skills-Cont{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     row-gap: 10px;
     column-gap: 15px;
 }
-.Skill .txt{
+.Skills .Skills-Cont .txt{
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
 }
-.Skill .barWrap{
+.Skills .barWrap{
     background: var(--black3);
-    height: 11px;
-    width: 100%;
     border-radius: 5.5px;
 }
-.Skill .prog{
+.Skills .prog{
     background: var(--blue1);
     height: 11px;
-    width: 0%;
     border-radius: 5.5px;
     transition: width 1s;
 }
-.Skill .a1 .lvl:after{
+.Skills .a1 .lvl:after{
     content: 'Novice';
 }
-.Skill .a2 .lvl:after{
+.Skills .a2 .lvl:after{
     content: 'Fundamentals';
 }
-.Skill .a3 .lvl:after{
+.Skills .a3 .lvl:after{
     content: 'Intermediate';
 }
-.Skill .a4 .lvl:after{
+.Skills .a4 .lvl:after{
     content: 'Advance';
 }
-.Skill .a5 .lvl:after{
+.Skills .a5 .lvl:after{
     content: 'Professional';
 }
-.Skill .Interest-Cont{
+/*Interest*/
+.Skills .Interest-Cont{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    grid-auto-rows: 55px;
     gap: 15px;
     width: 100%;
 }
-.Skill .Interest-Cont > div{
+.Skills .Interest-Cont > div{
     background: var(--black3);
     display: flex;
     align-items: center;
     border-radius: 7px;
     transition: 0.3s;
 }
-.Skill .Interest-Cont > div:hover{
+.Skills .Interest-Cont > div:hover{
     background: var(--black2);
 }
-.Skill .Interest-Cont .icon{
+.Skills .Interest-Cont .icon{
     background: var(--black4);
     border-radius: 7px 0 0 7px;
 }
-.Skill .Interest-Cont i{
+.Skills .Interest-Cont i{
     color: var(--blue1);
     font-size: 22px;
     text-align: center;
     line-height: 55px;
-    height: 55px;
-    width: 55px;
+    width: 70px;
 }
-.Skill .Interest-Cont .txt{
+.Skills .Interest-Cont .txt{
     display: flex;
     justify-content: center;
     width: 100%;
 }
-/*Achievements*/
-.Achieve input{
-    display: none;
-}
-.Achieve .pic1 img{
-    object-position: 35% center;
-}
-.Achieve .pic2 img{
-    object-position: 30% center;
-}
-.Achieve .gShow div label:hover .hover{
-    width: 169px;
-    padding: 0 12px;
-}
-.Achieve .gShow .hover div{
-    width: 145px;
-}
 /*---===Courses===---*/
-.Courses{
-    background: var(--black4);
-    font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
-    color: var(--white1);
-    display: flex;
-    flex-direction: column;
-}
 /*Course List*/
 .Courses .courseList{
-    margin: 5px 0 10px 20px;
+    margin: 5px 0 10px;
+}
+.Courses .courseList div{
+    width: fit-content;
 }
 .Courses .courseList a{
     color: var(--white1);
@@ -296,7 +155,6 @@
 /*Highlights*/
 .Courses .Highlights{
     display: flex;
-    overflow-x: auto;
     overflow-y: hidden;
     gap: 15px;
     height: 275px;
@@ -304,8 +162,6 @@
 }
 .Courses .Highlights > div{
     position: relative;
-    height: 100%;
-    width: fit-content;
     scroll-snap-align: start;
 }
 .Courses .Highlights img{
@@ -337,18 +193,9 @@
     background: transparent;
 }
 .Courses .Highlights::-webkit-scrollbar-thumb{
-    border-top: 3px solid var(--black4);
-    border-bottom: 3px solid var(--black4);
-    border-radius: 10px;
+    border-radius: 4px;
 }
 /*---===Resume===---*/
-.Resume{
-    background: var(--black5);
-    font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
-    color: var(--white1);
-    display: flex;
-    flex-direction: column;
-}
 .Resume .col{
     display: flex;
 }
@@ -360,90 +207,38 @@
 }
 .Resume .bar{
     padding-left: 10px;
-    border-left: 2px solid var(--blue1);
-}
-/*---===Activities===---*/
-.Activities{
-    background: var(--black4);
-    font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
-    color: var(--white1);
-}
-/*Seminar & Conference*/
-
-/*Extra-Curricular Activities*/
-.Activities input{
-    display: none;
-}
-.Activities .gShow div label:hover .hover{
-    width: 100px;
-    padding: 0 12px;
-}
-.Activities .gShow .hover div{
-    width: 76px;
-}
-.Activities .pic1 img{
-    object-position: 30% center;
+    border-left: 2px solid var(--white2);
 }
 /*---===Responsive===---*/
 @media(max-width: 1200px){
-    /*Achievement & Activities gShow*/
-    .gShow > div{
-        width: 266.66px;
-    }
-    .gShow .txt div{
-        width: 287.2px;
-    }
-    /*---===About Me====---*/
-    /*Introduction*/
-    .Intro .Intro-Cont .Profile{
-        flex-direction: column;
-    }
-    /*---===Courses===---*/    
+    /*---===Courses===---*/
+    /*Course List*/
+
     /*Highlights*/
     .Courses .Highlights img{
         width: calc((830px - 15px) / 2);
     }
 }
 @media(max-width: 950px){
-    /*Achievement & Activities gShow*/
-    .gShow .txt div{
-        width: 283.63px;
-    }
-    .gShow > div,
-    .box1:checked ~ .gShow .pic3,
-    .box2:checked ~ .gShow .pic3,
-    .box3:checked ~ .gShow .pic1,
-    .box3:checked ~ .gShow .pic2{
-        width: 342.5px;
-    }
-    .box1:checked ~ .gShow .pic1,
-    .box2:checked ~ .gShow .pic2,
-    .box3:checked ~ .gShow .pic3{
-        width: calc(70% - 7.5px);
-    }
-    .box1:checked ~ .gShow .pic2,
-    .box2:checked ~ .gShow .pic1{
-        width: calc(30% - 7.5px);
-    }
     /* Cont */
     .Home .Cont{
-        width: 100%;
+        width: calc(100vw - 60px);
+        margin: 0;
     }
     /*---===Banner===---*/
     .Home img{
-        height: 340px;
-        width: 270px;
+        width: 290px;
     }
     /*---===About Me====---*/
-    /*Introduction*/
-    .Intro .Intro-Cont{
-        flex-direction: column;
-    }
-    .Intro .Intro-Cont img{
-        width: 320px;
+    .AboutMe img{
         margin: 0 auto;
     }
+    .AboutMe .Cont > div{
+        flex-direction: column;
+    }
     /*---===Courses===---*/
+    /*Course List*/
+    
     /*Highlights*/
     .Courses .Highlights img{
         width: calc((700px - 15px) / 2);
@@ -454,39 +249,20 @@
     }
 }
 @media(max-width: 740px){
-    /*Achievement & Activities gShow*/
-    .gShow .txt div{
-        width: 245.93px;
-    }
-    .gShow > div,
-    .box1:checked ~ .gShow .pic3,
-    .box2:checked ~ .gShow .pic3,
-    .box3:checked ~ .gShow .pic1,
-    .box3:checked ~ .gShow .pic2{
-        width: 262.5px;
-    }
-    .box1:checked ~ .gShow .pic1,
-    .box2:checked ~ .gShow .pic2,
-    .box3:checked ~ .gShow .pic3{
-        width: calc(85% - 7.5px);
-    }
-    .box1:checked ~ .gShow .pic2,
-    .box2:checked ~ .gShow .pic1{
-        width: calc(15% - 7.5px);
-    }
     /*---===Banner===---*/
-    .Home{
-        height: 100vh;
-        padding-top: 30px;
-    }
     .Home .Cont{
         flex-direction: column;
-        gap: 30px
+        gap: 30px;
     }
     .Home .txt{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
     /*---===Courses===---*/
+    /*Course List*/
+    
     /*Highlights*/
     .Courses .Highlights img{
         width: calc((540px - 15px) / 2);
@@ -496,76 +272,24 @@
     }
 }
 @media(max-width: 560px){
-    /*Achievement & Activities gShow*/
-    .gShow .txt div{
-        text-align: justify;
-        width: 100%;
-        margin: 0;
-    }
-    .gShow > div,
-    .box1:checked ~ .gShow .pic1,
-    .box1:checked ~ .gShow .pic2,
-    .box1:checked ~ .gShow .pic3,
-    .box2:checked ~ .gShow .pic2,
-    .box2:checked ~ .gShow .pic1,
-    .box2:checked ~ .gShow .pic3,
-    .box3:checked ~ .gShow .pic1,
-    .box3:checked ~ .gShow .pic2,
-    .box3:checked ~ .gShow .pic3{
-        width: 100%;
-    }
-    .box1:checked ~ .gShow .pic1 img,
-    .box2:checked ~ .gShow .pic2 img,
-    .box3:checked ~ .gShow .pic3 img{
-        width: 100%;
-        border-radius: 7px;
-    }
-    .gShow .txt{
-        background: transparent linear-gradient(#00000033,#00000080,#000000cc);
-        position: absolute;
-        display: flex;
-        align-items: end;
-        opacity: 0;
-        height: 100%;
-        width: 100%;
-        padding: 15px;
-        border-radius: 7px;
-        transition: 0.5s;
-    }
-    .box1:checked ~ .gShow .pic1 .txt,
-    .box2:checked ~ .gShow .pic2 .txt,
-    .box3:checked ~ .gShow .pic3 .txt{
-        opacity: 1;
-        width: 100%;
-    }
     /*---===Banner===---*/
-    .Home{
-        padding-top: 0;
-    }
     .Home .Cont{
-        margin: 0;
-        padding: 0 17px;
+        width: calc(100vw - 34px);
     }
     .Home img{
-        width: 100%;
-        max-width: 270px;
+        width: min(100%, 270px);
     }
     /*---===About Me====---*/
-    /*Introduction*/
-    .Intro .Intro-Cont img{ 
-        width: 100%;
-        max-width: 320px;
-        min-width: 0;
+    .AboutMe img{
+        width: min(100%, 315px);
     }
-    /*Profile*/
-    .Profile ul{
-        margin-right: 0;
-    }
-    /*Skills*/
-    .Skill .Skills-Cont{
+    /*---===Skills===---*/
+    .Skills .Skills-Cont{
         grid-template-columns: 1fr;
     }
     /*---===Courses===---*/
+    /*Course List*/
+    
     /*Highlights*/
     .Courses .Highlights img{
         width: calc(100vw - 34px);
