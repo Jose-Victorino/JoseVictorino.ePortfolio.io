@@ -1,43 +1,24 @@
-/*---===General Style===---*/
-h1 > span{
-    color: var(--blue2);
-}
 /*---===Banner===---*/
 .Banner{
-    background: url(Pictures/black-linen.png) var(--black5);
+    background: linear-gradient(hsl(220, 6%, 10%), hsl(210, 5%, 8%), hsl(222, 4%, 7%));
     font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
     color: var(--blue2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 450px;
     width: 100%;
-    margin-top: -80px;
+    margin-top: -75px;
 }
 .Banner h3{
     font-size: clamp(2.5rem, 0.3438rem + 3.75vw, 3rem);
     letter-spacing: 2px;
 }
 /*---===Summary===---*/
-.Summary{
-    background: var(--black3);
-    font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
-    color: var(--white1);
-    width: 100%;
-}
 .Summary p{
     text-align: justify;
 }
 /*---===Activities===---*/
-.Acts{
-    background: var(--black4);
-    font-family: system-ui, 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
-    color: var(--white1);
-    width: 100%;
-}
 .Acts .Grid{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: 280px;
     gap: 16px;
 }
@@ -55,13 +36,10 @@ h1 > span{
 }
 .Acts label{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
-    border-radius: 7px;
     cursor: pointer;
 }
 .Acts .hover{
@@ -73,6 +51,7 @@ h1 > span{
     width: 0;
     margin-top: 30px;
     border-radius: 0 7px 7px 0px;
+    z-index: 1;
     transition: 0.3s;
 }
 .Acts .Grid div:nth-child(1) .hover div{
@@ -88,18 +67,16 @@ h1 > span{
     width: 110px;
 }
 .Acts .click{
+    background: linear-gradient(#00000033,#00000080,#000000cc);
+    display: flex;
+    align-items: end;
     position: absolute;
-    bottom: 0;
     opacity: 0;
-    height: fit-content;
-    width: 100%;
-    cursor: pointer;
-    border-radius: 7px;
-    transition: opacity 0.5s ease-in-out;
-}
-.Acts .click p{
+    height: 100%;
     padding: 14px;
     border-radius: 7px;
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
 }
 .Acts input#View1:hover ~ label .hover,
 .Acts input#View1:checked ~ label .hover{
@@ -121,22 +98,6 @@ h1 > span{
 .Acts input:checked ~ label .hover{
     padding: 0 20px;
 }
-.Acts input:checked ~ label{
-    background: linear-gradient(#00000033,#00000080,#000000cc);
-}
 .Acts input:checked ~ label .click{
     opacity: 1;
-}
-/*---===Responsive===---*/
-@media(max-width: 1200px){
-    /*---===Activities===---*/
-    .Acts .Grid{
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-@media(max-width: 740px){
-    /*---===Activities===---*/
-    .Acts .Grid{
-        grid-template-columns: 1fr;
-    }
 }
