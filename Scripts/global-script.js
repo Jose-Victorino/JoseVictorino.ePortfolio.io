@@ -1,24 +1,6 @@
 // courses
 const subClass = document.querySelector('.DDown');
 const courses = [
-    'ITS131L',
-    'ITS131L',
-    'ITS131L',
-    'ITS131L',
-    'ITS131L',
-    'ITS131L',
-    'ITS131L',
-    'ITS131L',
-    'ITS131L',
-    'ITS131L',
-    'ITS131L',
-    'ITS131L',
-    'ITS131L',
-    'ITS131L',
-    'ITS131L',
-    'ITS131L',
-    'ITS131L',
-    'ITS131L',
     'ITS131L'
 ];
 for(let i = 0; i < courses.length;i++){
