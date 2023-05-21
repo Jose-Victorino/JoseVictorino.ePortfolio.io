@@ -5,9 +5,6 @@ const courses = [
 ];
 const highlights = [
   ['ITS131L', 'M2-SA1', 'CRUD Form'],
-  ['ITS131L', 'M2-SA1', 'CRUD Form'],
-  ['ITS131L', 'M2-SA1', 'CRUD Form'],
-  ['ITS131L', 'M2-SA1', 'CRUD Form'],
 ];
 
 for(let i = 0; i < courses.length; i++){
