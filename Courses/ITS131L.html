@@ -1,184 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Victorino | ITS131L</title>
-    <link rel="shortcut icon" href="../Pictures/Crest-Icon.png" type="png">
-    <link rel="stylesheet" href="../global-style.css">
-    <link rel="stylesheet" href="../course-style.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Libre Franklin'>
-    <script type="text/javascript" src="https://kit.fontawesome.com/ec6c50ff9c.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jose Victorino | ITS131L</title>
+  <link rel="shortcut icon" href="../Pictures/Crest-Icon.png" type="png">
+  <link rel="stylesheet" href="../global-style.css">
+  <link rel="stylesheet" href="../course-style.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Libre Franklin'>
+  <script type="text/javascript" src="https://kit.fontawesome.com/ec6c50ff9c.js" crossorigin="anonymous"></script>
+  <style>
+    .Acts input#View1:hover ~ label .hover,
+    .Acts input#View1:checked ~ label .hover{
+      width: 80px;
+    }
+    .Acts input#View2:hover ~ label .hover,
+    .Acts input#View2:checked ~ label .hover{
+      width: 130px;
+    }
+    .Acts input#View3:hover ~ label .hover,
+    .Acts input#View3:checked ~ label .hover{
+      width: 170px;
+    }
+    .Acts input#View4:hover ~ label .hover,
+    .Acts input#View4:checked ~ label .hover{
+      width: 150px;
+    }
+    .Acts .Grid div:nth-child(1) .hover div{
+      width: 40px;
+    }
+    .Acts .Grid div:nth-child(2) .hover div{
+      width: 90px;
+    }
+    .Acts .Grid div:nth-child(3) .hover div{
+      width: 130px;
+    }
+    .Acts .Grid div:nth-child(4) .hover div{
+      width: 110px;
+    }
+  </style>
 </head>
 <body>
-    <!-- loading screen -->
-    <div id="load-Cont">
-        <div class="loading-spinner">
-            <div class="bg1"></div>
-            <div class="bg2"></div>
-        </div>
+  <!-- loading screen -->
+  <div id="load-Cont">
+    <div class="loading-spinner">
+      <div class="bg1"></div>
+      <div class="bg2"></div>
     </div>
-    <!-- Navigation Bar -->
-    <nav class="nav">
-        <input type="checkbox" id="Burger">
-        <input type="checkbox" id="Arrow"> 
-        <label class="BOpen" for="Burger">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <a class="logo" href="../index.html#Home">
-            <img src="../Pictures/Crest-Logo.png" alt="Logo">
-        </a>
-        <ul>
-            <label class="BClose" for="Burger">
-                <i class="fa-solid fa-xmark"></i>
-            </label>
-            <li>
-                <a href="../index.html#AboutMe">About Me</a>
-            </li>
-            <li>
-                <a href="../index.html#Skills">Skills</a>
-            </li>
-            <li class="Class">
-                <div>
-                    <a href="../index.html#Courses">Courses</a>
-                    <label class="Arrow" for="Arrow">
-                        <i class="fa-solid fa-angle-down"></i>
-                    </label>
-                </div>
-                <ul class="DDown"></ul>
-            </li>    
-            <li>
-                <a href="../index.html#Resume">Resume</a>
-            </li>
-            <li>
-                <a href="#Contact">Contact</a>
-            </li>
-        </ul>
-    </nav>
-    <!-- Banner -->
-    <section class="Banner">
-        <h3>ITS131L</h3>
-    </section>
-    <!-- Summary -->
-    <section class="Summary navBg">
-        <div class="Cont">
-            <h1>Course<span> Summary</span></h1>
-            <p>We used Oracle VM Virtualbox to install Linux and MySQL during this course. We learned how to create databases and tables and insert, update, and delete records in the table. In addition, we learned how to make and read an Entity Relationship Diagram (ERD). Also, we used Python and CSV to import data into tables. Finally, we installed PhpMyAdmin and created databases and tables with records there.</p>
+  </div>
+  <!-- Navigation Bar -->
+  <nav class="nav">
+    <input type="checkbox" id="Burger">
+    <input type="checkbox" id="Arrow"> 
+    <label class="BOpen" for="Burger">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+    <a class="logo" href="../index.html#Home">
+      <img src="../Pictures/Crest-Logo.png" alt="Logo">
+    </a>
+    <ul>
+      <label class="BClose" for="Burger">
+        <i class="fa-solid fa-xmark"></i>
+      </label>
+      <li>
+        <a href="../index.html#AboutMe">About</a>
+      </li>
+      <li>
+        <a href="../index.html#Skills">Skills</a>
+      </li>
+      <li class="Class">
+        <div>
+          <a href="../index.html#Courses">Courses</a>
+          <label class="Arrow" for="Arrow">
+            <i class="fa-solid fa-angle-down"></i>
+          </label>
         </div>
-    </section>
-    <!-- Activities -->
-    <section class="Acts" id="Activities">
-        <div class="Cont">
-            <h1>Activities</h1>
-            <div class="Grid">
-                <div>
-                    <input type="checkbox" id="View1">
-                    <img src="../Pictures/ITS131L/M1-SA1.png" alt="M1-SA1">
-                    <label for="View1">
-                        <div class="hover">
-                            <div>ERD</div>
-                        </div>
-                        <div class="click">
-                            <p>In this activity, I was tasked with making an ERD from the given table. Then, I encoded the tables and its data into MySQL.</p>
-                        </div>
-                    </label>
-                </div>
-                <div>
-                    <input type="checkbox" id="View2">
-                    <img src="../Pictures/ITS131L/M2-SA1.png" alt="M2-SA1">
-                    <label for="View2">
-                        <div class="hover">
-                            <div>CRUD Form</div>
-                        </div>
-                        <div class="click">
-                            <p>In this activity, me and my group were tasked to create a CRUD Form that can input, edit, delete, sort, and download all table records.</p>
-                        </div>
-                    </label>
-                </div>
-                <div>
-                    <input type="checkbox" id="View3">
-                    <img src="../Pictures/ITS131L/M1-FA4.png" style="object-position: left;" alt="M1-FA4">
-                    <label for="View3">
-                        <div class="hover">
-                            <div>MySQL Database</div>
-                        </div>
-                        <div class="click">
-                            <p>In this activity, I created a database and inserted records into tables. I learned how to update, delete, and display table records.</p>
-                        </div>
-                    </label>
-                </div>
-                <div>
-                    <input type="checkbox" id="View4">
-                    <img src="../Pictures/ITS131L/M2-FA2.png" style="object-position: left;" alt="M2-FA2">
-                    <label for="View4">
-                        <div class="hover">
-                            <div>Importing Data</div>
-                        </div>
-                        <div class="click">
-                            <p>In this activity, I imported data to a MySQL database using CSV/Excel as the data file and Python as the server-side code.</p>
-                        </div>
-                    </label>
-                </div>
+        <ul class="DDown"></ul>
+      </li>    
+      <li>
+        <a href="../index.html#Resume">Resume</a>
+      </li>
+      <li>
+        <a href="#Contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Banner -->
+  <section class="Banner">
+    <h3>ITS131L</h3>
+  </section>
+  <!-- Summary -->
+  <section class="Summary navBg">
+    <div class="Cont">
+      <h1>Course<span> Summary</span></h1>
+      <p>We used Oracle VM Virtualbox to install Linux and MySQL during this course. We learned how to create databases and tables and insert, update, and delete records in the table. In addition, we learned how to make and read an Entity Relationship Diagram (ERD). Also, we used Python and CSV to import data into tables. Finally, we installed PhpMyAdmin and created databases and tables with records there.</p>
+    </div>
+  </section>
+  <!-- Activities -->
+  <section class="Acts" id="Activities">
+    <div class="Cont">
+      <h1>Activities</h1>
+      <div class="Grid">
+        <div>
+          <input type="checkbox" id="View1">
+          <img src="../Pictures/Course Assets/ITS131L/M1-SA1.png" alt="M1-SA1">
+          <label for="View1">
+            <div class="hover">
+              <div>ERD</div>
             </div>
+            <div class="click">
+              <p>In this activity, I was tasked with making an ERD from the given table. Then, I encoded the tables and its data into MySQL.</p>
+            </div>
+          </label>
         </div>
-    </section>
-    <!-- Footer -->
-    <section id="Contact" class="Contact">
-        <div class="Cont">
+        <div>
+          <input type="checkbox" id="View2">
+          <img src="../Pictures/Course Assets/ITS131L/M2-SA1.png" alt="M2-SA1">
+          <label for="View2">
+            <div class="hover">
+              <div>CRUD Form</div>
+            </div>
+            <div class="click">
+              <p>In this activity, me and my group were tasked to create a CRUD Form that can input, edit, delete, sort, and download all table records.</p>
+            </div>
+          </label>
+        </div>
+        <div>
+          <input type="checkbox" id="View3">
+          <img src="../Pictures/Course Assets/ITS131L/M1-FA4.png" style="object-position: left;" alt="M1-FA4">
+          <label for="View3">
+            <div class="hover">
+              <div>MySQL Database</div>
+            </div>
+            <div class="click">
+              <p>In this activity, I created a database and inserted records into tables. I learned how to update, delete, and display table records.</p>
+            </div>
+          </label>
+        </div>
+        <div>
+          <input type="checkbox" id="View4">
+          <img src="../Pictures/Course Assets/ITS131L/M2-FA2.png" style="object-position: left;" alt="M2-FA2">
+          <label for="View4">
+            <div class="hover">
+              <div>Importing Data</div>
+            </div>
+            <div class="click">
+              <p>In this activity, I imported data to a MySQL database using CSV/Excel as the data file and Python as the server-side code.</p>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <section id="Contact" class="Contact">
+    <div class="Cont">
+      <div>
+        <img src="../Pictures/Crest-Logo.png" alt="Logo img">
+        <div class="txt">
+          <h4>Quick Links</h4>
+          <div class="SiteLink">
             <div>
-                <img src="../Pictures/Crest-Logo.png" alt="Logo img">
-                <div class="txt">
-                    <h4>Quick Links</h4>
-                    <div class="SiteLink">
-                        <div>
-                            <a href="../index.html#AboutMe">About</a>
-                        </div>
-                        <div>
-                            <a href="../index.html#Skills">Skills</a>
-                        </div>
-                        <div>
-                            <a href="../index.html#Courses">Courses</a>
-                        </div>
-                        <div>
-                            <a href="../index.html#Resume">Resume</a>
-                        </div>
-                    </div>
-                    <!-- socmed -->
-                    <div class="socmed">
-                        <a href="https://www.facebook.com/JoseVictorinoo/" title="Facebook" target="_blank">
-                            <i class="fa-brands fa-square-facebook"></i>
-                        </a>
-                        <a href="https://www.instagram.com/joseeevictorino/" title="Instagram" target="_blank">
-                            <i class="fa-brands fa-square-instagram"></i>
-                        </a>
-                        <a href="https://twitter.com/JoseeVictorino" title="Twitter" target="_blank">
-                            <i class="fa-brands fa-square-twitter"></i>
-                        </a>
-                    </div>
-                </div>
-                <form id="contactForm" action="mailto:josevictorino003@gmail.com" method="get">
-                    <h1>Contact <span> Me</span></h1>
-                    <div class="error"></div>
-                    <div class="Inputs">
-                        <div>
-                            <input type="name" name="name" id="name" placeholder="Name" required>
-                            <input type="email" name="email" id="email" placeholder="Email" required>
-                        </div>
-                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
-                        <textarea name="body" id="message" placeholder="Message" required></textarea>
-                    </div>
-                    <div class="Bottom">
-                        <button class="btn" type="submit">Send Message</button>
-                    </div>
-                </form>
+                <a href="../index.html#AboutMe">About</a>
             </div>
-            <footer>
-                <p>Jose Victorino © 2023</p>
-            </footer>
+            <div>
+              <a href="../index.html#Skills">Skills</a>
+            </div>
+            <div>
+              <a href="../index.html#Courses">Courses</a>
+            </div>
+            <div>
+              <a href="../index.html#Resume">Resume</a>
+            </div>
+          </div>
+          <!-- socmed -->
+          <div class="socmed">
+            <a href="https://www.facebook.com/JoseVictorinoo/" title="Facebook" target="_blank">
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/joseeevictorino/" title="Instagram" target="_blank">
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+            <a href="https://twitter.com/JoseeVictorino" title="Twitter" target="_blank">
+              <i class="fa-brands fa-square-twitter"></i>
+            </a>
+          </div>
         </div>
-    </section>
-    <script type="text/javascript" src="../Scripts/global-script.js"></script>
+        <form id="contactForm" action="mailto:josevictorino003@gmail.com" method="get">
+          <h1>Contact <span> Me</span></h1>
+          <div class="error"></div>
+          <div class="Inputs">
+            <div>
+              <input type="name" name="name" id="name" placeholder="Name" required>
+              <input type="email" name="email" id="email" placeholder="Email" required>
+            </div>
+            <input type="text" name="subject" id="subject" placeholder="Subject" required>
+            <textarea name="body" id="message" placeholder="Message" required></textarea>
+          </div>
+          <div class="Bottom">
+            <button class="btn" type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+      <footer>Jose Victorino © 2023</footer>
+    </div>
+  </section>
+  <script type="text/javascript" src="../Scripts/global-script.js"></script>
 </body>
 </html>
