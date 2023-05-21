@@ -1,297 +1,320 @@
-/*---===Banner===---*/
+/*---===Home===---*/
 .Home{
-    background: linear-gradient(hsl(220, 6%, 10%), hsl(210, 5%, 8%), hsl(222, 4%, 7%));
-    font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
-    color: var(--white1);
-    height: 100vh;
-    margin-top: -75px;
+  background: linear-gradient(hsl(220, 6%, 8%), hsl(222, 10%, 9%), hsl(222, 6%, 8%));
+  color: var(--white1);
+  height: 100vh;
+  margin-top: -75px;
 }
 .Home .Cont{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1200px;
-    margin: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  margin: 0 30px;
 }
-.Home .txt .p1{
-    font-size: clamp(1.625rem, -0.7321rem + 6.2857vw, 3rem);/*26, 48*/
-    white-space: nowrap;
+.Home .p1{
+  font-size: clamp(1.625rem, -0.7321rem + 6.2857vw, 3rem);
 }
-.Home .txt .p2{
-    font-size: clamp(1rem, 0.5313rem + 1vw, 1.125rem);/*16, 18*/
+.Home .p2{
+  font-size: clamp(1rem, 0.5313rem + 1vw, 1.125rem);
 }
-.Home .txt .p1 span,
-.Home .txt .p2 b{
-    color: var(--blue2);
+.Home span{
+  color: var(--blue2);
+}
+.Home .p2 b{
+  color: var(--blue3);
 }
 .Home .txt a{
-    display: flex;
-    font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
-    font-size: clamp(0.875rem, 0.6406rem + 0.625vw, 1rem);
-    width: fit-content;
-    margin-top: 12px;
+  display: flex;
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+  font-size: clamp(0.875rem, 0.6406rem + 0.625vw, 1rem);
+  width: fit-content;
+  margin-top: 12px;
 }
 .Home img{
-    object-fit: cover;
-    width: 320px;
-    aspect-ratio: 3 / 4;
-    border-radius: 7px;
+  object-fit: cover;
+  object-position: 0 15%;
+  width: max(32%, 340px);
+  aspect-ratio: 3 / 4;
+  border-radius: 7px;
 }
 /*---===About Me====---*/
 .AboutMe .Cont > div{
-    display: flex;
-    text-align: justify;
-    gap: 20px;
+  display: flex;
+  text-align: justify;
+  gap: 15px;
 }
 .AboutMe img{
-    filter: grayscale(30%);
-    object-fit: cover;
-    object-position: 45% 50%;
-    width: 315px;
-    aspect-ratio: 3 / 4;
+  filter: grayscale(30%);
+  object-fit: cover;
+  object-position: 45% 50%;
+  width: 315px;
+  aspect-ratio: 3 / 4;
+  border-radius: 7px;
 }
 .AboutMe .txt{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 .AboutMe .txt h5{
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 .AboutMe .Profile{
-    border-spacing: 0;
+  border-spacing: 0;
 }
 .AboutMe .Profile tr:not(:last-child) td{
-    padding-bottom: 3px;
+  padding-bottom: 3px;
 }
 .AboutMe .Profile i{
-    color: var(--white2);
-    margin-right: 10px;
+  color: var(--white2);
+  margin-right: 10px;
 }
 /*---===Skills===---*/
 .Skills .Skills-Cont{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    row-gap: 10px;
-    column-gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7px 15px;
 }
 .Skills .Skills-Cont .txt{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
 }
 .Skills .barWrap{
-    background: var(--black3);
-    border-radius: 5.5px;
+  background: var(--black3);
+  border-radius: 5.5px;
 }
 .Skills .prog{
-    background: var(--blue1);
-    height: 11px;
-    border-radius: 5.5px;
-    transition: width 1s;
+  background: var(--blue1);
+  height: 11px;
+  border-radius: 5.5px;
+  transition: width 1s;
 }
 .Skills .a1 .lvl:after{
-    content: 'Novice';
+  content: 'Novice';
 }
 .Skills .a2 .lvl:after{
-    content: 'Fundamentals';
+  content: 'Fundamentals';
 }
 .Skills .a3 .lvl:after{
-    content: 'Intermediate';
+  content: 'Intermediate';
 }
 .Skills .a4 .lvl:after{
-    content: 'Advance';
+  content: 'Advance';
 }
 .Skills .a5 .lvl:after{
-    content: 'Professional';
+  content: 'Professional';
 }
 /*Interest*/
 .Skills .Interest-Cont{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 15px;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 15px;
+  width: 100%;
 }
 .Skills .Interest-Cont > div{
-    background: var(--black3);
-    display: flex;
-    align-items: center;
-    border-radius: 7px;
-    transition: 0.3s;
-}
-.Skills .Interest-Cont > div:hover{
-    background: var(--black2);
+  background: var(--black3);
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  transition: 0.3s;
 }
 .Skills .Interest-Cont .icon{
-    background: var(--black4);
-    border-radius: 7px 0 0 7px;
+  background: var(--black4);
+  border-radius: 7px 0 0 7px;
 }
 .Skills .Interest-Cont i{
-    color: var(--blue1);
-    font-size: 22px;
-    text-align: center;
-    line-height: 55px;
-    width: 70px;
+  color: var(--blue1);
+  font-size: 22px;
+  text-align: center;
+  line-height: 55px;
+  width: 70px;
 }
 .Skills .Interest-Cont .txt{
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 /*---===Courses===---*/
 /*Course List*/
 .Courses .courseList{
-    margin: 5px 0 10px;
+  background: var(--black3);
+  display: grid;
+  overflow: hidden auto;
+  grid-template-columns: repeat(6, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+  grid-auto-rows: 50px;
+  gap: 10px;
+  max-height: 190px;
+  height: fit-content;
+  width: 830px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 4px;
 }
-.Courses .courseList div{
-    width: fit-content;
+.Courses .courseList::-webkit-scrollbar-track{
+  background: transparent;
+}
+.Courses .courseList::-webkit-scrollbar-thumb{
+  border-radius: 4px;
 }
 .Courses .courseList a{
-    color: var(--white1);
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white1);
+  letter-spacing: 1px;
+  border: 1px solid var(--white2);
+  border-radius: 7px;
+  transition: 0.3s;
 }
 .Courses .courseList a:hover{
-    text-decoration: underline;
+  background-color: var(--white2);
+  color: var(--black3);
 }
 /*Highlights*/
 .Courses .Highlights{
-    display: flex;
-    overflow-y: hidden;
-    gap: 15px;
-    height: 275px;
-    scroll-snap-type: x mandatory;
+  display: flex;
+  overflow-y: hidden;
+  gap: 15px;
+  padding-bottom: 7.5px;
+  scroll-snap-type: x mandatory;
 }
 .Courses .Highlights > div{
-    position: relative;
-    scroll-snap-align: start;
+  position: relative;
+  scroll-snap-align: start;
 }
 .Courses .Highlights img{
-    object-fit: cover;
-    height: 100%;
-    width: calc((1100px - 30px) / 3);
-    border-radius: 7px;
+  object-fit: cover;
+  height: 100%;
+  width: calc((1100px - 30px) / 3);
+  aspect-ratio: 4 / 3;
+  border-radius: 7px;
 }
 .Courses .Highlights .hover{
-    --black3: #2a2a2a80;
-    background: var(--black3);
-    font-size: 1.5rem;
-    color: var(--white1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    opacity: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: 7px;
-    transition: 0.3s;
+  background: linear-gradient(#00000033, #00000080, #000000cc);
+  font-size: clamp(1.25rem, 0.5rem + 1.6vw, 1.5rem);
+  color: var(--white1);
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 .Courses .Highlights .hover:hover{
-    opacity: 1;
+  opacity: 1;
 }
 .Courses .Highlights::-webkit-scrollbar-track{
-    background: transparent;
+  background: transparent;
 }
 .Courses .Highlights::-webkit-scrollbar-thumb{
-    border-radius: 4px;
+  border-radius: 4px;
 }
 /*---===Resume===---*/
-.Resume .col{
-    display: flex;
-}
-.Resume .col > div{
-    width: 100%;
+.Resume .Grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(367px, 1fr));
 }
 .Resume ul{
-    margin: 5px 0 10px 20px;
-}
-.Resume .bar{
-    padding-left: 10px;
-    border-left: 2px solid var(--white2);
+  margin: 0 0 7px 17px;
 }
 /*---===Responsive===---*/
 @media(max-width: 1200px){
-    /*---===Courses===---*/
-    /*Course List*/
-
-    /*Highlights*/
-    .Courses .Highlights img{
-        width: calc((830px - 15px) / 2);
-    }
+  /*---===Courses===---*/
+  /*Course List*/
+  .Courses .courseList{
+    width: 100%;
+  }
+  /*Highlights*/
+  .Courses .Highlights img{
+    width: calc((830px - 15px) / 2);
+  }
 }
 @media(max-width: 950px){
-    /* Cont */
-    .Home .Cont{
-        width: calc(100vw - 60px);
-        margin: 0;
-    }
-    /*---===Banner===---*/
-    .Home img{
-        width: 290px;
-    }
-    /*---===About Me====---*/
-    .AboutMe img{
-        margin: 0 auto;
-    }
-    .AboutMe .Cont > div{
-        flex-direction: column;
-    }
-    /*---===Courses===---*/
-    /*Course List*/
-    
-    /*Highlights*/
-    .Courses .Highlights img{
-        width: calc((700px - 15px) / 2);
-    }
-    /*---===Resume===---*/
-    .Resume .col{
-        flex-direction: column;
-    }
+  /*---===Home===---*/
+  .Home .Cont{
+    width: calc(100vw - 50px);
+    margin: 0;
+  }
+  /*---===About Me====---*/
+  .AboutMe img{
+    margin: 0 auto;
+  }
+  .AboutMe .Cont > div{
+    flex-direction: column;
+  }
+  /*---===Courses===---*/
+  /*Course List*/
+  .Courses .courseList{
+    grid-template-columns: repeat(5, 1fr);
+  }
+  /*Highlights*/
+  .Courses .Highlights img{
+    width: calc((700px - 15px) / 2);
+  }
 }
 @media(max-width: 740px){
-    /*---===Banner===---*/
-    .Home .Cont{
-        flex-direction: column;
-        gap: 30px;
-    }
-    .Home .txt{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    /*---===Courses===---*/
-    /*Course List*/
-    
-    /*Highlights*/
-    .Courses .Highlights img{
-        width: calc((540px - 15px) / 2);
-    }
-    .Courses .Highlights.mobile .hover{
-        opacity: 1;
-    }
+  /*---===Home===---*/
+  .Home .Cont{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .Home .txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  /*---===Courses===---*/
+  /*Course List*/
+  .Courses .courseList{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  /*Highlights*/
+  .Courses .Highlights img{
+    width: calc((540px - 15px) / 2);
+  }
+  .Courses .Highlights .hover{
+    opacity: 1;
+  }
+  /*---===Resume===---*/
+  .Resume .Grid{
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media(max-width: 560px){
-    /*---===Banner===---*/
-    .Home .Cont{
-        width: calc(100vw - 34px);
-    }
-    .Home img{
-        width: min(100%, 270px);
-    }
-    /*---===About Me====---*/
-    .AboutMe img{
-        width: min(100%, 315px);
-    }
-    /*---===Skills===---*/
-    .Skills .Skills-Cont{
-        grid-template-columns: 1fr;
-    }
-    /*---===Courses===---*/
-    /*Course List*/
-    
-    /*Highlights*/
-    .Courses .Highlights img{
-        width: calc(100vw - 34px);
-    }
+  /*---===Home===---*/
+  .Home .Cont{
+    width: calc(100vw - 34px);
+  }
+  .Home img{
+    width: min(100%, 340px);
+  }
+  /*---===About Me====---*/
+  .AboutMe img{
+    width: min(100%, 315px);
+  }
+  /*---===Skills===---*/
+  .Skills .Skills-Cont{
+    grid-template-columns: 1fr;
+  }
+  /*---===Courses===---*/
+  /*Course List*/
+  .Courses .courseList{
+    grid-template-columns: repeat(2, 150px);
+  }
+  /*Highlights*/
+  .Courses .Highlights img{
+    width: calc(100vw - 34px);
+  }
 }
