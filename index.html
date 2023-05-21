@@ -1,378 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Victorino</title>
-    <link rel="shortcut icon" href="Pictures/Crest-Icon.png" type="png">
-    <link rel="stylesheet" href="global-style.css">
-    <link rel="stylesheet" href="index-style.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Libre Franklin'>
-    <script type="text/javascript" src="https://kit.fontawesome.com/ec6c50ff9c.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jose Victorino</title>
+  <link rel="shortcut icon" href="Pictures/Crest-Icon.png" type="png">
+  <link rel="stylesheet" href="global-style.css">
+  <link rel="stylesheet" href="index-style.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Libre Franklin'>
+  <script type="text/javascript" src="https://kit.fontawesome.com/ec6c50ff9c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div id="load-Cont">
-        <div class="loading-spinner">
-            <div class="bg1"></div>
-            <div class="bg2"></div>
-        </div>
+  <!-- Loading Screen -->
+  <div id="load-Cont">
+    <div class="loading-spinner">
+      <div class="bg1"></div>
+      <div class="bg2"></div>
     </div>
-    <!-- Navigation Bar -->
-    <nav class="nav">
-        <input type="checkbox" id="Burger">
-        <input type="checkbox" id="Arrow">
-        <label class="BOpen" for="Burger">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <a class="logo" href="index.html#Home">
-            <img src="Pictures/Crest-Logo.png" alt="Logo img">
-        </a>
-        <ul>
-            <label class="BClose" for="Burger">
-                <i class="fa-solid fa-xmark"></i>
-            </label>
-            <li>
-                <a href="index.html#AboutMe">About</a>
-            </li>
-            <li>
-                <a href="index.html#Skills">Skills</a>
-            </li>
-            <li class="Class">
-                <div>
-                    <a href="index.html#Courses">Courses</a>
-                    <label class="Arrow" for="Arrow">
-                        <i class="fa-solid fa-angle-down"></i>
-                    </label>
-                </div>
-                <ul class="DDown main"></ul>
-            </li>    
-            <li>
-                <a href="index.html#Resume">Resume</a>
-            </li>
-            <li>
-                <a href="index.html#Contact">Contact</a>
-            </li>
-        </ul>
-    </nav>
-    <!-- Banner -->
-    <section id="Home" class="Home">
-        <div class="Cont">
-            <div class="txt">  
-                <p class="p1"><b>Hi, I'm<span> Jose Victorino</span></b></p>
-                <p class="p2">a <b>1st year I.T. Student</b> of Mapúa University.</p>
-                <!-- CV (Curriculum Vitae) href="" download -->
-                <a class="btn">Download CV</a>
-            </div>
-            <img src="Pictures/Banner.jpg" alt="Banner img">
+  </div>
+  <!-- Navigation Bar -->
+  <nav class="nav">
+    <input type="checkbox" id="Burger">
+    <input type="checkbox" id="Arrow">
+    <label class="BOpen" for="Burger">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+    <a class="logo" href="index.html#Home">
+      <img src="Pictures/Crest-Logo.png" alt="Logo img">
+    </a>
+    <ul>
+      <label class="BClose" for="Burger">
+        <i class="fa-solid fa-xmark"></i>
+      </label>
+      <li>
+        <a href="index.html#AboutMe">About</a>
+      </li>
+      <li>
+        <a href="index.html#Skills">Skills</a>
+      </li>
+      <li class="Class">
+        <div>
+          <a href="index.html#Courses">Courses</a>
+          <label class="Arrow" for="Arrow">
+            <i class="fa-solid fa-angle-down"></i>
+          </label>
         </div>
-    </section>
-    <!-- About Me -->
-    <section id="AboutMe" class="AboutMe navBg">
-        <div class="Cont">
-            <h1>About<span> Me</span></h1>
+        <ul class="DDown main"></ul>
+      </li>    
+      <li>
+        <a href="index.html#Resume">Resume</a>
+      </li>
+      <li>
+        <a href="index.html#Contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Home -->
+  <section id="Home" class="Home">
+    <div class="Cont">
+      <div class="txt">  
+        <b class="p1">Hi, I'm<span> Jose Victorino</span></b>
+        <p class="p2">a <b>1st year I.T. Student</b> of Mapúa University.</p>
+        <!-- CV (Curriculum Vitae) -->
+        <a class="btn" href="Pictures/Banner.jpg" download>Download CV</a>
+      </div>
+      <img src="Pictures/Banner.jpg" alt="Banner img">
+    </div>
+  </section>
+  <!-- About Me -->
+  <section id="AboutMe" class="AboutMe navBg">
+    <div class="Cont">
+      <h1 class="flip-up">About<span> Me</span></h1>
+      <div>
+        <img class="fade-right" src="Pictures/Intro.JPG" alt="Introduction img">
+        <div class="txt fade-left">
+          <div>
+            <h5>Introduction</h5>
+            <p>Hello, I am Jose Victorino aiming to be a future Web Developer. I enjoy programming, especially building websites. I strive to learn more about what it takes to be a Web Developer.</p>
+          </div>
+          <div>
+            <h5>Profile</h5>
+            <table class="Profile">
+              <tr>
+                <td>
+                  <i class="fa-solid fa-user"></i>
+                </td>
+                <td>
+                  <p>Jose Lorenzo L. Victorino</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="fa-solid fa-phone"></i>
+                </td>
+                <td>
+                  <p>(+63) 9284650259</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="fa-solid fa-location-dot"></i>
+                </td>
+                <td>
+                  <p>Quezon City, Metro Manila</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="fa-solid fa-envelope"></i>
+                </td>
+                <td>
+                  <p>josevictorino003@gmail.com</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <p>When I was in elementary, my initial dream was to become a pilot, to fly to places, and to travel the world. As I grew up, I slowly lost interest in it and took an interest in engineering due to my father being an engineer. In high school, I became interested in photo and video editing, coding, and anything computer related. Now, I took IT because of my initial skills and interest in coding. I enjoy coding, especially with HTML, CSS, JavaScript.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Skills -->
+  <section id="Skills" class="Skills">
+    <div class="Cont">
+      <h1 class="flip-up">My<span> Skills</span></h1> 
+      <div class="Skills-Cont fade-right">
+        <div class="a2">
+          <div class="txt">
+            <p>C++</p>
+            <p class="lvl"></p>
+          </div>
+          <div class="barWrap">
+            <div class="prog"></div>
+          </div>
+        </div>
+        <div class="a1">
+          <div class="txt">
+            <p>Python</p>
+            <p class="lvl"></p>
+          </div>
+          <div class="barWrap">
+            <div class="prog"></div>
+          </div>
+        </div>
+        <div class="a3">
+          <div class="txt">
+            <p>HTML</p>
+            <p class="lvl"></p>
+          </div>
+          <div class="barWrap">
+            <div class="prog"></div>
+          </div>
+        </div>
+        <div class="a2">
+          <div class="txt">
+            <p>CSS</p>
+            <p class="lvl"></p>
+          </div>
+          <div class="barWrap">
+            <div class="prog"></div>
+          </div>
+        </div>
+        <div class="a1">
+          <div class="txt">
+            <p>JavaScript</p>
+            <p class="lvl"></p>
+          </div>
+          <div class="barWrap">
+            <div class="prog"></div>
+          </div>
+        </div>
+        <div class="a2">
+          <div class="txt">
+            <p>Photo Editing</p>
+            <p class="lvl"></p>
+          </div>
+          <div class="barWrap">
+            <div class="prog"></div>
+          </div>
+        </div>
+        <div class="a3">
+          <div class="txt">
+            <p>Video Editing</p>
+            <p class="lvl"></p>
+          </div>
+          <div class="barWrap">
+            <div class="prog"></div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <!-- Interests -->
+      <h5 class="fade-up">INTEREST</h5>
+      <div class="Interest-Cont fade-up">
+        <div>
+          <div class="icon">
+            <i class="fa-solid fa-film"></i>
+          </div>
+          <div class="txt">
+            <p>Watching Movies</p>
+          </div>
+        </div>
+        <div>
+          <div class="icon">
+            <i class="fa-solid fa-gamepad"></i>
+          </div>
+          <div class="txt">
+            <p>Video Games</p>
+          </div>
+        </div>
+        <div>
+          <div class="icon">
+            <i class="fa-regular fa-futbol"></i>
+          </div>
+          <div class="txt">
+            <p>Football</p>
+          </div>
+        </div>
+        <div>
+          <div class="icon">
+            <i class="fa-solid fa-guitar"></i>
+          </div>
+          <div class="txt">
+            <p>Guitar</p>
+          </div>
+        </div>
+        <div>
+          <div class="icon">
+            <i class="fa-solid fa-camera"></i>
+          </div>
+          <div class="txt">
+            <p>Photography</p>
+          </div>
+        </div>
+        <div>
+          <div class="icon">
+            <i class="fa-solid fa-video"></i>
+          </div>
+          <div class="txt">
+            <p>Videography</p>
+          </div>
+        </div>
+        <div>
+          <div class="icon">
+            <i class="fa-solid fa-pen"></i>
+          </div>
+          <div class="txt">
+            <p>Photo Editing</p>
+          </div>
+        </div>
+        <div>
+          <div class="icon">
+            <i class="fa-solid fa-play"></i>
+          </div>
+          <div class="txt">
+            <p>Video Editing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Courses -->
+  <section id="Courses" class="Courses">
+    <div class="Cont">
+      <!-- Course List -->
+      <h1 class="flip-up">My<span> Courses</span></h1>
+      <div class="courseList fade-left"></div>
+      <br>
+      <!-- Highlights -->
+      <h5 class="fade-right">HIGHLIGHTS</h5>
+      <div class="Highlights fade-right"></div>
+    </div>
+  </section>
+  <!-- Resume -->
+  <section id="Resume" class="Resume">
+    <div class="Cont">
+      <h1 class="flip-up">RESUME</h1>
+      <div class="Grid">
+        <!-- Education -->
+        <div class="Edu fade-right">
+          <h5>EDUCATION</h5>
+          <h4>Mapúa University 2019 - Present</h4>
+          <i>Senior Highschool - STEM / College</i>
+          <ul type="square">
+            <li>SHS Diploma</li>
+            <li>Graduated with Honors</li>
+          </ul>
+          <h4>UST Angelicum 2010 - 2019</h4>
+          <i>Junior Highschool</i>
+          <ul type="square">
+            <li>High School Diploma</li>
+            <li>Robotics Team Leader</li>
+            <li>Batch Photographer</li>
+          </ul>
+        </div>
+        <!-- Experience -->
+        <div class="Exp fade-left">
+          <h5>EXPERIENCE</h5>
+          <h4>CREOTEC Philippines Inc. 2020</h4>
+          <ul type="square">
+            <li>Completed 80 hours of virtual work immersion training</li>
+            <li>Department Assigned: Technical Group (STEM)</li>
+          </ul>
+        </div>
+        <!--Certificates-->
+        <div class="Cert fade-right">
+          <h5>CERTIFICATES</h5>
+          <ul type="square">
+            <li>CREOTEC Philippines Inc.</li>
+            <li>Coursera Python</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <section id="Contact" class="Contact">
+    <div class="Cont">
+      <div>
+        <img src="Pictures/Crest-Logo.png" alt="Logo img">
+        <div class="txt">
+          <h4>Quick Links</h4>
+          <div class="SiteLink">
             <div>
-                <img src="Pictures/Intro.JPG" alt="Introduction img">
-                <div class="txt">
-                    <div>
-                        <h5>Introduction</h5>
-                        <p>Hello, I am Jose Victorino aiming to be a future Web Developer. I enjoy programming, especially building websites. I strive to learn more about what it takes to be a Web Developer.</p>
-                    </div>
-                    <div>
-                        <h5>Profile</h5>
-                        <table class="Profile">
-                            <tr>
-                                <td><i class="fa-solid fa-user"></i></td>
-                                <td><p>Jose Lorenzo L. Victorino</p></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa-solid fa-phone"></i></td>
-                                <td><p>(+63) 9284650259</p></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa-solid fa-location-dot"></i></td>
-                                <td><p>Quezon City, Metro Manila</p></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa-solid fa-envelope"></i></td>
-                                <td><p>josevictorino003@gmail.com</p></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div>
-                        <p>When I was in elementary, my initial dream was to become a pilot, to fly to places, and to travel the world. As I grew up, I slowly lost interest in it and took an interest in engineering due to my father being an engineer. In high school, I became interested in photo and video editing, coding, and anything computer related. Now, I took IT because of my initial skills and interest in coding. I enjoy coding, especially with HTML, CSS, JavaScript.</p>
-                    </div>
-                </div>
+              <a href="index.html#AboutMe">About</a>
             </div>
-        </div>
-    </section>
-    <!-- Skills -->
-    <section id="Skills" class="Skills">
-        <div class="Cont">
-            <h1>My<span> Skills</span></h1> 
-            <div class="Skills-Cont">
-                <div class="a2">
-                    <div class="txt">
-                        <p>C++</p>
-                        <p class="lvl"></p>
-                    </div>
-                    <div class="barWrap">
-                        <div class="prog"></div>
-                    </div>
-                </div>
-                <div class="a1">
-                    <div class="txt">
-                        <p>Python</p>
-                        <p class="lvl"></p>
-                    </div>
-                    <div class="barWrap">
-                        <div class="prog"></div>
-                    </div>
-                </div>
-                <div class="a2">
-                    <div class="txt">
-                        <p>HTML</p>
-                        <p class="lvl"></p>
-                    </div>
-                    <div class="barWrap">
-                        <div class="prog"></div>
-                    </div>
-                </div>
-                <div class="a2">
-                    <div class="txt">
-                        <p>CSS</p>
-                        <p class="lvl"></p>
-                    </div>
-                    <div class="barWrap">
-                        <div class="prog"></div>
-                    </div>
-                </div>
-                <div class="a1">
-                    <div class="txt">
-                        <p>JavaScript</p>
-                        <p class="lvl"></p>
-                    </div>
-                    <div class="barWrap">
-                        <div class="prog"></div>
-                    </div>
-                </div>
-                <div class="a2">
-                    <div class="txt">
-                        <p>Photo Editing</p>
-                        <p class="lvl"></p>
-                    </div>
-                    <div class="barWrap">
-                        <div class="prog"></div>
-                    </div>
-                </div>
-                <div class="a3">
-                    <div class="txt">
-                        <p>Video Editing</p>
-                        <p class="lvl"></p>
-                    </div>
-                    <div class="barWrap">
-                        <div class="prog"></div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <!-- Interests -->
-            <h5>INTEREST</h5>
-            <div class="Interest-Cont">
-                <div>
-                    <div class="icon">
-                        <i class="fa-solid fa-film"></i>
-                    </div>
-                    <div class="txt">
-                        <p>Watching Movies</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="icon">
-                        <i class="fa-solid fa-gamepad"></i>
-                    </div>
-                    <div class="txt">
-                        <p>Video Games</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="icon">
-                        <i class="fa-regular fa-futbol"></i>
-                    </div>
-                    <div class="txt">
-                        <p>Football</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="icon">
-                        <i class="fa-solid fa-guitar"></i>
-                    </div>
-                    <div class="txt">
-                        <p>Guitar</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="icon">
-                        <i class="fa-solid fa-camera"></i>
-                    </div>
-                    <div class="txt">
-                        <p>Photography</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="icon">
-                        <i class="fa-solid fa-video"></i>
-                    </div>
-                    <div class="txt">
-                        <p>Videography</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="icon">
-                        <i class="fa-solid fa-pen"></i>
-                    </div>
-                    <div class="txt">
-                        <p>Photo Editing</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="icon">
-                        <i class="fa-solid fa-play"></i>
-                    </div>
-                    <div class="txt">
-                        <p>Video Editing</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Courses -->
-    <section id="Courses" class="Courses">
-        <div class="Cont">
-            <!-- Course List -->
-            <h1>My<span> Courses</span></h1>
-            <div class="bar">
-                <div class="courseList"></div>
-            </div>
-            <br>
-            <!-- Highlights -->
-            <h5>HIGHLIGHTS</h5>
-            <div class="Highlights"><!--Insert-->
-                <div>
-                    <img src="Pictures/ITS131L/M2-SA1.png" alt="CRUD Form img">
-                    <a href="Courses/ITS131L.html#Activities">
-                        <div class="hover">CRUD Form (ITS131L)</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Resume -->
-    <section id="Resume" class="Resume">
-        <div class="Cont">
-            <h1>RESUME</h1>
-            <div class="col">
-                <!-- Education -->
-                <div>
-                    <h5>EDUCATION</h5>
-                    <div class="bar">
-                        <h4>Mapúa University 2019 - Present</h4>
-                        <i>Senior Highschool - STEM / College</i>
-                        <ul type="square">
-                            <li>SHS Diploma</li>
-                            <li>Graduated with Honors</li>
-                        </ul>
-                        <h4>UST Angelicum 2010 - 2019</h4>
-                        <i>Junior Highschool</i>
-                        <ul type="square">
-                            <li>High School Diploma</li>
-                            <li>Robotics Team Leader</li>
-                            <li>Batch Photographer</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Experience -->
-                <div>
-                    <h5>EXPERIENCE</h5>
-                    <div class="bar">
-                        <h4>CREOTEC Philippines Inc. 2020</h4>
-                        <ul type="square">
-                            <li>Completed 80 hours of virtual work immersion training</li>
-                            <li>Department Assigned: Technical Group (STEM)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <!--Certificates-->
             <div>
-                <h5>CERTIFICATES</h5>
-                <div class="bar">
-                    <ul type="square">
-                        <li>CREOTEC Philippines Inc.</li>
-                        <li>Coursera Python</li>
-                    </ul>
-                </div>
+              <a href="index.html#Skills">Skills</a>
             </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <section id="Contact" class="Contact">
-        <div class="Cont">
             <div>
-                <img src="Pictures/Crest-Logo.png" alt="Logo img">
-                <div class="txt">
-                    <h4>Quick Links</h4>
-                    <div class="SiteLink">
-                        <div>
-                            <a href="index.html#AboutMe">About</a>
-                        </div>
-                        <div>
-                            <a href="index.html#Skills">Skills</a>
-                        </div>
-                        <div>
-                            <a href="index.html#Courses">Courses</a>
-                        </div>
-                        <div>
-                            <a href="index.html#Resume">Resume</a>
-                        </div>
-                    </div>
-                    <!-- socmed -->
-                    <div class="socmed">
-                        <a href="https://www.facebook.com/JoseVictorinoo/" title="Facebook" target="_blank">
-                            <i class="fa-brands fa-square-facebook"></i>
-                        </a>
-                        <a href="https://www.instagram.com/joseeevictorino/" title="Instagram" target="_blank">
-                            <i class="fa-brands fa-square-instagram"></i>
-                        </a>
-                        <a href="https://twitter.com/JoseeVictorino" title="Twitter" target="_blank">
-                            <i class="fa-brands fa-square-twitter"></i>
-                        </a>
-                    </div>
-                </div>
-                <form id="contactForm" action="mailto:josevictorino003@gmail.com" method="get">
-                    <h1>Contact <span> Me</span></h1>
-                    <div class="Inputs">
-                        <div>
-                            <input type="name" name="name" id="name" placeholder="Name" required>
-                            <input type="email" name="email" id="email" placeholder="Email" required>
-                        </div>
-                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
-                        <textarea name="body" id="message" placeholder="Message" required></textarea>
-                    </div>
-                    <div class="Bottom">
-                        <button class="btn" type="submit">Send Message</button>
-                    </div>
-                </form>
+              <a href="index.html#Courses">Courses</a>
             </div>
-            <footer>
-                <p>Jose Victorino © 2023</p>
-            </footer>
+            <div>
+              <a href="index.html#Resume">Resume</a>
+            </div>
+          </div>
+          <!-- socmed -->
+          <div class="socmed">
+            <a href="https://www.facebook.com/JoseVictorinoo/" title="Facebook" target="_blank">
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/joseeevictorino/" title="Instagram" target="_blank">
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+            <a href="https://twitter.com/JoseeVictorino" title="Twitter" target="_blank">
+              <i class="fa-brands fa-square-twitter"></i>
+            </a>
+          </div>
         </div>
-    </section>
-    <script type="text/javascript" src="Scripts/global-script.js"></script>
-    <script type="text/javascript" src="Scripts/script.js"></script>
+        <form id="contactForm" action="mailto:josevictorino003@gmail.com" method="get">
+          <h1>Contact <span> Me</span></h1>
+          <div class="Inputs">
+            <div>
+              <input type="name" name="name" id="name" placeholder="Name" required>
+              <input type="email" name="email" id="email" placeholder="Email" required>
+            </div>
+            <input type="text" name="subject" id="subject" placeholder="Subject" required>
+            <textarea name="body" id="message" placeholder="Message" required></textarea>
+          </div>
+          <div class="Bottom">
+            <button class="btn" type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+      <footer>Jose Victorino © 2023</footer>
+    </div>
+  </section>
+  <script type="text/javascript" src="Scripts/global-script.js"></script>
+  <script type="text/javascript" src="Scripts/index-script.js"></script>
 </body>
 </html>
